@@ -1,0 +1,137 @@
+[
+  {
+    "Pose": "Chudan",
+    "Source": "C:\\Users\\anjan\\Desktop\\Projects\\rpgm\\wws\\img\\battlers\\Samurai-ChudanBack-v1.png",
+    "SourceSize": [
+      320,
+      320
+    ],
+    "VisibleBounds": [
+      17,
+      24,
+      302,
+      303
+    ],
+    "BodyTop": 24,
+    "FootAxis": 107.0,
+    "Scale": 1.0,
+    "Offset": [
+      133,
+      64
+    ],
+    "Canvas": [
+      480,
+      384
+    ],
+    "FootBaseline": 368,
+    "Output": "img/battlers/Samurai-ChudanBack-v2.png"
+  },
+  {
+    "Pose": "Jodan",
+    "Source": "C:\\Users\\anjan\\Desktop\\Projects\\rpgm\\wws\\docs\\art\\main-character\\forms\\jodan-source-v1.png",
+    "SourceSize": [
+      1254,
+      1254
+    ],
+    "VisibleBounds": [
+      251,
+      34,
+      970,
+      1211
+    ],
+    "BodyTop": 225,
+    "FootAxis": 629.5,
+    "Scale": 0.28368794326241137,
+    "Offset": [
+      61,
+      24
+    ],
+    "Canvas": [
+      480,
+      384
+    ],
+    "FootBaseline": 368,
+    "Output": "img/battlers/Samurai-JodanBack-v2.png"
+  },
+  {
+    "Pose": "Gedan",
+    "Source": "C:\\Users\\anjan\\Desktop\\Projects\\rpgm\\wws\\docs\\art\\main-character\\forms\\gedan-source-v1.png",
+    "SourceSize": [
+      1254,
+      1254
+    ],
+    "VisibleBounds": [
+      74,
+      110,
+      1164,
+      1186
+    ],
+    "BodyTop": 110,
+    "FootAxis": 433.0,
+    "Scale": 0.25998142989786444,
+    "Offset": [
+      127,
+      59
+    ],
+    "Canvas": [
+      480,
+      384
+    ],
+    "FootBaseline": 368,
+    "Output": "img/battlers/Samurai-GedanBack-v2.png"
+  },
+  {
+    "Pose": "Kasumi",
+    "Source": "C:\\Users\\anjan\\Desktop\\Projects\\rpgm\\wws\\docs\\art\\main-character\\forms\\kasumi-source-v1.png",
+    "SourceSize": [
+      1254,
+      1254
+    ],
+    "VisibleBounds": [
+      50,
+      61,
+      1223,
+      1184
+    ],
+    "BodyTop": 61,
+    "FootAxis": 469.5,
+    "Scale": 0.2313167259786477,
+    "Offset": [
+      131,
+      94
+    ],
+    "Canvas": [
+      480,
+      384
+    ],
+    "FootBaseline": 368,
+    "Output": "img/battlers/Samurai-KasumiBack-v2.png"
+  },
+  {
+    "Pose": "Waki",
+    "Source": "C:\\Users\\anjan\\Desktop\\Projects\\rpgm\\wws\\docs\\art\\main-character\\forms\\waki-source-v1.png",
+    "SourceSize": [
+      1254,
+      1254
+    ],
+    "VisibleBounds": [
+      35,
+      152,
+      1192,
+      1160
+    ],
+    "BodyTop": 152,
+    "FootAxis": 829.0,
+    "Scale": 0.27750247770069375,
+    "Offset": [
+      10,
+      46
+    ],
+    "Canvas": [
+      480,
+      384
+    ],
+    "FootBaseline": 368,
+    "Output": "img/battlers/Samurai-WakiBack-v2.png"
+  }
+]

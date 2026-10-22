@@ -1,0 +1,58 @@
+{
+  "tileSize": 48,
+  "assets": {
+    "gate": {
+      "x": 0,
+      "y": 0,
+      "w": 4,
+      "h": 3
+    },
+    "veranda": {
+      "x": 0,
+      "y": 3,
+      "w": 4,
+      "h": 1
+    },
+    "rack": {
+      "x": 0,
+      "y": 4,
+      "w": 2,
+      "h": 2
+    },
+    "dummy": {
+      "x": 2,
+      "y": 4,
+      "w": 1,
+      "h": 2
+    },
+    "lantern": {
+      "x": 3,
+      "y": 4,
+      "w": 1,
+      "h": 2
+    },
+    "basin": {
+      "x": 0,
+      "y": 6,
+      "w": 1,
+      "h": 1
+    },
+    "planting": {
+      "x": 1,
+      "y": 6,
+      "w": 2,
+      "h": 1
+    },
+    "slab": {
+      "x": 0,
+      "y": 7,
+      "w": 1,
+      "h": 1
+    }
+  },
+  "terrainPeriod": [
+    8,
+    8
+  ],
+  "processing": "Nearest-neighbor prop/architecture sizing; periodic opposite-edge crossfade and 42% terrain contrast; no mirror operations."
+}

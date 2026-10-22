@@ -1,0 +1,162 @@
+[
+  {
+    "pose": "Chudan",
+    "source": "docs\\art\\shinsengumi\\chudan-source-v1.png",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "sourceBounds": [
+      62,
+      100,
+      1054,
+      1224
+    ],
+    "footAnchor": 687.5,
+    "scale": 0.21708185053380782,
+    "offset": [
+      -5,
+      2
+    ],
+    "canvas": [
+      288,
+      288
+    ],
+    "soleBaseline": 268,
+    "bounds": [
+      8,
+      24,
+      224,
+      267
+    ],
+    "output": "img\\enemies\\Shinsengumi-Chudan-v2.png"
+  },
+  {
+    "pose": "Jodan",
+    "source": "docs\\art\\shinsengumi\\stances\\jodan-source-v1.png",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "sourceBounds": [
+      296,
+      36,
+      1081,
+      1205
+    ],
+    "footAnchor": 667.5,
+    "scale": 0.21708185053380782,
+    "offset": [
+      -1,
+      6
+    ],
+    "canvas": [
+      288,
+      288
+    ],
+    "soleBaseline": 268,
+    "bounds": [
+      63,
+      14,
+      233,
+      267
+    ],
+    "output": "img\\enemies\\Shinsengumi-Jodan-v2.png"
+  },
+  {
+    "pose": "Gedan",
+    "source": "docs\\art\\shinsengumi\\stances\\gedan-source-v1.png",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "sourceBounds": [
+      165,
+      115,
+      1068,
+      1202
+    ],
+    "footAnchor": 727.5,
+    "scale": 0.21708185053380782,
+    "offset": [
+      -14,
+      7
+    ],
+    "canvas": [
+      288,
+      288
+    ],
+    "soleBaseline": 268,
+    "bounds": [
+      22,
+      32,
+      218,
+      268
+    ],
+    "output": "img\\enemies\\Shinsengumi-Gedan-v2.png"
+  },
+  {
+    "pose": "Kasumi",
+    "source": "docs\\art\\shinsengumi\\stances\\kasumi-source-v1.png",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "sourceBounds": [
+      104,
+      165,
+      1162,
+      1150
+    ],
+    "footAnchor": 677.5,
+    "scale": 0.21708185053380782,
+    "offset": [
+      -3,
+      18
+    ],
+    "canvas": [
+      288,
+      288
+    ],
+    "soleBaseline": 268,
+    "bounds": [
+      20,
+      54,
+      249,
+      267
+    ],
+    "output": "img\\enemies\\Shinsengumi-Kasumi-v2.png"
+  },
+  {
+    "pose": "Waki",
+    "source": "docs\\art\\shinsengumi\\stances\\waki-source-v1.png",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "sourceBounds": [
+      217,
+      163,
+      1240,
+      1160
+    ],
+    "footAnchor": 578.5,
+    "scale": 0.21164021164021163,
+    "offset": [
+      22,
+      22
+    ],
+    "canvas": [
+      288,
+      288
+    ],
+    "soleBaseline": 268,
+    "bounds": [
+      68,
+      56,
+      284,
+      267
+    ],
+    "output": "img\\enemies\\Shinsengumi-Waki-v2.png"
+  }
+]

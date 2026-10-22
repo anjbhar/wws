@@ -1,0 +1,168 @@
+Core combat gameplay loop
+
+Turn Start
+
+Step 1: Stance selection
+
+out of turn order each character in the combat chooses a fighting stance simultaneously
+
+This will be shown to everyone involved in action
+
+
+Step 2: determine initiative order
+
+This is based on both the base initiative stat of characters, their weapons, and the fighting stance they choose
+
+
+Step 3: Turn based combat begins
+
+
+There 4: Action Choice
+
+
+
+This turns will be fast paced. Each character in the combat will get only 1 action per turn  and have only 20 seconds to decided that action
+
+        1.      Move
+        2.      Attack
+        3.      Change Stance/wait
+        4.      Taunt
+
+Move - can involve simple movement, a charge, or disengagement from combat
+
+Attack - choose from a list of attacks that come with your stance. Different stances give access to different attacks. This can impact the strength of attack, likelihood of passing enemy guard, and attack hit locations.
+
+For some attacks, you can choose different levels of attack power. More powerful attacks deal more damage, but can be easier to block or hurt your recovery time (initiative in next round)
+
+
+Wait - Waiting and guarding sacrifices a characters initiative for defensive bonuses. They don’t actively attack this turn but get a defensive buff that includes the possibility of a counter attack. This can be strong, as it is possible to use a counter attack against multiple enemies in a single turn.
+
+
+
+Change Stance - at the beginning of a characters turn they can choose to try and switch to a different stance than the one they began the round with. This can offer a large advantage because they can optimize their stance to directly address their opponents stance. This does include risk. There are 3 possible outcomes
+
+        1.      Success - character changes stances and continues turn
+        2.      Slow - character changes stances but looses initiative and must wait till end of round to attack
+        3.      Fumble - character changes stances but is too predictable to surprise enemy. The change to the stance they want but loose all other actions for the turn
+
+Additionally, changing stances has a minimum initiative requirement and can’t be done the the character has already been attacked that turn
+
+
+Taunt- the player can use an action point to taunt the enemy. Based on the speed in which they can type the taunt, they deal composite damage
+
+All actions are improved by speed, especially likelihood of hitting and the possibility of getting momentum
+
+
+
+Step 5: actual combat progression
+
+If a character attacks, in order to do damage they must pass their opponents guard. There will be 2 systems here, 1 for npcs and 1 for players.
+
+Npc choose between blocking and dodging, which will be probability based relating to stats
+
+The player will have a more engaged experience. Each turn will be timed, and the enemy attack level will increase or reduce the players time to react.
+
+The player will choose dodge or parry.
+
+This will involve a reaction based challenge based on the players stats. The better the players stats the easier the task.
+
+These are not long challenges and shouldn’t take more than 5 seconds.
+
+
+If an attack succeeds, it can deal 3 possible wound types
+
+Light - superficial cut that can add up if a character takes to many- some have special affects such as a cut on the forehead reducing vision
+
+Medium - significant cut that will cause bleeding and put a clock on the combat
+
+Heavy - heavy strikes that can completely immobilize or remove limbs
+
+The probability breakdowns are as follows based on cutting level
+
+Light wound/medium wound/heavy wound
+
+        1.      80/18/2
+        2.      70/26/4
+        3.      60/34/6
+        4.      50/42/8
+        5.      40/50/10
+
+
+Certain areas of the body can yield mortal wounds. A mortal wound occurs when the wound does not kill the opponent but guarantees their death. If the enemy passes a willpower check they can stay in action while mortally wounded and continue to fight until they die.
+
+
+
+Step 6: apply buffs/debuffs/wounds following the round
+
+Step 7: move on to the next round until combat ends
+
+
+
+How does the UI Work?
+
+At start of turn 4 large cards appear at bottom of screen showing action type
+
+IF MOVE
+
+Shows cards showing movement options
+
+
+IF CHANGE STANCE
+
+Shows cards will all available stances and strike areas
+
+
+IF ATTACK
+
+Shows cards with all attack options
+
+
+IF TAUNT
+
+Shows words that needs to be typed quickly
+
+
+
+The faster choices are made, the higher probability of success and additional bonuses such as extra action points
+
+
+Important combat stats
+
+Composure
+Momentum
+Willpower
+Wounds
+
+
+
+Combat factors that can be leveled up
+
+Every individual stance can be leveled up
+        1.      Turn time increase
+        2.      Probability of bonus action point
+        3.      Probability of defense
+        4.      Probability of riposte
+        5.      Probability of recovery
+
+
+Drawing the sword can be leveled up as it’s own martial art
+
+Cutting has its own level tree, that increases probability of deep cut
+
+
+Unarmed combat has 3 trees
+        1.      Striking
+        2.      Grappling
+        3.      Submission
+
+
+Can level up taunts
+        1.      Extra time to type
+        2.      More impactful insults
+
+
+
+Can level up composure
+        1.      Just gain composure
+
+Also can do short term buffs in composure such as through meditation

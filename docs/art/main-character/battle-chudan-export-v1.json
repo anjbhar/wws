@@ -1,0 +1,24 @@
+{
+  "Source": [
+    1254,
+    1254
+  ],
+  "VisibleBounds": [
+    191,
+    154,
+    1217,
+    1158
+  ],
+  "Canvas": [
+    320,
+    320
+  ],
+  "Scale": 0.27860696517412936,
+  "Offset": [
+    -36,
+    -19
+  ],
+  "FootBaseline": 304,
+  "Output": "img/battlers/Samurai-ChudanBack-v1.png",
+  "Generator": "Built-in image_gen"
+}

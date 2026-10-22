@@ -1,0 +1,532 @@
+{
+  "initial": {
+    "position": [
+      12,
+      11
+    ],
+    "facing": 8,
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "routes": [
+    {
+      "to": [
+        12,
+        10
+      ],
+      "steps": 1,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        16,
+        11
+      ],
+      "steps": 5,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        12,
+        4
+      ],
+      "steps": 11,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        12,
+        4
+      ],
+      "steps": 0,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        10,
+        4
+      ],
+      "steps": 2,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        14,
+        4
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        12,
+        5
+      ],
+      "steps": 3,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        8,
+        3
+      ],
+      "steps": 6,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        16,
+        3
+      ],
+      "steps": 10,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        2,
+        6
+      ],
+      "steps": 17,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        2,
+        8
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        1,
+        7
+      ],
+      "steps": 2,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        4,
+        7
+      ],
+      "steps": 5,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        2,
+        9
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        2,
+        11
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        1,
+        10
+      ],
+      "steps": 2,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        3,
+        10
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        22,
+        7
+      ],
+      "steps": 22,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        22,
+        9
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        21,
+        8
+      ],
+      "steps": 2,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        23,
+        8
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        22,
+        9
+      ],
+      "steps": 2,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        22,
+        11
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        21,
+        10
+      ],
+      "steps": 2,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        23,
+        10
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        2,
+        4
+      ],
+      "steps": 27,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        2,
+        6
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        1,
+        5
+      ],
+      "steps": 2,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        4,
+        5
+      ],
+      "steps": 5,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        22,
+        5
+      ],
+      "steps": 18,
+      "input": "physical browser keyboard"
+    },
+    {
+      "to": [
+        22,
+        7
+      ],
+      "steps": 4,
+      "input": "physical browser keyboard"
+    }
+  ],
+  "views": [
+    {
+      "name": "veranda-center",
+      "position": [
+        12,
+        4
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "veranda-west",
+      "position": [
+        10,
+        4
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "veranda-east",
+      "position": [
+        14,
+        4
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "dojo-below",
+      "position": [
+        12,
+        5
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "dojo-west",
+      "position": [
+        8,
+        3
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "dojo-east",
+      "position": [
+        16,
+        3
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "rack-above",
+      "position": [
+        2,
+        6
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "rack-below",
+      "position": [
+        2,
+        8
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "rack-west",
+      "position": [
+        1,
+        7
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "rack-east",
+      "position": [
+        4,
+        7
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "dummy-above",
+      "position": [
+        2,
+        9
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "dummy-below",
+      "position": [
+        2,
+        11
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "dummy-west",
+      "position": [
+        1,
+        10
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "dummy-east",
+      "position": [
+        3,
+        10
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "lantern-above",
+      "position": [
+        22,
+        7
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "lantern-below",
+      "position": [
+        22,
+        9
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "lantern-west",
+      "position": [
+        21,
+        8
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "lantern-east",
+      "position": [
+        23,
+        8
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "basin-above",
+      "position": [
+        22,
+        9
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "basin-below",
+      "position": [
+        22,
+        11
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "basin-west",
+      "position": [
+        21,
+        10
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "basin-east",
+      "position": [
+        23,
+        10
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "bamboo-west-above",
+      "position": [
+        2,
+        4
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "bamboo-west-below",
+      "position": [
+        2,
+        6
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "bamboo-west-west",
+      "position": [
+        1,
+        5
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "bamboo-west-east",
+      "position": [
+        4,
+        5
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "bamboo-east-above",
+      "position": [
+        22,
+        5
+      ],
+      "reachable": true,
+      "inputRoute": true
+    },
+    {
+      "name": "bamboo-east-below",
+      "position": [
+        22,
+        7
+      ],
+      "reachable": true,
+      "inputRoute": true
+    }
+  ],
+  "interactions": [
+    {
+      "name": "masanori-action",
+      "text": "I am Masanori. Care to test your sword against mine?"
+    },
+    {
+      "name": "shinsengumi-action",
+      "text": "A steady hand begins with a steady mind. Care for a spar?"
+    },
+    {
+      "name": "closed-dojo",
+      "text": "The dojo is closed. Sparring is held here in the courtyard."
+    }
+  ],
+  "reachable": 195
+}

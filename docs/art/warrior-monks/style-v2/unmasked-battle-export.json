@@ -1,0 +1,27 @@
+{
+  "Generator": "built-in image_gen",
+  "Variant": "unmasked",
+  "SourceSize": [
+    1104,
+    1425
+  ],
+  "SourceBounds": [
+    190,
+    36,
+    976,
+    1397
+  ],
+  "BodyCrown": 420,
+  "TargetBodyHeight": 236,
+  "Canvas": [
+    288,
+    384
+  ],
+  "ArtworkBottom": 368,
+  "Scale": 0.24130879345603273,
+  "Offset": [
+    3,
+    31
+  ],
+  "Output": "img/enemies/WarriorMonk-Unmasked-v2.png"
+}

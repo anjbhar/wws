@@ -1,0 +1,564 @@
+[
+  {
+    "variant": "masked",
+    "output": "$WarriorMonk-Masked-v1",
+    "canvas": [
+      192,
+      448
+    ],
+    "frameSize": [
+      64,
+      112
+    ],
+    "soleBaseline": 108,
+    "bodyHeightTarget": 67,
+    "scale": 0.2182410423452769,
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "box": [
+          63,
+          38,
+          243,
+          421
+        ],
+        "bodyCrown": 111,
+        "bodyHeight": 310,
+        "visibleSize": [
+          39,
+          84
+        ],
+        "bodyHeightPixels": 67.65,
+        "offset": [
+          16,
+          24
+        ],
+        "footAxisSource": 72.5
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "box": [
+          371,
+          39,
+          547,
+          417
+        ],
+        "bodyCrown": 110,
+        "bodyHeight": 307,
+        "visibleSize": [
+          38,
+          82
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          13,
+          26
+        ],
+        "footAxisSource": 89.0
+      },
+      {
+        "row": 0,
+        "column": 2,
+        "box": [
+          683,
+          40,
+          857,
+          423
+        ],
+        "bodyCrown": 111,
+        "bodyHeight": 312,
+        "visibleSize": [
+          38,
+          84
+        ],
+        "bodyHeightPixels": 68.09,
+        "offset": [
+          16,
+          24
+        ],
+        "footAxisSource": 71.5
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "box": [
+          65,
+          458,
+          261,
+          828
+        ],
+        "bodyCrown": 530,
+        "bodyHeight": 298,
+        "visibleSize": [
+          43,
+          81
+        ],
+        "bodyHeightPixels": 65.04,
+        "offset": [
+          11,
+          27
+        ],
+        "footAxisSource": 97.0
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "box": [
+          405,
+          458,
+          551,
+          828
+        ],
+        "bodyCrown": 529,
+        "bodyHeight": 299,
+        "visibleSize": [
+          32,
+          81
+        ],
+        "bodyHeightPixels": 65.25,
+        "offset": [
+          19,
+          27
+        ],
+        "footAxisSource": 60.5
+      },
+      {
+        "row": 1,
+        "column": 2,
+        "box": [
+          684,
+          460,
+          886,
+          830
+        ],
+        "bodyCrown": 535,
+        "bodyHeight": 295,
+        "visibleSize": [
+          44,
+          81
+        ],
+        "bodyHeightPixels": 64.38,
+        "offset": [
+          10,
+          27
+        ],
+        "footAxisSource": 100.5
+      },
+      {
+        "row": 2,
+        "column": 0,
+        "box": [
+          64,
+          855,
+          263,
+          1230
+        ],
+        "bodyCrown": 934,
+        "bodyHeight": 296,
+        "visibleSize": [
+          43,
+          82
+        ],
+        "bodyHeightPixels": 64.6,
+        "offset": [
+          10,
+          26
+        ],
+        "footAxisSource": 100.0
+      },
+      {
+        "row": 2,
+        "column": 1,
+        "box": [
+          388,
+          857,
+          545,
+          1231
+        ],
+        "bodyCrown": 931,
+        "bodyHeight": 300,
+        "visibleSize": [
+          34,
+          82
+        ],
+        "bodyHeightPixels": 65.47,
+        "offset": [
+          13,
+          26
+        ],
+        "footAxisSource": 85.5
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "box": [
+          674,
+          857,
+          878,
+          1230
+        ],
+        "bodyCrown": 933,
+        "bodyHeight": 297,
+        "visibleSize": [
+          45,
+          81
+        ],
+        "bodyHeightPixels": 64.82,
+        "offset": [
+          10,
+          27
+        ],
+        "footAxisSource": 102.0
+      },
+      {
+        "row": 3,
+        "column": 0,
+        "box": [
+          65,
+          1245,
+          243,
+          1634
+        ],
+        "bodyCrown": 1331,
+        "bodyHeight": 303,
+        "visibleSize": [
+          39,
+          85
+        ],
+        "bodyHeightPixels": 66.13,
+        "offset": [
+          13,
+          23
+        ],
+        "footAxisSource": 85.5
+      },
+      {
+        "row": 3,
+        "column": 1,
+        "box": [
+          371,
+          1245,
+          552,
+          1633
+        ],
+        "bodyCrown": 1330,
+        "bodyHeight": 303,
+        "visibleSize": [
+          40,
+          85
+        ],
+        "bodyHeightPixels": 66.13,
+        "offset": [
+          11,
+          23
+        ],
+        "footAxisSource": 98.0
+      },
+      {
+        "row": 3,
+        "column": 2,
+        "box": [
+          690,
+          1243,
+          869,
+          1635
+        ],
+        "bodyCrown": 1330,
+        "bodyHeight": 305,
+        "visibleSize": [
+          39,
+          86
+        ],
+        "bodyHeightPixels": 66.56,
+        "offset": [
+          11,
+          22
+        ],
+        "footAxisSource": 95.0
+      }
+    ]
+  },
+  {
+    "variant": "unmasked",
+    "output": "$WarriorMonk-Unmasked-v1",
+    "canvas": [
+      192,
+      448
+    ],
+    "frameSize": [
+      64,
+      112
+    ],
+    "soleBaseline": 108,
+    "bodyHeightTarget": 67,
+    "scale": 0.2255892255892256,
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "box": [
+          59,
+          21,
+          235,
+          433
+        ],
+        "bodyCrown": 122,
+        "bodyHeight": 311,
+        "visibleSize": [
+          40,
+          93
+        ],
+        "bodyHeightPixels": 70.16,
+        "offset": [
+          15,
+          15
+        ],
+        "footAxisSource": 76.0
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "box": [
+          383,
+          23,
+          540,
+          424
+        ],
+        "bodyCrown": 127,
+        "bodyHeight": 297,
+        "visibleSize": [
+          35,
+          90
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          14,
+          18
+        ],
+        "footAxisSource": 79.5
+      },
+      {
+        "row": 0,
+        "column": 2,
+        "box": [
+          694,
+          16,
+          862,
+          435
+        ],
+        "bodyCrown": 121,
+        "bodyHeight": 314,
+        "visibleSize": [
+          38,
+          95
+        ],
+        "bodyHeightPixels": 70.84,
+        "offset": [
+          13,
+          13
+        ],
+        "footAxisSource": 85.5
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "box": [
+          46,
+          434,
+          230,
+          829
+        ],
+        "bodyCrown": 541,
+        "bodyHeight": 288,
+        "visibleSize": [
+          42,
+          89
+        ],
+        "bodyHeightPixels": 64.97,
+        "offset": [
+          14,
+          19
+        ],
+        "footAxisSource": 81.5
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "box": [
+          396,
+          437,
+          532,
+          832
+        ],
+        "bodyCrown": 539,
+        "bodyHeight": 293,
+        "visibleSize": [
+          31,
+          89
+        ],
+        "bodyHeightPixels": 66.1,
+        "offset": [
+          18,
+          19
+        ],
+        "footAxisSource": 61.5
+      },
+      {
+        "row": 1,
+        "column": 2,
+        "box": [
+          691,
+          440,
+          868,
+          831
+        ],
+        "bodyCrown": 541,
+        "bodyHeight": 290,
+        "visibleSize": [
+          40,
+          88
+        ],
+        "bodyHeightPixels": 65.42,
+        "offset": [
+          13,
+          20
+        ],
+        "footAxisSource": 85.5
+      },
+      {
+        "row": 2,
+        "column": 0,
+        "box": [
+          63,
+          852,
+          251,
+          1246
+        ],
+        "bodyCrown": 958,
+        "bodyHeight": 288,
+        "visibleSize": [
+          42,
+          89
+        ],
+        "bodyHeightPixels": 64.97,
+        "offset": [
+          13,
+          19
+        ],
+        "footAxisSource": 83.5
+      },
+      {
+        "row": 2,
+        "column": 1,
+        "box": [
+          398,
+          862,
+          533,
+          1249
+        ],
+        "bodyCrown": 952,
+        "bodyHeight": 297,
+        "visibleSize": [
+          30,
+          87
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          16,
+          21
+        ],
+        "footAxisSource": 71.0
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "box": [
+          697,
+          861,
+          884,
+          1248
+        ],
+        "bodyCrown": 959,
+        "bodyHeight": 289,
+        "visibleSize": [
+          42,
+          87
+        ],
+        "bodyHeightPixels": 65.2,
+        "offset": [
+          10,
+          21
+        ],
+        "footAxisSource": 99.0
+      },
+      {
+        "row": 3,
+        "column": 0,
+        "box": [
+          68,
+          1250,
+          244,
+          1656
+        ],
+        "bodyCrown": 1357,
+        "bodyHeight": 299,
+        "visibleSize": [
+          40,
+          92
+        ],
+        "bodyHeightPixels": 67.45,
+        "offset": [
+          12,
+          16
+        ],
+        "footAxisSource": 88.0
+      },
+      {
+        "row": 3,
+        "column": 1,
+        "box": [
+          390,
+          1256,
+          560,
+          1657
+        ],
+        "bodyCrown": 1358,
+        "bodyHeight": 299,
+        "visibleSize": [
+          38,
+          90
+        ],
+        "bodyHeightPixels": 67.45,
+        "offset": [
+          13,
+          18
+        ],
+        "footAxisSource": 85.0
+      },
+      {
+        "row": 3,
+        "column": 2,
+        "box": [
+          707,
+          1255,
+          884,
+          1658
+        ],
+        "bodyCrown": 1354,
+        "bodyHeight": 304,
+        "visibleSize": [
+          40,
+          91
+        ],
+        "bodyHeightPixels": 68.58,
+        "offset": [
+          12,
+          17
+        ],
+        "footAxisSource": 88.0
+      }
+    ]
+  }
+]

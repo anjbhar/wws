@@ -1,0 +1,27 @@
+{
+  "Generator": "built-in image_gen",
+  "SourceSize": [
+    1254,
+    1254
+  ],
+  "SourceBounds": [
+    62,
+    100,
+    1053,
+    1223
+  ],
+  "TransparentSourcePixels": 1069663,
+  "Canvas": [
+    288,
+    288
+  ],
+  "FootBaseline": 268,
+  "Scale": 0.21708185053380782,
+  "Offset": [
+    23,
+    2
+  ],
+  "Resampling": "NearestNeighbor",
+  "Output": "img/enemies/Shinsengumi-Chudan-v1.png",
+  "Status": "Visual review; not integrated into encounter"
+}

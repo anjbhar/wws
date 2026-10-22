@@ -1,0 +1,578 @@
+[
+  {
+    "character": "player",
+    "original": "$Samurai-v2",
+    "output": "$Samurai-v3",
+    "frameSize": [
+      64,
+      88
+    ],
+    "soleBaseline": 84,
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "sourceBounds": [
+          160,
+          24,
+          344,
+          368
+        ],
+        "visibleSize": [
+          38,
+          71
+        ],
+        "originalHeight": 62
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "sourceBounds": [
+          439,
+          24,
+          605,
+          362
+        ],
+        "visibleSize": [
+          34,
+          69
+        ],
+        "originalHeight": 60
+      },
+      {
+        "row": 0,
+        "column": 2,
+        "sourceBounds": [
+          702,
+          24,
+          879,
+          368
+        ],
+        "visibleSize": [
+          37,
+          71
+        ],
+        "originalHeight": 62
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "sourceBounds": [
+          162,
+          384,
+          353,
+          725
+        ],
+        "visibleSize": [
+          38,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "sourceBounds": [
+          450,
+          384,
+          598,
+          721
+        ],
+        "visibleSize": [
+          29,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 1,
+        "column": 2,
+        "sourceBounds": [
+          707,
+          384,
+          893,
+          726
+        ],
+        "visibleSize": [
+          36,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 2,
+        "column": 0,
+        "sourceBounds": [
+          148,
+          738,
+          337,
+          1077
+        ],
+        "visibleSize": [
+          37,
+          66
+        ],
+        "originalHeight": 57
+      },
+      {
+        "row": 2,
+        "column": 1,
+        "sourceBounds": [
+          447,
+          738,
+          594,
+          1074
+        ],
+        "visibleSize": [
+          29,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "sourceBounds": [
+          690,
+          738,
+          887,
+          1074
+        ],
+        "visibleSize": [
+          39,
+          66
+        ],
+        "originalHeight": 57
+      },
+      {
+        "row": 3,
+        "column": 0,
+        "sourceBounds": [
+          161,
+          1092,
+          349,
+          1452
+        ],
+        "visibleSize": [
+          37,
+          71
+        ],
+        "originalHeight": 62
+      },
+      {
+        "row": 3,
+        "column": 1,
+        "sourceBounds": [
+          435,
+          1092,
+          612,
+          1444
+        ],
+        "visibleSize": [
+          35,
+          69
+        ],
+        "originalHeight": 60
+      },
+      {
+        "row": 3,
+        "column": 2,
+        "sourceBounds": [
+          697,
+          1092,
+          887,
+          1452
+        ],
+        "visibleSize": [
+          37,
+          71
+        ],
+        "originalHeight": 62
+      }
+    ]
+  },
+  {
+    "character": "instructor",
+    "original": "$SamuraiInstructor-v2",
+    "output": "$SamuraiInstructor-v3",
+    "frameSize": [
+      64,
+      88
+    ],
+    "soleBaseline": 84,
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "sourceBounds": [
+          136,
+          35,
+          319,
+          363
+        ],
+        "visibleSize": [
+          38,
+          69
+        ],
+        "originalHeight": 60
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "sourceBounds": [
+          440,
+          34,
+          610,
+          363
+        ],
+        "visibleSize": [
+          35,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 0,
+        "column": 2,
+        "sourceBounds": [
+          731,
+          35,
+          913,
+          363
+        ],
+        "visibleSize": [
+          38,
+          69
+        ],
+        "originalHeight": 60
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "sourceBounds": [
+          129,
+          398,
+          332,
+          723
+        ],
+        "visibleSize": [
+          42,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "sourceBounds": [
+          458,
+          397,
+          610,
+          723
+        ],
+        "visibleSize": [
+          31,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 1,
+        "column": 2,
+        "sourceBounds": [
+          731,
+          397,
+          940,
+          723
+        ],
+        "visibleSize": [
+          43,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 2,
+        "column": 0,
+        "sourceBounds": [
+          118,
+          755,
+          329,
+          1080
+        ],
+        "visibleSize": [
+          43,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 2,
+        "column": 1,
+        "sourceBounds": [
+          448,
+          754,
+          597,
+          1080
+        ],
+        "visibleSize": [
+          31,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "sourceBounds": [
+          725,
+          755,
+          934,
+          1080
+        ],
+        "visibleSize": [
+          43,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 3,
+        "column": 0,
+        "sourceBounds": [
+          125,
+          1109,
+          310,
+          1448
+        ],
+        "visibleSize": [
+          39,
+          71
+        ],
+        "originalHeight": 62
+      },
+      {
+        "row": 3,
+        "column": 1,
+        "sourceBounds": [
+          437,
+          1109,
+          613,
+          1448
+        ],
+        "visibleSize": [
+          36,
+          70
+        ],
+        "originalHeight": 61
+      },
+      {
+        "row": 3,
+        "column": 2,
+        "sourceBounds": [
+          739,
+          1109,
+          924,
+          1448
+        ],
+        "visibleSize": [
+          39,
+          71
+        ],
+        "originalHeight": 62
+      }
+    ]
+  },
+  {
+    "character": "shinsengumi",
+    "original": "$Shinsengumi-v1",
+    "output": "$Shinsengumi-v2",
+    "frameSize": [
+      64,
+      88
+    ],
+    "soleBaseline": 84,
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "sourceBounds": [
+          91,
+          50,
+          272,
+          384
+        ],
+        "visibleSize": [
+          36,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "sourceBounds": [
+          404,
+          50,
+          572,
+          376
+        ],
+        "visibleSize": [
+          33,
+          64
+        ],
+        "originalHeight": 56
+      },
+      {
+        "row": 0,
+        "column": 2,
+        "sourceBounds": [
+          701,
+          50,
+          875,
+          384
+        ],
+        "visibleSize": [
+          35,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "sourceBounds": [
+          100,
+          432,
+          303,
+          760
+        ],
+        "visibleSize": [
+          40,
+          64
+        ],
+        "originalHeight": 56
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "sourceBounds": [
+          419,
+          432,
+          571,
+          757
+        ],
+        "visibleSize": [
+          30,
+          64
+        ],
+        "originalHeight": 56
+      },
+      {
+        "row": 1,
+        "column": 2,
+        "sourceBounds": [
+          700,
+          432,
+          901,
+          761
+        ],
+        "visibleSize": [
+          39,
+          64
+        ],
+        "originalHeight": 56
+      },
+      {
+        "row": 2,
+        "column": 0,
+        "sourceBounds": [
+          87,
+          810,
+          284,
+          1138
+        ],
+        "visibleSize": [
+          40,
+          66
+        ],
+        "originalHeight": 57
+      },
+      {
+        "row": 2,
+        "column": 1,
+        "sourceBounds": [
+          405,
+          810,
+          564,
+          1138
+        ],
+        "visibleSize": [
+          32,
+          67
+        ],
+        "originalHeight": 58
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "sourceBounds": [
+          678,
+          810,
+          879,
+          1138
+        ],
+        "visibleSize": [
+          40,
+          66
+        ],
+        "originalHeight": 57
+      },
+      {
+        "row": 3,
+        "column": 0,
+        "sourceBounds": [
+          95,
+          1187,
+          284,
+          1535
+        ],
+        "visibleSize": [
+          39,
+          71
+        ],
+        "originalHeight": 62
+      },
+      {
+        "row": 3,
+        "column": 1,
+        "sourceBounds": [
+          400,
+          1187,
+          573,
+          1534
+        ],
+        "visibleSize": [
+          35,
+          70
+        ],
+        "originalHeight": 61
+      },
+      {
+        "row": 3,
+        "column": 2,
+        "sourceBounds": [
+          687,
+          1187,
+          875,
+          1535
+        ],
+        "visibleSize": [
+          38,
+          71
+        ],
+        "originalHeight": 62
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "sourceSize": [
+    1672,
+    941
+  ],
+  "outputSize": [
+    1280,
+    720
+  ],
+  "resample": "nearest-neighbor",
+  "battleback1": "EdoPracticeCourtyard-v1",
+  "battleback2": "",
+  "troopId": 6,
+  "mode": "built-in image_gen",
+  "transparent": false
+}

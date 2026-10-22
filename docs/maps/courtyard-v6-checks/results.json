@@ -1,0 +1,117 @@
+{
+  "initial": {
+    "position": [
+      12,
+      7
+    ],
+    "facing": 8,
+    "camera": [
+      -0.84375,
+      0
+    ],
+    "viewport": [
+      1280,
+      720
+    ],
+    "loaded": true
+  },
+  "reachable": 161,
+  "checks": {
+    "11,4": true,
+    "12,4": true,
+    "12,8": true,
+    "12,10": true,
+    "16,11": true,
+    "12,13": true,
+    "11,13": true,
+    "4,7": true,
+    "2,10": true,
+    "22,9": true,
+    "20,8": true,
+    "2,6": true,
+    "4,5": true,
+    "5,5": true,
+    "2,4": true,
+    "3,4": true,
+    "21,5": true,
+    "22,5": true
+  },
+  "bases": {
+    "4,6": false,
+    "5,6": false,
+    "2,9": false,
+    "22,8": false,
+    "20,7": false,
+    "2,5": false,
+    "3,5": false,
+    "21,6": false,
+    "22,6": false,
+    "10,14": false,
+    "13,14": false,
+    "0,7": false,
+    "1,7": false,
+    "23,7": false,
+    "24,7": false
+  },
+  "events": [
+    {
+      "id": 1,
+      "name": "Enter home",
+      "position": [
+        11,
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Masanori — Sparring Samurai",
+      "position": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Enter home — right door",
+      "position": [
+        12,
+        3
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Shinsengumi — Courtyard Swordsman",
+      "position": [
+        16,
+        10
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Southern entrance — training boundary",
+      "position": [
+        11,
+        14
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Southern entrance — training boundary",
+      "position": [
+        12,
+        14
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "name": "closed-dojo",
+      "text": "The dojo doors are closed. Training continues in the courtyard."
+    },
+    {
+      "name": "southern-boundary",
+      "text": "The road can wait. Remain here until courtyard training is finished."
+    }
+  ],
+  "errors": []
+}

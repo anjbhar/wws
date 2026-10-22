@@ -1,0 +1,63 @@
+{
+  "layout": [
+    {
+      "name": "Hayato",
+      "x": 409.6,
+      "y": 540,
+      "scale": 0.74
+    },
+    {
+      "name": "Masked Monk B",
+      "x": 1075.2,
+      "y": 468,
+      "scale": 0.74
+    },
+    {
+      "name": "Unmasked Monk",
+      "x": 870.4000000000001,
+      "y": 424.79999999999995,
+      "scale": 0.74
+    },
+    {
+      "name": "Masked Monk A",
+      "x": 1062.3999999999999,
+      "y": 381.6,
+      "scale": 0.74
+    }
+  ],
+  "slots": [
+    {
+      "side": "allies",
+      "x": 409.6,
+      "y": 540
+    },
+    {
+      "side": "allies",
+      "x": 217.60000000000002,
+      "y": 489.6
+    },
+    {
+      "side": "allies",
+      "x": 204.8,
+      "y": 568.8000000000001
+    },
+    {
+      "side": "enemies",
+      "x": 1062.3999999999999,
+      "y": 381.6
+    },
+    {
+      "side": "enemies",
+      "x": 870.4000000000001,
+      "y": 424.79999999999995
+    },
+    {
+      "side": "enemies",
+      "x": 1075.2,
+      "y": 468
+    }
+  ],
+  "visualCapacity": "3 allies and 3 enemies",
+  "partyCombatEnabled": false,
+  "errors": []
+}

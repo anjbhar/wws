@@ -1,0 +1,224 @@
+{
+  "generator": "built-in image_gen",
+  "sourceSize": [
+    887,
+    1774
+  ],
+  "canvas": [
+    144,
+    288
+  ],
+  "frameSize": [
+    48,
+    72
+  ],
+  "scale": 0.15158924205378974,
+  "rows": [
+    "Down",
+    "Left",
+    "Right",
+    "Up"
+  ],
+  "columns": [
+    "Walk A",
+    "Stand",
+    "Walk B"
+  ],
+  "soleBaseline": 68,
+  "resampling": "nearest-neighbor",
+  "frames": [
+    {
+      "row": 0,
+      "column": 0,
+      "sourceBounds": [
+        82,
+        46,
+        289,
+        440
+      ],
+      "destination": [
+        7,
+        8,
+        31,
+        60
+      ]
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "sourceBounds": [
+        345,
+        46,
+        546,
+        431
+      ],
+      "destination": [
+        57,
+        10,
+        30,
+        58
+      ]
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "sourceBounds": [
+        601,
+        46,
+        805,
+        440
+      ],
+      "destination": [
+        106,
+        8,
+        31,
+        60
+      ]
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "sourceBounds": [
+        58,
+        465,
+        287,
+        847
+      ],
+      "destination": [
+        8,
+        82,
+        35,
+        58
+      ]
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "sourceBounds": [
+        367,
+        465,
+        542,
+        846
+      ],
+      "destination": [
+        59,
+        82,
+        27,
+        58
+      ]
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "sourceBounds": [
+        610,
+        465,
+        829,
+        846
+      ],
+      "destination": [
+        103,
+        82,
+        33,
+        58
+      ]
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "sourceBounds": [
+        60,
+        873,
+        290,
+        1256
+      ],
+      "destination": [
+        6,
+        154,
+        35,
+        58
+      ]
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "sourceBounds": [
+        354,
+        874,
+        532,
+        1256
+      ],
+      "destination": [
+        58,
+        154,
+        27,
+        58
+      ]
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "sourceBounds": [
+        613,
+        873,
+        837,
+        1256
+      ],
+      "destination": [
+        102,
+        154,
+        34,
+        58
+      ]
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "sourceBounds": [
+        65,
+        1270,
+        288,
+        1679
+      ],
+      "destination": [
+        6,
+        222,
+        34,
+        62
+      ]
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "sourceBounds": [
+        340,
+        1270,
+        551,
+        1670
+      ],
+      "destination": [
+        56,
+        223,
+        32,
+        61
+      ]
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "sourceBounds": [
+        597,
+        1270,
+        820,
+        1679
+      ],
+      "destination": [
+        103,
+        222,
+        34,
+        62
+      ]
+    }
+  ],
+  "output": "img\\characters\\$SamuraiInstructor-v2.png"
+}

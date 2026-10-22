@@ -1,0 +1,30 @@
+{
+  "Generator": "built-in image_gen",
+  "Variant": "masked",
+  "SourceSize": [
+    1086,
+    1448
+  ],
+  "SourceBounds": [
+    202,
+    18,
+    972,
+    1423
+  ],
+  "BodyCrown": 310,
+  "TargetBodyHeight": 236,
+  "TransparentSourcePixels": 1065005,
+  "Canvas": [
+    288,
+    384
+  ],
+  "ArtworkBottom": 368,
+  "Scale": 0.2118491921005386,
+  "Offset": [
+    20,
+    66
+  ],
+  "Resampling": "NearestNeighbor",
+  "Output": "img/enemies/WarriorMonk-Masked-v1.png",
+  "Status": "Standalone battle asset; no enemy or encounter assigned"
+}

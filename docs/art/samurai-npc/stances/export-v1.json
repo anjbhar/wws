@@ -1,0 +1,102 @@
+[
+  {
+    "Pose": "Chudan",
+    "Source": [
+      1254,
+      1254
+    ],
+    "Bounds": [
+      94,
+      147,
+      977,
+      1181
+    ],
+    "Offset": [
+      -12,
+      -3
+    ],
+    "Scale": 0.22966507177033493,
+    "FootBaseline": 268,
+    "Output": "img/enemies/SamuraiInstructor-Chudan-v1.png"
+  },
+  {
+    "Pose": "Jodan",
+    "Source": [
+      1254,
+      1254
+    ],
+    "Bounds": [
+      364,
+      47,
+      989,
+      1179
+    ],
+    "Offset": [
+      -8,
+      -3
+    ],
+    "Scale": 0.22966507177033493,
+    "FootBaseline": 268,
+    "Output": "img/enemies/SamuraiInstructor-Jodan-v1.png"
+  },
+  {
+    "Pose": "Gedan",
+    "Source": [
+      1254,
+      1254
+    ],
+    "Bounds": [
+      185,
+      131,
+      968,
+      1156
+    ],
+    "Offset": [
+      12,
+      2
+    ],
+    "Scale": 0.22966507177033493,
+    "FootBaseline": 268,
+    "Output": "img/enemies/SamuraiInstructor-Gedan-v1.png"
+  },
+  {
+    "Pose": "Kasumi",
+    "Source": [
+      1254,
+      1254
+    ],
+    "Bounds": [
+      132,
+      166,
+      1068,
+      1173
+    ],
+    "Offset": [
+      -5,
+      -2
+    ],
+    "Scale": 0.22966507177033493,
+    "FootBaseline": 268,
+    "Output": "img/enemies/SamuraiInstructor-Kasumi-v1.png"
+  },
+  {
+    "Pose": "Waki",
+    "Source": [
+      1254,
+      1254
+    ],
+    "Bounds": [
+      271,
+      157,
+      1217,
+      1159
+    ],
+    "Offset": [
+      18,
+      14
+    ],
+    "Scale": 0.21892103205629398,
+    "FootBaseline": 268,
+    "Output": "img/enemies/SamuraiInstructor-Waki-v1.png"
+  }
+]

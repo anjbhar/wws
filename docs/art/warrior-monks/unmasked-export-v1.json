@@ -1,0 +1,30 @@
+{
+  "Generator": "built-in image_gen",
+  "Variant": "unmasked",
+  "SourceSize": [
+    1086,
+    1448
+  ],
+  "SourceBounds": [
+    220,
+    34,
+    903,
+    1413
+  ],
+  "BodyCrown": 420,
+  "TargetBodyHeight": 236,
+  "TransparentSourcePixels": 1166555,
+  "Canvas": [
+    288,
+    384
+  ],
+  "ArtworkBottom": 368,
+  "Scale": 0.23742454728370221,
+  "Offset": [
+    11,
+    32
+  ],
+  "Resampling": "NearestNeighbor",
+  "Output": "img/enemies/WarriorMonk-Unmasked-v1.png",
+  "Status": "Standalone battle asset; no enemy or encounter assigned"
+}

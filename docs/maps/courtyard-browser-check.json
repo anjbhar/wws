@@ -1,0 +1,24 @@
+{
+  "map": 1,
+  "tilesets": [
+    "",
+    "",
+    "",
+    "",
+    "EdoCourtyard_A5-v1",
+    "",
+    "",
+    "EdoRedWoodExterior_D-v4",
+    "EdoCourtyard_E-v1"
+  ],
+  "characters": [
+    "$SamuraiInstructor-v2",
+    "$Shinsengumi-v1"
+  ],
+  "spawn": [
+    12,
+    12
+  ],
+  "loaded": true,
+  "errors": []
+}

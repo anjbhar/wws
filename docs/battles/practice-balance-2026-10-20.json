@@ -1,0 +1,41 @@
+[
+  {
+    "enemy": {
+      "hp": 530,
+      "attack": 31,
+      "defense": 20,
+      "speed": 28
+    },
+    "samplesPerPolicy": 2000,
+    "policies": [
+      {
+        "policy": "mixed",
+        "playerWinPercent": 55.3,
+        "averageRounds": 8.8,
+        "winnerHealthPercent": 25.9,
+        "stalls": 0
+      },
+      {
+        "policy": "quick-torso",
+        "playerWinPercent": 60.7,
+        "averageRounds": 8.2,
+        "winnerHealthPercent": 24.2,
+        "stalls": 0
+      },
+      {
+        "policy": "heavy-torso",
+        "playerWinPercent": 64.2,
+        "averageRounds": 7.5,
+        "winnerHealthPercent": 28.9,
+        "stalls": 0
+      },
+      {
+        "policy": "seek-openings",
+        "playerWinPercent": 70,
+        "averageRounds": 7.8,
+        "winnerHealthPercent": 27,
+        "stalls": 0
+      }
+    ]
+  }
+]

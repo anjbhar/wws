@@ -1,0 +1,603 @@
+{
+  "actualBattle": "3 vs 3",
+  "simulationClock": "real MZ frames stepped between inputs",
+  "opening": [
+    "Hayato",
+    "Hayato B",
+    "Hayato C"
+  ],
+  "actions": 37,
+  "turns": [
+    "Hayato B",
+    "Hayato",
+    "Hayato C"
+  ],
+  "menus": [
+    {
+      "name": "Hayato B",
+      "lane": 0,
+      "options": [
+        0,
+        1
+      ],
+      "legal": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "Hayato",
+      "lane": 1,
+      "options": [
+        0,
+        1,
+        2
+      ],
+      "legal": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato C",
+      "lane": 2,
+      "options": [
+        1,
+        2
+      ],
+      "legal": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato B",
+      "lane": 0,
+      "options": [
+        0,
+        1
+      ],
+      "legal": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "Hayato",
+      "lane": 1,
+      "options": [
+        0,
+        1,
+        2
+      ],
+      "legal": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato C",
+      "lane": 2,
+      "options": [
+        1,
+        2
+      ],
+      "legal": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato B",
+      "lane": 0,
+      "options": [
+        0,
+        1
+      ],
+      "legal": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "Hayato",
+      "lane": 1,
+      "options": [
+        0,
+        1,
+        2
+      ],
+      "legal": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato C",
+      "lane": 2,
+      "options": [
+        1,
+        2
+      ],
+      "legal": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato B",
+      "lane": 0,
+      "options": [
+        0,
+        1
+      ],
+      "legal": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "Hayato",
+      "lane": 1,
+      "options": [
+        0,
+        1,
+        2
+      ],
+      "legal": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato C",
+      "lane": 2,
+      "options": [
+        1,
+        2
+      ],
+      "legal": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato B",
+      "lane": 0,
+      "options": [
+        0,
+        1
+      ],
+      "legal": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "Hayato",
+      "lane": 1,
+      "options": [
+        0,
+        1,
+        2
+      ],
+      "legal": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato C",
+      "lane": 2,
+      "options": [
+        1,
+        2
+      ],
+      "legal": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Hayato",
+      "lane": 1,
+      "options": [
+        0,
+        2
+      ],
+      "legal": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "Hayato",
+      "lane": 1,
+      "options": [
+        0,
+        2
+      ],
+      "legal": [
+        0,
+        2
+      ]
+    }
+  ],
+  "hits": [
+    {
+      "actor": true,
+      "source": "Hayato B",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Unmasked Monk",
+      "target": "Hayato",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Unmasked Monk",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk A",
+      "target": "Hayato B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato B",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Unmasked Monk",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato C",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Unmasked Monk",
+      "target": "Hayato B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Unmasked Monk",
+      "target": "Hayato B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk A",
+      "target": "Hayato",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato B",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Unmasked Monk",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk A",
+      "target": "Hayato B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato B",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Unmasked Monk",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato C",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk A",
+      "target": "Hayato B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato B",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Unmasked Monk",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk A",
+      "target": "Hayato B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato C",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato B",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato C",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato B",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk A",
+      "target": "Hayato B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk A",
+      "target": "Hayato B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato B",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato C",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato C",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato C",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato C",
+      "target": "Masked Monk B",
+      "legal": true
+    },
+    {
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Hayato C",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Hayato",
+      "target": "Masked Monk B",
+      "legal": true
+    }
+  ],
+  "victory": true,
+  "escape": true,
+  "partyRestored": true,
+  "errors": []
+}

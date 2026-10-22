@@ -1,0 +1,38 @@
+# RPG Maker MZ / MV playtest saves and local settings
+/save/
+*.rmmzsave
+*.rpgsave
+
+# Runtime and tool logs
+*.log
+npm-debug.log*
+
+# Local dependencies and Python caches used by project tools
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Temporary files and editor swap files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local credentials (keep example configuration available)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Keep game.rmmzproject, package.json, data/, js/ (including plugins.js),
+# css/, img/, audio/, effects/, fonts/, icon/, and movies/ in Git.
+# Preserve docs/ source art, reference material, and existing manual backups.
+# Export deployed games outside this source folder.

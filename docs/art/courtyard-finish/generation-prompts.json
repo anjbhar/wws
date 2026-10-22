@@ -1,0 +1,107 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "img/tilesets/EdoRedWoodExterior_D-v3.png",
+  "prompts": [
+    {
+      "name": "ground",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. Opaque seamless packed earth texture, flat top down ground plane, quiet tan ochre grey-brown fine compact dirt with very subtle natural variations and sparse tiny grains. No stones, grass, tracks, cracks, shadows, borders, vignette or macro blobs. Tile perfectly on all four edges. Texture only filling entire square. Pixel clusters at native 48px game texture density.",
+      "transparent_background": false
+    },
+    {
+      "name": "stones",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. A small set of three separate weathered flat stepping stones in a single horizontal row, space between each, simple irregular rounded grey slabs with warm wear and a hint of moss. Each final stone fits 40x30px inside a 48x48 cell. View from elevated above showing broad flat top, almost no side. No surrounding dirt.",
+      "transparent_background": true
+    },
+    {
+      "name": "wall-joins",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. Modular matching wall assembly pieces only: one L-shaped corner at left and one end post at right, isolated separately with generous space. Cream plaster and muted red wooden base, narrow charcoal tiled cap matching reference wall (not a building). Corner has short horizontal return and short receding side return. End post is a single square muted red timber upright on small stone foot with charcoal cap. Final wall height 144px, end post width 28px. No ground.",
+      "transparent_background": true
+    },
+    {
+      "name": "gate",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. One modest open wooden courtyard entrance gate, muted red-brown timber, two slim square posts on stone feet, plain horizontal lintel and small shallow charcoal tiled roof. Entire final asset fits 192x144px (4x3 tiles). Clear empty open center passage 96px wide and 90px tall. No doors, no surrounding walls, no decorations. Genuine transparent open passage.",
+      "transparent_background": true
+    },
+    {
+      "name": "veranda",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. One compact low wooden veranda with integrated centered two steps, isolated. Wide shallow rectangular horizontal timber landing, muted reddish brown weathered planks and front fascia, two short simple wooden steps at center. No railings, no roof, no doors, no building, no tall posts. Final size 192x48px, center stair width 80px, deck shallow elevated RPG Maker perspective. Back edge perfectly straight horizontal.",
+      "transparent_background": true
+    },
+    {
+      "name": "bokken-rack",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. One small freestanding horizontal wooden sword rack holding four wooden bokken swords, no metal blades. Weathered dark reddish brown timber stand with simple feet. Final footprint 96x96px, visible height about 70px, modest scale for 60px character. Isolated, no ground.",
+      "transparent_background": true
+    },
+    {
+      "name": "dummy",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. One simple upright straw training dummy on a wooden post and small stable wooden cross foot. Straw cylindrical torso and rounded straw head, short horizontal wrapped arms. No face, armor or clothing. Final 48x96px canvas, visible height 65px matching 60px tall samurai. Restrained weathered straw and dark wood palette.",
+      "transparent_background": true
+    },
+    {
+      "name": "basin",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. One low weathered grey stone water basin, small hollowed round rectangular monolithic stone with visible dark still water hollow and a simple bamboo dipper resting across edge. Final 48x48px, visible width 42px height 30px, waist height at most relative to 60px samurai. No ground or garden.",
+      "transparent_background": true
+    },
+    {
+      "name": "lantern",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. One modest squat traditional Japanese stone garden lantern, carved grey weathered granite, square base and short pedestal, small hollow light chamber and simple wide pagoda cap with small rounded finial. Final 48x96px, visible height 65px. No flame glow, no garden, isolated.",
+      "transparent_background": true
+    },
+    {
+      "name": "planting",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. One very small restrained cluster of two low grey natural rocks with a few dark olive green low grasses and tiny groundcover leaves at their feet. Final 96x48px canvas, rocks at most 23px tall, no trees, no bamboo, no flowers, no dirt patch, no border, no scenery. Sparse horizontal natural arrangement.",
+      "transparent_background": true
+    },
+    {
+      "name": "sidewall",
+      "prompt": "Use case: historical-scene. Create a production game asset, custom original pixel artwork for an Edo samurai dojo. Match the reference's elevated straight-on RPG Maker perspective (NOT isometric), crisp dark pixel outlines, muted red timber, cream plaster, charcoal tiles, upper-left light. Final use 48px tile grid with characters 60px tall. Keep details readable after nearest-neighbor export. Isolated requested object only, centered with clearance, genuine transparent background, no scenery, text, grid, blur, broad cast shadows or watermark. Reference is style only; do not reproduce whole sheet. Necessary wall assembly completion: a single straight north-south boundary wall viewed from above in RPG Maker elevated projection. Narrow vertical strip, charcoal tiled cap running vertically, cream plaster flank and muted red base visible on its RIGHT side. No endcaps; top edge and bottom edge must repeat seamlessly to extend vertically. Final piece 48px wide x96px tall. Long vertical parallel sides, no diagonal or isometric skew. Isolated transparent surroundings.",
+      "transparent_background": true
+    }
+  ],
+  "sources": [
+    [
+      "ground",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-7b3972e3-ef4c-402a-b405-4968b57b6bc9.png"
+    ],
+    [
+      "stones",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-ff1ba960-ac09-4ea5-8625-585a80dd287f.png"
+    ],
+    [
+      "wall-joins",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-d658de25-c6a4-4041-a210-e98d01495bde.png"
+    ],
+    [
+      "gate",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-25aa7f60-5b8c-4754-b492-34e005e7251b.png"
+    ],
+    [
+      "veranda",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-47b3d58c-46a3-46aa-b7ab-35b5790da9e7.png"
+    ],
+    [
+      "bokken-rack",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-23c39354-e6f5-4aac-945c-2f6f74e781ca.png"
+    ],
+    [
+      "dummy",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-3d53991f-7fdf-4ddc-b344-835c39565b3f.png"
+    ],
+    [
+      "basin",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-321322c7-dc37-4651-9d34-affb7ee6d916.png"
+    ],
+    [
+      "lantern",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-9751f124-abb2-458e-9446-9f8339939ac0.png"
+    ],
+    [
+      "planting",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-f718a045-b80d-4486-bffe-9b8005d4d020.png"
+    ],
+    [
+      "sidewall",
+      "C:\\Users\\anjan\\.codex\\generated_images\\01a15de8-c249-7d93-87e3-3efda545a2ba\\exec-9e562923-5ef1-4f81-99ca-f6506312318f.png"
+    ]
+  ]
+}

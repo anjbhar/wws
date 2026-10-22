@@ -1,0 +1,23 @@
+{
+  "source": "grass-source.png",
+  "sheet": "EdoCourtyard_A5-grass-v3",
+  "tiles": 64,
+  "dirtBoundsInclusive": [
+    7,
+    5,
+    17,
+    11
+  ],
+  "centerPixels": [
+    600,
+    408
+  ],
+  "dirtSizePixels": [
+    468,
+    276
+  ],
+  "dirtBoundingCells": 77,
+  "transitionCells": 32,
+  "export": "Generated grass, nearest-neighbor 96 to 192; bilaterally symmetrical rounded pixel turf fringe; retained dirt material",
+  "unchanged": "Upper map layers, events, spawn, architecture, props and collision"
+}

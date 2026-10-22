@@ -1,0 +1,65 @@
+{
+  "legacySizes": [
+    [
+      192,
+      352
+    ],
+    [
+      192,
+      352
+    ],
+    [
+      192,
+      352
+    ]
+  ],
+  "sprites": [
+    {
+      "name": "$SamuraiInstructor-v3",
+      "frame": [
+        64,
+        88
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "anchor": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "name": "$Shinsengumi-v2",
+      "frame": [
+        64,
+        88
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "anchor": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "name": "$Samurai-v3",
+      "frame": [
+        64,
+        88
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "anchor": [
+        0.5,
+        1
+      ]
+    }
+  ],
+  "errors": [],
+  "keyboardMovement": "four-direction loop passed"
+}

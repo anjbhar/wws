@@ -1,0 +1,600 @@
+[
+  {
+    "variant": "masked",
+    "output": "$WarriorMonk-Masked-v2",
+    "canvas": [
+      192,
+      448
+    ],
+    "frameSize": [
+      64,
+      112
+    ],
+    "soleBaseline": 108,
+    "bodyHeightTarget": 67,
+    "scale": 0.24814814814814815,
+    "directionalScales": {
+      "0": 0.24814814814814815,
+      "1": 0.24014336917562723,
+      "2": 0.24014336917562723,
+      "3": 0.22408026755852842
+    },
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "box": [
+          80,
+          38,
+          258,
+          387
+        ],
+        "bodyCrown": 117,
+        "bodyHeight": 270,
+        "visibleSize": [
+          44,
+          87
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          14,
+          21
+        ],
+        "footAxisSource": 72.5,
+        "scale": 0.24814814814814815
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "box": [
+          395,
+          39,
+          561,
+          387
+        ],
+        "bodyCrown": 117,
+        "bodyHeight": 270,
+        "visibleSize": [
+          41,
+          86
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          15,
+          22
+        ],
+        "footAxisSource": 68.5,
+        "scale": 0.24814814814814815
+      },
+      {
+        "row": 0,
+        "column": 2,
+        "box": [
+          712,
+          39,
+          887,
+          387
+        ],
+        "bodyCrown": 117,
+        "bodyHeight": 270,
+        "visibleSize": [
+          43,
+          86
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          15,
+          22
+        ],
+        "footAxisSource": 69.5,
+        "scale": 0.24814814814814815
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "box": [
+          76,
+          431,
+          270,
+          787
+        ],
+        "bodyCrown": 508,
+        "bodyHeight": 279,
+        "visibleSize": [
+          47,
+          85
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          8,
+          23
+        ],
+        "footAxisSource": 99.0,
+        "scale": 0.24014336917562723
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "box": [
+          392,
+          432,
+          552,
+          787
+        ],
+        "bodyCrown": 508,
+        "bodyHeight": 279,
+        "visibleSize": [
+          38,
+          85
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          15,
+          23
+        ],
+        "footAxisSource": 71.0,
+        "scale": 0.24014336917562723
+      },
+      {
+        "row": 1,
+        "column": 2,
+        "box": [
+          707,
+          431,
+          897,
+          787
+        ],
+        "bodyCrown": 508,
+        "bodyHeight": 279,
+        "visibleSize": [
+          46,
+          85
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          9,
+          23
+        ],
+        "footAxisSource": 95.5,
+        "scale": 0.24014336917562723
+      },
+      {
+        "row": 2,
+        "column": 0,
+        "box": [
+          58,
+          823,
+          261,
+          1180
+        ],
+        "bodyCrown": 901,
+        "bodyHeight": 279,
+        "visibleSize": [
+          49,
+          86
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          9,
+          22
+        ],
+        "footAxisSource": 97.0,
+        "scale": 0.24014336917562723
+      },
+      {
+        "row": 2,
+        "column": 1,
+        "box": [
+          405,
+          823,
+          561,
+          1181
+        ],
+        "bodyCrown": 902,
+        "bodyHeight": 279,
+        "visibleSize": [
+          37,
+          86
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          11,
+          22
+        ],
+        "footAxisSource": 88.0,
+        "scale": 0.24014336917562723
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "box": [
+          688,
+          823,
+          892,
+          1180
+        ],
+        "bodyCrown": 901,
+        "bodyHeight": 279,
+        "visibleSize": [
+          49,
+          86
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          8,
+          22
+        ],
+        "footAxisSource": 101.0,
+        "scale": 0.24014336917562723
+      },
+      {
+        "row": 3,
+        "column": 0,
+        "box": [
+          76,
+          1220,
+          261,
+          1579
+        ],
+        "bodyCrown": 1280,
+        "bodyHeight": 299,
+        "visibleSize": [
+          41,
+          80
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          14,
+          28
+        ],
+        "footAxisSource": 79.5,
+        "scale": 0.22408026755852842
+      },
+      {
+        "row": 3,
+        "column": 1,
+        "box": [
+          387,
+          1220,
+          569,
+          1579
+        ],
+        "bodyCrown": 1280,
+        "bodyHeight": 299,
+        "visibleSize": [
+          41,
+          80
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          17,
+          28
+        ],
+        "footAxisSource": 67.5,
+        "scale": 0.22408026755852842
+      },
+      {
+        "row": 3,
+        "column": 2,
+        "box": [
+          707,
+          1220,
+          895,
+          1579
+        ],
+        "bodyCrown": 1279,
+        "bodyHeight": 300,
+        "visibleSize": [
+          42,
+          80
+        ],
+        "bodyHeightPixels": 67.22,
+        "offset": [
+          16,
+          28
+        ],
+        "footAxisSource": 72.0,
+        "scale": 0.22408026755852842
+      }
+    ]
+  },
+  {
+    "variant": "unmasked",
+    "output": "$WarriorMonk-Unmasked-v2",
+    "canvas": [
+      192,
+      448
+    ],
+    "frameSize": [
+      64,
+      112
+    ],
+    "soleBaseline": 108,
+    "bodyHeightTarget": 67,
+    "scale": 0.23591549295774647,
+    "directionalScales": {
+      "0": 0.23591549295774647,
+      "1": 0.24452554744525548,
+      "2": 0.24723247232472326,
+      "3": 0.23843416370106763
+    },
+    "frames": [
+      {
+        "row": 0,
+        "column": 0,
+        "box": [
+          64,
+          54,
+          255,
+          411
+        ],
+        "bodyCrown": 120,
+        "bodyHeight": 291,
+        "visibleSize": [
+          45,
+          84
+        ],
+        "bodyHeightPixels": 68.65,
+        "offset": [
+          15,
+          24
+        ],
+        "footAxisSource": 73.0,
+        "scale": 0.23591549295774647
+      },
+      {
+        "row": 0,
+        "column": 1,
+        "box": [
+          371,
+          53,
+          561,
+          404
+        ],
+        "bodyCrown": 120,
+        "bodyHeight": 284,
+        "visibleSize": [
+          45,
+          83
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          12,
+          25
+        ],
+        "footAxisSource": 84.0,
+        "scale": 0.23591549295774647
+      },
+      {
+        "row": 0,
+        "column": 2,
+        "box": [
+          709,
+          56,
+          897,
+          411
+        ],
+        "bodyCrown": 120,
+        "bodyHeight": 291,
+        "visibleSize": [
+          44,
+          84
+        ],
+        "bodyHeightPixels": 68.65,
+        "offset": [
+          14,
+          24
+        ],
+        "footAxisSource": 76.5,
+        "scale": 0.23591549295774647
+      },
+      {
+        "row": 1,
+        "column": 0,
+        "box": [
+          78,
+          461,
+          258,
+          814
+        ],
+        "bodyCrown": 540,
+        "bodyHeight": 274,
+        "visibleSize": [
+          44,
+          86
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          11,
+          22
+        ],
+        "footAxisSource": 87.0,
+        "scale": 0.24452554744525548
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "box": [
+          402,
+          461,
+          554,
+          814
+        ],
+        "bodyCrown": 540,
+        "bodyHeight": 274,
+        "visibleSize": [
+          37,
+          86
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          17,
+          22
+        ],
+        "footAxisSource": 63.0,
+        "scale": 0.24452554744525548
+      },
+      {
+        "row": 1,
+        "column": 2,
+        "box": [
+          729,
+          461,
+          903,
+          814
+        ],
+        "bodyCrown": 540,
+        "bodyHeight": 274,
+        "visibleSize": [
+          43,
+          86
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          12,
+          22
+        ],
+        "footAxisSource": 81.0,
+        "scale": 0.24452554744525548
+      },
+      {
+        "row": 2,
+        "column": 0,
+        "box": [
+          68,
+          853,
+          249,
+          1210
+        ],
+        "bodyCrown": 939,
+        "bodyHeight": 271,
+        "visibleSize": [
+          45,
+          88
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          10,
+          20
+        ],
+        "footAxisSource": 90.5,
+        "scale": 0.24723247232472326
+      },
+      {
+        "row": 2,
+        "column": 1,
+        "box": [
+          392,
+          852,
+          545,
+          1210
+        ],
+        "bodyCrown": 939,
+        "bodyHeight": 271,
+        "visibleSize": [
+          38,
+          89
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          10,
+          19
+        ],
+        "footAxisSource": 88.0,
+        "scale": 0.24723247232472326
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "box": [
+          708,
+          852,
+          885,
+          1210
+        ],
+        "bodyCrown": 939,
+        "bodyHeight": 271,
+        "visibleSize": [
+          44,
+          89
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          10,
+          19
+        ],
+        "footAxisSource": 91.0,
+        "scale": 0.24723247232472326
+      },
+      {
+        "row": 3,
+        "column": 0,
+        "box": [
+          67,
+          1254,
+          247,
+          1613
+        ],
+        "bodyCrown": 1328,
+        "bodyHeight": 285,
+        "visibleSize": [
+          43,
+          86
+        ],
+        "bodyHeightPixels": 67.95,
+        "offset": [
+          4,
+          22
+        ],
+        "footAxisSource": 115.5,
+        "scale": 0.23843416370106763
+      },
+      {
+        "row": 3,
+        "column": 1,
+        "box": [
+          390,
+          1254,
+          568,
+          1609
+        ],
+        "bodyCrown": 1328,
+        "bodyHeight": 281,
+        "visibleSize": [
+          42,
+          85
+        ],
+        "bodyHeightPixels": 67.0,
+        "offset": [
+          8,
+          23
+        ],
+        "footAxisSource": 99.5,
+        "scale": 0.23843416370106763
+      },
+      {
+        "row": 3,
+        "column": 2,
+        "box": [
+          712,
+          1254,
+          887,
+          1613
+        ],
+        "bodyCrown": 1328,
+        "bodyHeight": 285,
+        "visibleSize": [
+          42,
+          86
+        ],
+        "bodyHeightPixels": 67.95,
+        "offset": [
+          6,
+          22
+        ],
+        "footAxisSource": 109.5,
+        "scale": 0.23843416370106763
+      }
+    ]
+  }
+]

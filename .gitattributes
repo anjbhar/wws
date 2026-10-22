@@ -1,0 +1,21 @@
+# Normalize text in Git while respecting each developer's checkout settings.
+* text=auto
+
+# Game assets must remain byte-for-byte unchanged.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.ogg binary
+*.m4a binary
+*.mp3 binary
+*.wav binary
+*.mp4 binary
+*.webm binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.efkefc binary

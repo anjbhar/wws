@@ -1,0 +1,106 @@
+[
+  {
+    "check": "check-samurai-encounter.cjs",
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "c20afc",
+        "wall_time_seconds": 0.0000305,
+        "exit_code": 0,
+        "original_token_count": 68,
+        "output": "{\"npcReachable\":true,\"assets\":\"present\",\"interpreterBranches\":[{\"choice\":1,\"result\":0,\"battles\":0,\"recoveries\":0},{\"choice\":0,\"result\":0,\"battles\":1,\"recoveries\":2},{\"choice\":0,\"result\":1,\"battles\":1,\"recoveries\":2},{\"choice\":0,\"result\":2,\"battles\":1,\"recoveries\":2}]}\n"
+      }
+    }
+  },
+  {
+    "check": "check-shinsengumi-sparring.cjs",
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "a85fd0",
+        "wall_time_seconds": 0.0000621,
+        "exit_code": 0,
+        "original_token_count": 52,
+        "output": "PASS: Shinsengumi 1000 HP, opening speech/pause/replay, event/recovery, poses/targets, 500 HP two-sword phase, locked stance/AI, phase reset, real cuts/feedback, 1 HP protection, cleanup and stock fallback\n"
+      }
+    }
+  },
+  {
+    "check": "check-duel.cjs",
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "d6704c",
+        "wall_time_seconds": 0.0120919,
+        "exit_code": 0,
+        "original_token_count": 47,
+        "output": "PASS: real MZ duel integration: automatic stat-based Parry/Block and Dodge, paid stance turns, persistent forms, damage previews, targets, injuries, bleeding, outcomes and stock fallback\n"
+      }
+    }
+  },
+  {
+    "check": "check-opening-stance.cjs",
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "177592",
+        "wall_time_seconds": 0.0000295,
+        "exit_code": 0,
+        "original_token_count": 46,
+        "output": "PASS: both opponents, all 25 opening-form combinations, untimed free selection, first-round initiative, full turns preserved, later changes paid, forms retained and opening retreat\n"
+      }
+    }
+  },
+  {
+    "check": "check-duel-feedback.cjs",
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "870bb5",
+        "wall_time_seconds": 0.0000185,
+        "exit_code": 0,
+        "original_token_count": 50,
+        "output": "PASS: duel feedback: impact timing, sound distinctions, recoil/dodge return, single damage/defense labels, injury changes, one-time protection, turn cues, Health easing, cleanup and stock fallback\n"
+      }
+    }
+  },
+  {
+    "check": "check-duel-sprite-sizes.cjs",
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "8643de",
+        "wall_time_seconds": 0.000016,
+        "exit_code": 0,
+        "original_token_count": 46,
+        "output": "PASS: all 16 active stance sprites have uniform body height and foot baseline per character, proportional scaling, stance/reaction/phase render updates and matching asset dimensions\n"
+      }
+    }
+  },
+  {
+    "check": "check-shinsengumi-music.cjs",
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "83dea3",
+        "wall_time_seconds": 1.52976,
+        "exit_code": 0,
+        "original_token_count": 39,
+        "output": "PASS: Shinsengumi MP3 selection, intro skip, no duplicate restart, looping, volume, map music restoration, stock battle/audio fallback and enabled plugin\n"
+      }
+    }
+  },
+  {
+    "check": "check-shinsengumi-music-audio.cjs",
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "6a5dc8",
+        "wall_time_seconds": 8.4954875,
+        "exit_code": 0,
+        "original_token_count": 76,
+        "output": "PASS: decoded MP3 crossfade, sample-continuous loop, native playback and initial fade {\n  duration: 187.27183673469386,\n  loopStart: 14.67,\n  loopEnd: 187.27183673469386,\n  seamError: 0,\n  renderedLoopError: 3.5762786843029915e-8,\n  initialRms: 0.0007609591924049685,\n  fullRms: 0.17165565110362668\n}\n"
+      }
+    }
+  }
+]

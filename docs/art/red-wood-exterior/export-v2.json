@@ -1,0 +1,31 @@
+{
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "sourceBounds": [
+    11,
+    152,
+    1437,
+    1033
+  ],
+  "buildingSize": [
+    288,
+    192
+  ],
+  "sheetSize": [
+    768,
+    768
+  ],
+  "mainAssembly": {
+    "column": 0,
+    "row": 1,
+    "width": 6,
+    "height": 4
+  },
+  "doorOpeningApprox": [
+    80,
+    72
+  ],
+  "export": "alpha-preserving nearest-neighbor"
+}

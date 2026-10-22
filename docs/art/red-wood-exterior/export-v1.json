@@ -1,0 +1,25 @@
+{
+  "buildingSize": [
+    384,
+    288
+  ],
+  "sourceBounds": [
+    0,
+    6,
+    1436,
+    1029
+  ],
+  "mainAssembly": {
+    "column": 0,
+    "height": 6,
+    "row": 1,
+    "width": 8
+  },
+  "sourceTransparentPixels": 484040,
+  "sourceHeight": 1086,
+  "sourceWidth": 1448,
+  "sheetSize": [
+    768,
+    768
+  ]
+}

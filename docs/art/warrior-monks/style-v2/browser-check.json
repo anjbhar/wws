@@ -1,0 +1,38 @@
+{
+  "sprites": [
+    {
+      "name": "$WarriorMonk-Masked-v2",
+      "frame": [
+        64,
+        112
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "position": [
+        8,
+        9
+      ]
+    },
+    {
+      "name": "$WarriorMonk-Unmasked-v2",
+      "frame": [
+        64,
+        112
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "position": [
+        10,
+        9
+      ]
+    }
+  ],
+  "frames": 12,
+  "legacyMapReload": "passed",
+  "oldBitmapAliases": "passed",
+  "errors": []
+}

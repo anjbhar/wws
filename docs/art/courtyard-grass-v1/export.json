@@ -1,0 +1,15 @@
+{
+  "source": "grass-source.png",
+  "sheet": "EdoCourtyard_A5-grass-v1",
+  "tileSize": 48,
+  "grassCells": 291,
+  "dirtCells": 84,
+  "dirtRectangleInclusive": [
+    7,
+    5,
+    18,
+    11
+  ],
+  "unchanged": "Map layers 1\u20135, events, architecture, props, spawn and collision",
+  "export": "nearest-neighbor 96 to 192; generated grass, deterministic edge masks; original dirt retained in upper A5 half"
+}
