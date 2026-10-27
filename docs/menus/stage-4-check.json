@@ -1,0 +1,10 @@
+{
+  "stage": 4,
+  "checks": [
+    "Pause: solo empty slots, three active fighters, left navigation, keyboard cancel, mouse actor selection, 960 × 540 fit",
+    "Equipment: preview is inert, cancel preserves weapon, confirmed stats match engine preview, bulk confirmation, keyboard fighter switching",
+    "Inventory: empty state, categories, quantities, descriptions, recipient cancel and real healing/consumption, mouse-wheel list scrolling",
+    "Status/Skills: actor details, relevant attributes, actor switching, live form catalogue, Seigan/Three Stage Thrust, scrolling and browsing preserve formation"
+  ],
+  "runtimeErrors": []
+}

@@ -43,7 +43,7 @@ for(const kind of ['Quick Cut','Heavy Cut'])for(const branch of ['second-hit-thi
     Math.random=()=>secondRoll;
     BattleManager.updateAction();
     assert.equal(BattleManager._phase,'action');
-    assert.equal(BattleManager._subject,e);assert.equal(d.kind,'Lightless Blade');
+    assert.equal(BattleManager._subject,e);assert.equal(d.kind,'Three Stage Thrust');
     assert.equal(d.area,'Torso');assert.equal(d.lightlessStrike,2);
     const secondDefense=secondHit?null:branch==='second-dodge'?'Dodge':'Parry';
     assert.equal(d.defense,secondDefense);
@@ -59,7 +59,7 @@ for(const kind of ['Quick Cut','Heavy Cut'])for(const branch of ['second-hit-thi
         const thirdDodge=WwsDuelRules.defenseChances(a,e,false,'Torso').Dodge;
         Math.random=()=>branch.endsWith('dodge')?thirdDodge/2:.99;
         BattleManager.updateAction();
-        assert.equal(d.kind,'Lightless Blade');assert.equal(d.lightlessStrike,3);
+        assert.equal(d.kind,'Three Stage Thrust');assert.equal(d.lightlessStrike,3);
         assert.equal(d.defense,branch.endsWith('dodge')?'Dodge':null);
         assert.equal(d.area,'Torso');assert.deepEqual(d.pending,[a]);
         if(!d.defense)expectedHp=Math.max(1,expectedHp-WwsDuelRules.damage(e,a,false,'Torso'));
@@ -80,7 +80,7 @@ for(const kind of ['Quick Cut','Heavy Cut'])for(const branch of ['second-hit-thi
         assert.equal(impacts[2].lightlessStrike,3);assert.notEqual(impacts[2].defense,'Parry');
         assert.equal(impacts[2].area,'Torso');
     }
-    assert(WwsDuelFeedback.events.some(event=>event.text==='LIGHTLESS BLADE · 2/3'));
+    assert(WwsDuelFeedback.events.some(event=>event.text==='THREE STAGE THRUST · 2/3'));
     assert(!WwsDuelFeedback.events.some(event=>event.text?.includes('SURE HIT')));
     assert(!$gameMessage.isBusy(),'Explanation waits for the entire chain');
     assert(e._wws.lightlessExplanationPending);
@@ -92,7 +92,7 @@ for(const kind of ['Quick Cut','Heavy Cut'])for(const branch of ['second-hit-thi
     tick(16);
     assert.equal(d.mode,'lightlessDialogue');
     assert.equal($gameMessage.speakerName(),e.name());
-    assert($gameMessage.allText().includes("It's called Lightless Blade. When you parry my blade,"));
+    assert($gameMessage.allText().includes("It's called Three Stage Thrust. When you parry my blade,"));
     assert($gameMessage.allText().includes('I can strike twice more in an instant.'));
     tick(120);
     assert.equal(d.mode,'lightlessDialogue');assert.equal($gameMessage._texts.length,2);
@@ -117,7 +117,7 @@ for(const [id,stance,outcome] of [
     Math.random=()=>.99;BattleManager.wwsChooseAction('Quick Cut','Torso');
     d.defense=outcome;resolve();
     assert.equal(WwsDuelFeedback.events.filter(event=>event.type==='impact').length,1);
-    assert(!WwsDuelFeedback.events.some(event=>event.text?.startsWith('LIGHTLESS BLADE')));
+    assert(!WwsDuelFeedback.events.some(event=>event.text?.startsWith('THREE STAGE THRUST')));
     BattleManager.updatePhase(true);assert(!$gameMessage.isBusy());
 }
 // On strike three, parry probability is not redistributed into extra dodge.
@@ -130,10 +130,10 @@ for(let i=0;i<1000;i++) {
 // Rapid follow-ups omit the normal log wind-up; ordinary cuts retain it.
 const battleLog=new Window_BattleLog();let commands=[];
 battleLog.push=(...args)=>commands.push(args[0]);
-d.kind='Lightless Blade';battleLog.startAction(e,{},[a]);
+d.kind='Three Stage Thrust';battleLog.startAction(e,{},[a]);
 assert.deepEqual(commands,['performAction']);
 for(const strike of [2,3]) {
-    d.lightlessStrike=strike;d.kind='Lightless Blade';
+    d.lightlessStrike=strike;d.kind='Three Stage Thrust';
     battleLog.wait();assert.equal(battleLog._waitCount,2,'Follow-up log waits last only two frames');
 }
 // Shorten the initial parry recovery too, while keeping its opening wind-up.

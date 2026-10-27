@@ -20,14 +20,13 @@ troops[troopId]={...structuredClone(troops[6]),id:troopId,
  name:'Warrior Monks — Group Practice [WWS Duel] [WWS Courtyard] [WWS Monk Group]',
  members:[ids[0],ids[1],ids[0]].map((enemyId,i)=>({enemyId,x:614+i*256,y:420,hidden:false}))};
 const command=(code,indent=0,parameters=[])=>({code,indent,parameters});
-const message=text=>[command(101,0,['',0,0,2,'Warrior Monks']),command(401,0,[text])];
-const list=[command(314,0,[0,0]),command(301,0,[0,troopId,true,true]),
- command(601),command(314,1,[0,0]),...message('Well fought. You kept all three opponents in sight.'),
+const message=(text,indent=0,speaker='Warrior Monks')=>[command(101,indent,['',0,0,2,speaker]),...text.split('\n').map(line=>command(401,indent,[line]))];
+const list=[...message('A steady mind is as important as a steady blade.\nCome, let us see how you fight alongside your companions.',0,'Warrior Monk'),
+ command(314,0,[0,0]),command(301,0,[0,troopId,true,true]),
+ command(601),command(314,1,[0,0]),...message('Well fought. You kept all three opponents in sight.',1),
  command(602),command(314,1,[0,0]),
  command(603),command(314,1,[0,0]),
  command(604),command(0)];
-// Message commands in the victory branch belong to its indent, too.
-list[4].indent=1;list[5].indent=1;
 let changed=false;
 for(const variant of ['unmasked']){
  const e=map.events.find(e=>e&&e.note==='wws:warrior-monk-'+variant);assert(e);

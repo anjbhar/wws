@@ -1,11 +1,17 @@
 /*:
  * @target MZ
- * @plugindesc v1.21 Three-on-three practice with formation-based targeting.
+ * @plugindesc v1.23 Explicit solo/party encounters and saved three-slot formations.
  * @author WWS
  * @help
  * Enabled for troop 6 (Masanori), or troops with [WWS Duel] in their name.
  * Runs with up to three allies and three tagged enemies; other battles retain stock combat.
- * Monk group practice supplies two temporary copies of the main character.
+ * Monk group practice supplies battle-only Masanori and Shinsengumi allies.
+ * Other encounters are solo unless tagged [WWS Party] in the troop name.
+ * Solo encounters use Hayato when present, otherwise the party leader.
+ * Three active slots: Center, Left, Right. Additional actors are reserves.
+ * Formation assignments persist in saves; the menu Formation command swaps slots.
+ * Actor notes <DuelActorSprite: SamuraiInstructor> / <DuelActorSprite: Shinsengumi>
+ * select their rear party poses. Shinsengumi can choose Seigan and use Three Stage Thrust.
  * Troop 6 is always sparring. Other tagged troops are sparring unless their
  * name also contains [Bleeding]. Bleeding duels are controlled tests only.
  * One untimed action per turn: Quick Cut, Heavy Cut, or Change Stance.
@@ -20,16 +26,18 @@
  * In nonlethal practice, the player cannot fall below 1 Health or lose.
  * Choose an opening form freely before round 1; the NPC chooses its own.
  * Later stance changes use the whole turn; forms persist across rounds.
- * Actor 1 previews each form on the stance cards before confirming.
+ * Each ally previews their own forms before confirming.
  * Automatic reactions briefly show Kasumi/Waki during the attack.
  * Enemy note <DuelSprite: Shinsengumi> selects Shinsengumi-{Form}-v1 poses.
  * Optional <DuelSpriteVersion: 2> selects a versioned pose set.
  * Shinsengumi pauses for dialogue once at half HP, keeping his current form.
- * His exclusive Seigan grants Lightless Blade: after his cut is parried,
+ * His exclusive Seigan grants Three Stage Thrust: after his cut is parried,
  * immediately strike the torso again with normal parry/dodge defenses. If
  * that second strike hits or is parried, a third torso strike allows only dodge.
  * Follow-ups use Quick Cut damage. A dodge ends the chain.
  * Custom pose sets use five transparent 288x288 images in img/enemies.
+ * LegendaryRonin has one Two Sword guard; every cut strikes twice with fresh
+ * defenses and injuries, one action/recovery cost, and the same selected area.
  * Arrows and Enter, or click cards. Defenses never spend an action.
  * Cancel in later stance/target selection returns free. Cancel at the opening
  * picker or on actions leaves sparring; opening selection cannot be skipped.
@@ -60,8 +68,10 @@
             text: ["Lower guard / head open", "+2 speed / -5% damage", "Defense -5 / Auto dodge +10"] }
     };
     const stances = Object.keys(forms);
-    // Enemy-only form: never offered among the player's five forms.
+    // Shinsengumi's special form replaces Chudan for his party actor.
     forms.Seigan = { ...forms.Chudan };
+    // The ronin keeps one guard; its advantage is two independent cuts per action.
+    forms["Two Sword"] = { ...forms.Chudan };
     const actions = ["Quick Cut", "Heavy Cut"];
     const areas = ["Head", "Torso", "Arms", "Legs"];
     const poses = stances;
@@ -73,13 +83,22 @@
     const injuryLevel = (b, area) => b._wws.injuries?.[area]?.severity || 0;
     const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
     const form = b => forms[b._wws?.stance] || forms.Chudan;
-    const playerImage = pose => `Samurai-${pose}Back-v2`;
+    const playerImage = (pose, b) => {
+        const set = rules.actorSpriteSet(b);
+        return `${set || "Samurai"}-${pose}Back-v${set === "SamuraiInstructor" ? 1 : 2}`;
+    };
     // Crown and sole landmarks exclude blades and raised hands. Each pose uses
     // its character's neutral body height and sole baseline, without stretching.
     const spriteSizes = {
         Samurai: { width: 480, height: 384, poses: {
             Chudan: [88, 367], Jodan: [88, 367], Gedan: [88, 367],
             Kasumi: [108, 367], Waki: [88, 367]
+        } },
+        SamuraiInstructorBack: { width: 480, height: 384, poses: {
+            Chudan: [88, 367], Jodan: [88, 367], Gedan: [88, 367], Kasumi: [108, 367], Waki: [88, 367]
+        } },
+        ShinsengumiBack: { width: 480, height: 384, poses: {
+            Chudan: [88, 367], Jodan: [88, 367], Gedan: [88, 367], Kasumi: [108, 367], Waki: [88, 367], Seigan: [88, 367]
         } },
         SamuraiInstructor: { width: 288, height: 288, poses: {
             Chudan: [31, 267], Jodan: [51, 267], Gedan: [32, 267],
@@ -89,12 +108,14 @@
             Chudan: [24, 266], Jodan: [54, 266], Gedan: [32, 267],
             Kasumi: [54, 266], Waki: [56, 266], Seigan: [29, 267]
         } },
+        LegendaryRonin: { width: 288, height: 288, static: true, poses: { Chudan: [31, 267] } },
         WarriorMonkMasked: { width: 288, height: 384, static: true, poses: { Chudan: [132, 367] } },
         WarriorMonkUnmasked: { width: 288, height: 384, static: true, poses: { Chudan: [132, 367] } }
     };
     // Pure rules are exposed for repeatable tests and tuning without a renderer.
     const rules = globalThis.WwsDuelRules = {
         stances: stances.slice(),
+        formInfo(name) { const form = forms[name]; return form ? { ...form, text: form.text.slice(), coverage: { ...form.coverage } } : null; },
         actions: actions.slice(),
         enemies() { return BattleManager._wwsDuel?.battlers.filter(b => b.isEnemy()) || []; },
         allies() { return BattleManager._wwsDuel?.allies || []; },
@@ -102,12 +123,26 @@
             const d=BattleManager._wwsDuel;
             return BattleManager._subject?.isActor() ? BattleManager._subject : d?.activeBattler?.isActor() ? d.activeBattler : this.allies()[0];
         },
-        lane(b) { return b.isActor() ? [1,0,2][this.allies().indexOf(b)] : b.index(); },
+        lane(b) {
+            const team = b.isActor() ? this.allies() : this.enemies();
+            const index = team.indexOf(b);
+            return b.isActor() ? [1,0,2][index] : team.length === 1 ? 1 : team.length === 2 ? [0,2][index] : index;
+        },
+        position(b) { return ["Left", "Center", "Right"][this.lane(b)]; },
         legalTargets(b = this.actor()) {
             if(!b)return [];
-            const opponents=b.isActor()?this.enemies():this.allies();
+            const opponents=(b.isActor()?this.enemies():this.allies()).filter(target=>target.isAlive());
+            // Partial formations cannot strand a fighter or give one side immunity.
+            const team = (b.isActor() ? this.allies() : this.enemies()).filter(member => member.isAlive());
+            if (team.length < 3 || opponents.length < 3) return opponents;
             const lane=this.lane(b);
-            return opponents.filter(target=>target.isAlive()&&(lane===1||this.lane(target)===1||this.lane(target)===lane));
+            return opponents.filter(target=>lane===1||this.lane(target)===1||this.lane(target)===lane);
+        },
+        canExecute(attacker, target, kind = "Quick Cut") {
+            return kind === "Quick Cut" && !!attacker?.isActor() && !!target?.isEnemy() && target.isAlive() && target.hp < 200;
+        },
+        cutName(attacker, target, kind) {
+            return this.canExecute(attacker, target, kind) ? "Execute" : kind;
         },
         playerTarget() {
             const d = BattleManager._wwsDuel;
@@ -118,11 +153,14 @@
         formationSlot(side, index, width = Graphics.width, height = Graphics.height) {
             // Keep opponents just behind their opposite allies, below the HUD.
             const slots = side === "allies" ? [[.32,.75],[.17,.68],[.16,.79]] : [[.78,.65],[.64,.70],[.79,.75]];
-            const [x,y] = slots[index];
+            const count = side === "allies" ? this.allies().length : this.enemies().length;
+            const slot = side === "enemies" ? count === 1 ? 1 : count === 2 ? [0,2][index] : index : index;
+            const [x,y] = slots[slot];
             return {x:width*x,y:height*y};
         },
         spriteLayout(b, pose = this.pose(b)) {
-            const set = b?.isActor() ? (b.actorId() === 1 ? "Samurai" : null) : this.enemySpriteSet(b);
+            const actorSet = this.actorSpriteSet(b);
+            const set = b?.isActor() ? (actorSet === "Samurai" ? actorSet : actorSet && actorSet + "Back") : this.enemySpriteSet(b);
             const size = spriteSizes[set], landmarks = size?.static ? size.poses.Chudan : size?.poses[pose];
             if (!landmarks) return null;
             const [crown, foot] = landmarks;
@@ -140,8 +178,15 @@
             sprite.anchor.y = layout.anchorY;
         },
         availableStances(b) {
+            if (this.enemySpriteSet(b) === "LegendaryRonin") return ["Two Sword"];
+            if (this.actorSpriteSet(b) === "Shinsengumi") return stances.map(stance => stance === "Chudan" ? "Seigan" : stance);
             return this.enemySpriteSet(b) === "Shinsengumi" ? [...stances, "Seigan"] : stances.slice();
         },
+        actorSpriteSet(b) {
+            if (!b?.isActor()) return null;
+            return (b.actor().note || "").match(/<DuelActorSprite:\s*([A-Za-z0-9_-]+)\s*>/i)?.[1] || (b.actorId() === 1 ? "Samurai" : null);
+        },
+        playerImage(b, pose = this.playerPose(b)) { return playerImage(pose, b); },
         enemyStance(b, roll) {
             // Seigan gets 70%; each of his other five forms gets 6%.
             // Include the current form so he tends to stay in his preferred guard.
@@ -152,7 +197,10 @@
             return available[Math.min(available.length - 1, Math.floor(roll * available.length))];
         },
         hasLightlessBlade(b) {
-            return this.enemySpriteSet(b) === "Shinsengumi" && b._wws?.stance === "Seigan";
+            return (this.enemySpriteSet(b) === "Shinsengumi" || this.actorSpriteSet(b) === "Shinsengumi") && b._wws?.stance === "Seigan";
+        },
+        hasTwoSwordAttack(b) {
+            return this.enemySpriteSet(b) === "LegendaryRonin";
         },
         lightlessDefense(target, attacker, strike, roll) {
             if (strike === 3) {
@@ -188,7 +236,7 @@
         },
         playerPose(b) {
             const d = BattleManager._wwsDuel;
-            return d && d.mode === "stance" && this.actor() === b && stances.includes(d.previewStance) ? d.previewStance : this.pose(b);
+            return d && d.mode === "stance" && this.actor() === b && this.availableStances(b).includes(d.previewStance) ? d.previewStance : this.pose(b);
         },
         initiative(b) { return b.agi + form(b).speed - b._wws.recovery - 2 * injuryLevel(b, "Legs"); },
         defenseChances(b, attacker, heavy = false, area = "Torso") {
@@ -266,14 +314,61 @@
     const actorSpriteVisible = Game_Actor.prototype.isSpriteVisible;
     Game_Actor.prototype.isSpriteVisible = function() {
         const d = BattleManager._wwsDuel;
-        return !!(d && d.allies.includes(this) && this._wws && this.actorId() === 1 && !$gameSystem.isSideView()) || actorSpriteVisible.call(this);
+        return !!(d && d.allies.includes(this) && this._wws && rules.actorSpriteSet(this) && !$gameSystem.isSideView()) || actorSpriteVisible.call(this);
     };
+    // Keep combat capacity consistent with the engine, followers and reserves.
+    Game_Party.prototype.maxBattleMembers = function() { return 3; };
+    Game_Party.prototype.wwsFormation = function() {
+        const active = this.allMembers().slice(0, this.maxBattleMembers());
+        const ids = active.map(actor => actor.actorId());
+        const saved = Array.isArray(this._wwsFormation) ? this._wwsFormation : [];
+        const slots = [0,1,2].map(index => ids.includes(saved[index]) && saved.indexOf(saved[index]) === index ? saved[index] : null);
+        for (const id of ids) if (!slots.includes(id)) slots[slots.indexOf(null)] = id;
+        // Compact empty slots so a lone member always occupies the center.
+        this._wwsFormation = slots.filter(id => id !== null);
+        return this._wwsFormation.map(id => active.find(actor => actor.actorId() === id));
+    };
+    Game_Party.prototype.setWwsFormation = function(ids) {
+        const active = this.allMembers().slice(0, this.maxBattleMembers()).map(actor => actor.actorId());
+        if (!Array.isArray(ids) || ids.length !== active.length || new Set(ids).size !== ids.length || ids.some(id => !active.includes(id))) return false;
+        this._wwsFormation = ids.slice();
+        $gamePlayer?.refresh();
+        return true;
+    };
+    Game_Party.prototype.allBattleMembers = function() { return this.wwsFormation(); };
+    const swapPartyOrder = Game_Party.prototype.swapOrder;
+    Game_Party.prototype.swapOrder = function(index1, index2) {
+        const before = this.wwsFormation().map(actor => actor.actorId());
+        const first = this._actors[index1], second = this._actors[index2];
+        swapPartyOrder.call(this, index1, index2);
+        this._wwsFormation = before.map(id => id === first ? second : id === second ? first : id);
+        this.wwsFormation();
+        $gamePlayer.refresh();
+    };
+    // Make the stock Formation menu's combat meaning visible, including reserves.
+    if (typeof Window_MenuStatus !== "undefined") {
+        const drawMenuStatus = Window_MenuStatus.prototype.drawItemStatus;
+        Window_MenuStatus.prototype.drawItemStatus = function(index) {
+            drawMenuStatus.call(this, index);
+            const slot = $gameParty.wwsFormation().indexOf(this.actor(index));
+            const rect = this.itemRect(index), size = this.contents.fontSize;
+            this.contents.fontSize = 18;
+            this.contents.fillRect(rect.x + 2, rect.y + rect.height - 28, 140, 26, "rgba(24,29,28,0.94)");
+            this.drawText(["Center", "Left", "Right"][slot] || "Reserve", rect.x + 6, rect.y + rect.height - 33, 132, "center");
+            this.contents.fontSize = size;
+        };
+    }
     const actorIndex=Game_Actor.prototype.index;
     Game_Actor.prototype.index=function(){const d=BattleManager._wwsDuel;return d&&!d.partyRestored&&d.allies.includes(this)?d.allies.indexOf(this):actorIndex.call(this);};
     const partyMembers=Game_Party.prototype.members,battleMembers=Game_Party.prototype.battleMembers;
-    const temporaryParty=()=>{const d=BattleManager._wwsDuel;return d?.temporaryAllies&&!d.partyRestored&&($gameParty.inBattle()||d.endingParty)?d.allies:null;};
+    const temporaryParty=()=>{const d=BattleManager._wwsDuel;return d&&!d.partyRestored&&($gameParty.inBattle()||d.startingParty||d.endingParty)?d.allies:null;};
     Game_Party.prototype.members=function(){return temporaryParty()||partyMembers.call(this);};
     Game_Party.prototype.battleMembers=function(){return temporaryParty()||battleMembers.call(this);};
+    const partyStart=Game_Party.prototype.onBattleStart;
+    Game_Party.prototype.onBattleStart=function(advantageous){
+        const d=BattleManager._wwsDuel;if(d)d.startingParty=true;
+        try{partyStart.call(this,advantageous);}finally{if(d)d.startingParty=false;}
+    };
     const partyEnd=Game_Party.prototype.onBattleEnd;
     Game_Party.prototype.onBattleEnd=function(){
         const d=BattleManager._wwsDuel;if(d)d.endingParty=true;
@@ -285,12 +380,16 @@
         if(this._wwsSubject)return rules.legalTargets(this._wwsSubject).includes(this._wwsTarget)?[this._wwsTarget]:[];
         return actionTargets.call(this);
     };
-    function practiceClone(hero,suffix){
-        const clone=new Game_Actor(hero.actorId());
-        clone._name=`${hero.name()} ${suffix}`;clone._classId=hero._classId;clone._level=hero._level;
-        clone._exp={...hero._exp};clone._skills=hero._skills.slice();clone._paramPlus=hero._paramPlus.slice();
-        clone._equips=hero._equips.map(item=>new Game_Item(item.object()));clone.recoverAll();
-        return clone;
+    function practiceCompanions(hero) {
+        return ["SamuraiInstructor", "Shinsengumi"].map(set => {
+            const record = $dataActors.find(actor => actor?.note.includes(`<DuelActorSprite: ${set}>`));
+            if (!record) throw new Error(`Missing monk practice actor: ${set}`);
+            // Fresh battle-only instances never change the saved party or guests.
+            const guest = new Game_Actor(record.id);
+            guest.changeLevel(hero.level, false);
+            guest.recoverAll();
+            return guest;
+        });
     }
     const practiceProtected = battler => {
         const d = BattleManager._wwsDuel;
@@ -321,11 +420,14 @@
         this._wwsDuel = null;
         setup.call(this, troopId, canEscape, canLose);
         const troop = $gameTroop.troop();
-        const allies=$gameParty.battleMembers().slice();
-        if ((troopId === 6 || troop.name.includes("[WWS Duel]")) &&
+        const partyBattle = troop.name.includes('[WWS Party]') || troop.name.includes('[WWS Monk Group]');
+        const active = $gameParty.battleMembers().slice();
+        const hero = $gameParty.allMembers().find(actor => actor.actorId() === 1) || active[0];
+        const allies = partyBattle ? active : hero ? [hero] : [];
+        if ((troopId === 6 || troop.name.includes("[WWS Duel]") || partyBattle) &&
             allies.length>=1&&allies.length<=3 && $gameTroop.members().length >= 1 && $gameTroop.members().length <= 3 && !this.isTpb()) {
-            const temporaryAllies=allies.length===1&&troop.name.includes('[WWS Monk Group]');
-            if(temporaryAllies)allies.push(practiceClone(allies[0],'B'),practiceClone(allies[0],'C'));
+            const temporaryAllies=allies.length===1&&allies[0].actorId()===1&&troop.name.includes('[WWS Monk Group]');
+            if(temporaryAllies)allies.push(...practiceCompanions(allies[0]));
             const battlers = [...allies, ...$gameTroop.members()];
             for (const b of battlers) b._wws = { stance: null, reaction: null, recovery: 0, bleeding: 0, injuries: {} };
             this._wwsDuel = { battlers, allies,temporaryAllies,openingIndex:0, multi: battlers.length > 2, round: 0, sparring: troopId === 6 || !troop.name.includes("[Bleeding]"),
@@ -336,8 +438,7 @@
     BattleManager.checkBattleEnd=function(){
         if(checkBattleEnd.call(this))return true;
         const d=this._wwsDuel;
-        // Keep fixed lanes after a knockout. Opposite surviving flanks draw
-        // rather than silently gaining permission to attack across the field.
+        // End a stalemate only if no surviving fighter has a legal target.
         if(d?.multi&&!d.opening&&d.mode!=="finished"&&d.battlers.some(b=>b.isAlive())&&!d.battlers.some(b=>b.isAlive()&&rules.legalTargets(b).length)){
             $gameMessage.add("Neither side can reach the remaining opponents. The fight ends in a draw.");
             this.endBattle(1);return true;
@@ -362,6 +463,7 @@
                 $gameMessage.setSpeakerName("Group practice");
                 $gameMessage.add("Each fighter gets one turn per round. Choose a form for each ally.");
                 $gameMessage.add("Flanks can attack their opposite or the center. Centers can attack anyone.");
+                $gameMessage.add("When either team has fewer than three fighters, everyone can target any opponent.");
                 $gameMessage.add("Choose an opponent, then a body area. Defeat them all to win.");
                 return;
             }
@@ -406,7 +508,7 @@
     BattleManager.wwsChooseStance = function(stance) {
         const d = this._wwsDuel, b = this._subject;
         if (d?.opening) {
-            if (d.mode !== "stance" || b !== d.allies[d.openingIndex] || !stances.includes(stance)) return;
+            if (d.mode !== "stance" || b !== d.allies[d.openingIndex] || !rules.availableStances(b).includes(stance)) return;
             b._wws.stance = stance;
             d.openingIndex++;
             d.previewStance=null;
@@ -477,7 +579,10 @@
             let roll = Math.random(), index = 0;
             // Reconsider form on 20% of turns. Keeping the same form allows an
             // attack; actually changing form still spends the whole turn.
-            if (roll < .2 && rules.enemySpriteSet(b) === "Shinsengumi") {
+            if (rules.availableStances(b).length === 1) {
+                // A fixed guard always attacks, including rolls in the usual
+                // stance-change range. Never spend a turn changing to undefined.
+            } else if (roll < .2 && rules.enemySpriteSet(b) === "Shinsengumi") {
                 const next = rules.enemyStance(b, roll / .2);
                 if (next !== b._wws.stance) {
                     this.wwsChooseStance(next);
@@ -509,6 +614,10 @@
             if(!enemies.length)return;
             d.enemyPreview = null;
             d.enemyTarget = enemies.length === 1 ? enemies[0] : null;
+            if (rules.canExecute(b, d.enemyTarget, kind)) {
+                this.wwsCommitCut("Head");
+                return;
+            }
             d.mode = enemies.length > 1 ? "opponent" : "target";
             d.notice = `${kind}: ${enemies.length > 1 ? "choose an opponent, then a body area" : "choose a body area"}. Cancel returns to actions.`;
             return;
@@ -533,6 +642,10 @@
         if (!enemy) return;
         d.enemyTarget = enemy;
         d.enemyPreview = null;
+        if (rules.canExecute(this._subject, enemy, d.kind)) {
+            this.wwsCommitCut("Head");
+            return;
+        }
         d.mode = "target";
         d.notice = `${d.kind}: choose a body area on ${enemy.name()}.`;
     };
@@ -554,11 +667,13 @@
         const legal=rules.legalTargets(b);
         const target = b.isActor() ? rules.playerTarget() : legal.length===1?legal[0]:legal[Math.floor(Math.random()*legal.length)];
         if (!legal.includes(target)) return;
+        if (rules.canExecute(b, target, kind)) d.kind = "Execute";
         d.lightlessStrike = 1;
-        d.area = area;
+        d.twoSwordStrike = rules.hasTwoSwordAttack(b) ? 1 : 0;
+        d.area = d.kind === "Execute" ? "Head" : area;
         if (kind === "Heavy Cut") rules.recover(b, 8);
         d.target = target;
-        d.defense = rules.defenseOutcome(target, b, kind === "Heavy Cut", area, Math.random());
+        d.defense = d.kind === "Execute" ? null : rules.defenseOutcome(target, b, kind === "Heavy Cut", area, Math.random());
         this.wwsAttack();
     };
     BattleManager.wwsAttack = function() {
@@ -569,7 +684,7 @@
         action.setTarget(d.target.index());
         this._subject._actions = [action];
         d.mode = "animation";
-        d.notice = `${this._subject.name()}: ${d.kind} → ${d.area}.`;
+        d.notice = d.kind === "Execute" ? `${this._subject.name()}: Execute → ${d.target.name()}.` : `${this._subject.name()}: ${d.kind}${d.twoSwordStrike ? " · " + d.twoSwordStrike + "/2" : ""} → ${d.area}.`;
         this._logWindow.clear();
         this._logWindow.addText(d.notice);
         this.startAction();
@@ -605,7 +720,7 @@
             $gameMessage.setBackground(0);
             $gameMessage.setPositionType(2);
             $gameMessage.setSpeakerName(teacher.name());
-            $gameMessage.add("It's called Lightless Blade. When you parry my blade,");
+            $gameMessage.add("It's called Three Stage Thrust. When you parry my blade,");
             $gameMessage.add("I can strike twice more in an instant.");
             return;
         }
@@ -658,7 +773,7 @@
         const beforeHp = target.hp;
         let injuryChange = null;
         if (!result.evaded) {
-            const damage = rules.damage(subject, target, d.kind === "Heavy Cut", d.area);
+            const damage = d.kind === "Execute" ? target.hp : rules.damage(subject, target, d.kind === "Heavy Cut", d.area);
             this._action.executeDamage(target, damage);
             if (target.isAlive()) {
                 const severity = rules.woundSeverity(rules.cuttingLevel(subject, d.kind === "Heavy Cut"), Math.random());
@@ -672,7 +787,7 @@
         }
         const outcome = { Parry: "Parried", Dodge: "Dodged" };
         this._logWindow.addText(d.defense ? `${target.name()}: ${outcome[d.defense]}.` : `${target.name()} takes ${beforeHp - target.hp} damage.`);
-        globalThis.WwsDuelFeedback?.impact({ subject, target, area: d.area, heavy: d.kind === "Heavy Cut", defense: d.defense, damage: Math.max(0, beforeHp - target.hp), lightlessStrike: d.kind === "Lightless Blade" ? d.lightlessStrike : 0 });
+        globalThis.WwsDuelFeedback?.impact({ subject, target, area: d.kind === "Execute" ? "Neck" : d.area, execute: d.kind === "Execute", heavy: d.kind === "Heavy Cut", defense: d.defense, damage: Math.max(0, beforeHp - target.hp), lightlessStrike: d.kind === "Three Stage Thrust" ? d.lightlessStrike : 0, twoSwordStrike: d.twoSwordStrike || 0 });
         if (injuryChange) globalThis.WwsDuelFeedback?.injury(target, injuryChange.area, injuryChange.severity);
         this._logWindow.displayActionResults(subject, target);
     };
@@ -682,22 +797,33 @@
         const d = this._wwsDuel;
         d.target._wws.reaction = null;
         this._logWindow.endAction(this._subject);
+        // The second blade follows hits, parries AND dodges. It stays within
+        // the same turn and uses the same cut/area, with fresh defense and injury
+        // rolls evaluated against the state left by the first impact.
+        if (d.twoSwordStrike === 1 && rules.hasTwoSwordAttack(this._subject) &&
+            this._subject.isAlive() && d.target.isAlive()) {
+            d.twoSwordStrike = 2;
+            d.defense = rules.defenseOutcome(d.target, this._subject, d.kind === "Heavy Cut", d.area, Math.random());
+            this.wwsAttack();
+            return;
+        }
+        d.twoSwordStrike = 0;
         // The initial cut must be parried. Strike two continues on a hit or
         // parry, with at most two follow-ups in this same turn.
         const continuesLightless = d.defense === "Parry" ||
-            (d.lightlessStrike === 2 && d.kind === "Lightless Blade" && !d.defense);
+            (d.lightlessStrike === 2 && d.kind === "Three Stage Thrust" && !d.defense);
         if (continuesLightless && d.lightlessStrike < 3 && rules.hasLightlessBlade(this._subject) &&
             this._subject.isAlive() && d.target.isAlive()) {
             d.lightlessStrike++;
-            d.kind = "Lightless Blade";
+            d.kind = "Three Stage Thrust";
             d.area = "Torso";
             d.defense = rules.lightlessDefense(d.target, this._subject, d.lightlessStrike, Math.random());
             this.wwsAttack();
             globalThis.WwsDuelFeedback?.emit({ type: "stance", target: this._subject,
-                text: `LIGHTLESS BLADE · ${d.lightlessStrike}/3${d.lightlessStrike === 3 ? " · DODGE ONLY" : ""}`, duration: 48 });
+                text: `THREE STAGE THRUST · ${d.lightlessStrike}/3${d.lightlessStrike === 3 ? " · DODGE ONLY" : ""}`, duration: 48 });
             return;
         }
-        if (d.kind === "Lightless Blade" && !this._subject._wws.lightlessExplained) {
+        if (d.kind === "Three Stage Thrust" && this._subject.isEnemy() && !this._subject._wws.lightlessExplained) {
             this._subject._wws.lightlessExplanationPending = true;
             this._subject._wws.lightlessExplanationDelay = 0.75;
         }
@@ -743,7 +869,7 @@
     class Window_DuelCards extends Window_Command {
         initialize(rect) { this._mode = ""; super.initialize(rect); this.opacity = 0; this.hide(); this.deactivate(); }
         lineHeight() { return 24; }
-        maxCols() { return this._mode === "opponent" ? Math.max(1, rules.legalTargets().length) : this._mode === "target" ? 4 : this._mode === "action" ? actions.length + 1 : stances.length; }
+        maxCols() { return this._mode === "opponent" ? Math.max(1, rules.legalTargets().length) : this._mode === "target" ? 4 : this._mode === "action" ? actions.length + 1 : rules.availableStances(rules.actor()).length; }
         itemHeight() { return 76; }
         itemRect(index) {
             const width = this.innerWidth / this.maxCols();
@@ -772,8 +898,13 @@
                 for (const enemy of rules.legalTargets()) this.addCommand(enemy.name(), "choose", true, enemy.index());
                 return;
             }
-            const names = this._mode === "stance" ? stances : this._mode === "action" ? [...actions, "Change Stance"] : this._mode === "target" ? areas : [];
-            for (const name of names) this.addCommand(name, "choose", this._mode !== "stance" || BattleManager._wwsDuel?.opening || name !== rules.actor()?._wws.stance, name);
+            const names = this._mode === "stance" ? rules.availableStances(rules.actor()) : this._mode === "action" ? [...actions, "Change Stance"] : this._mode === "target" ? areas : [];
+            for (const name of names) {
+                const targets = name === "Quick Cut" && !BattleManager._wwsDuel?.multi ? rules.legalTargets() : [];
+                const count = targets.filter(target => rules.canExecute(rules.actor(), target)).length;
+                const label = count ? (count === targets.length ? "Execute" : "Quick Cut / Execute") : name;
+                this.addCommand(label, "choose", this._mode !== "stance" || BattleManager._wwsDuel?.opening || name !== rules.actor()?._wws.stance, name);
+            }
         }
         drawItem(index) {
             const rect = this.itemRect(index), name = this.commandName(index);
@@ -781,23 +912,25 @@
             this.contents.fillRect(rect.x, rect.y, rect.width, rect.height, selected ? "rgba(113,65,50,0.65)" : ui.ink);
             this.contents.fillRect(rect.x, rect.y + rect.height - 2, rect.width, 2, selected ? ui.accent : ui.line);
             ui.textAt(this, name, rect.x + 16, rect.y + 2, rect.width - 32, 23, ui.text, "left", true);
-            const descriptions = { "Quick Cut": "Light cut · No recovery", "Heavy Cut": "Double damage · Recovery −8", "Change Stance": "Choose a new form · Uses this turn",
+            const descriptions = { "Execute": "Sure hit · Defeats enemy", "Quick Cut / Execute": "Execute enemies below 200 HP", "Quick Cut": "Light cut · No recovery", "Heavy Cut": "Double damage · Recovery −8", "Change Stance": "Choose a new form · Uses this turn",
                 Head: "More damage · Weaken defense", Torso: "Steady damage · Slow recovery",
                 Arms: "Weaken their cuts", Legs: "Reduce their speed" };
-            const summary = forms[name]?.text[0] || descriptions[name] || "";
+            const summary = name === "Seigan" ? "Parried cut → Three Stage Thrust" : forms[name]?.text[0] || descriptions[name] || "";
             ui.textAt(this, summary, rect.x + 16, rect.y + 28, rect.width - 32, 13, ui.muted);
             if (forms[name]) ui.textAt(this, name === rules.actor()?._wws.stance ? "Current form" : forms[name].text[1], rect.x + 16, rect.y + 48, rect.width - 32, 12, ui.muted);
             if (this._mode === "opponent") {
                 const enemy = rules.enemies().find(b => b.index() === this._list[index].ext);
                 ui.textAt(this, `${enemy.hp} / ${enemy.mhp} Health · ${enemy._wws.stance}`, rect.x + 16, rect.y + 30, rect.width - 32, 15, ui.muted);
-                ui.textAt(this, "Select opponent, then choose a body area", rect.x + 16, rect.y + 52, rect.width - 32, 13, ui.muted);
+                const execute = selected && rules.canExecute(rules.actor(), enemy, BattleManager._wwsDuel.kind);
+                ui.textAt(this, execute ? "Execute · Sure hit · Defeats enemy" : "Select opponent, then choose a body area", rect.x + 16, rect.y + 52, rect.width - 32, 13, ui.muted);
             }
             if (this._mode === "target") {
                 const d = BattleManager._wwsDuel;
                 const target = rules.playerTarget();
                 const chances = rules.defenseChances(target, rules.actor(), d.kind === "Heavy Cut", name);
                 const damage = rules.damage(rules.actor(), target, d.kind === "Heavy Cut", name);
-                ui.textAt(this, `${damage} damage · ${Math.round((1 - chances.Parry - chances.Dodge) * 100)}% hit`, rect.x + 16, rect.y + 48, rect.width - 32, 14, ui.text);
+                const execute = rules.canExecute(rules.actor(), target, d.kind);
+                ui.textAt(this, execute ? "Execute · 100% hit · Defeats enemy" : `${damage} damage · ${Math.round((1 - chances.Parry - chances.Dodge) * 100)}% hit`, rect.x + 16, rect.y + 48, rect.width - 32, 14, ui.text);
             }
         }
         setMode(mode) {
@@ -807,7 +940,7 @@
             this._mode = mode;
             this.refresh();
             const current = actor?._wws?.stance;
-            this.select(mode === "stance" ? Math.max(0, stances.indexOf(current)) : 0);
+            this.select(mode === "stance" ? Math.max(0, rules.availableStances(actor).indexOf(current)) : 0);
             if (["stance", "action", "target", "opponent"].includes(mode)) { this.show(); this.activate(); }
             else { this.hide(); this.deactivate(); }
         }
@@ -817,7 +950,7 @@
             if (this._mode === "opponent" && this.active && d?.mode === "opponent") {
                 d.enemyPreview = rules.legalTargets().find(b => b.index() === this.currentExt());
             }
-            if (this._mode === "stance" && this.active && d?.mode === "stance" && stances.includes(this.currentExt())) {
+            if (this._mode === "stance" && this.active && d?.mode === "stance" && rules.availableStances(rules.actor()).includes(this.currentExt())) {
                 d.previewStance = this.currentExt();
             }
         }
@@ -837,10 +970,11 @@
                     ui.textAt(this,b.name(),x+12,y-5,width*.61,18,b.isAlive()?ui.text:ui.muted,"left",true);
                     const stance=!b.isAlive()?"Defeated":b===rules.actor()&&d.mode==="stance"?d.previewStance||"Choose form":b._wws.stance||"Unrevealed";
                     ui.textAt(this,stance,x+width*.64,y-5,width*.36-12,12,ui.muted,"right");
-                    const barWidth=width*.58;
+                    const barWidth=width*.36;
                     this.contents.fillRect(x+12,y+24,barWidth,3,"#42483f");
                     this.contents.fillRect(x+12,y+24,barWidth*bar.trail/b.mhp,3,"#dbc49c");
                     this.contents.fillRect(x+12,y+24,barWidth*bar.value/b.mhp,3,side?ui.accent:"#9eaf91");
+                    ui.textAt(this,rules.position(b),x+width*.44,y+10,width*.19,11,ui.muted);
                     ui.textAt(this,`${b.hp} / ${b.mhp}`,x+width*.64,y+10,width*.36-12,11,ui.muted,"right");
                     const tags=Object.entries(b._wws.injuries).map(([area,injury])=>`${area}: ${severityNames[injury.severity].toLowerCase()} ${injury.rounds}r`);
                     if(b._wws.recovery)tags.push(`Recovery −${b._wws.recovery}`);
@@ -904,8 +1038,9 @@
                 if (rules.enemySpriteSet(b) === "Shinsengumi") ImageManager.loadEnemy(rules.enemyImage(b, "Seigan"));
             }
         }
-        if (BattleManager._wwsDuel.battlers[0].actorId() === 1 && !$gameSystem.isSideView()) {
-            for (const pose of poses) ImageManager.loadBitmap("img/battlers/", playerImage(pose));
+        if (!$gameSystem.isSideView()) {
+            for (const ally of rules.allies().filter(b => rules.actorSpriteSet(b)))
+                for (const pose of rules.availableStances(ally)) ImageManager.loadBitmap("img/battlers/", playerImage(pose, ally));
         }
         this._duelHud = new Window_DuelHud(new Rectangle(20, 16, Graphics.boxWidth - 40, BattleManager._wwsDuel.multi ? 174 : 126));
         this._duelCards = new Window_DuelCards(ui.bottomRect());
@@ -944,10 +1079,10 @@
         const d = BattleManager._wwsDuel;
         this._duelHud.refresh();
         this._duelCards.setMode($gameMessage.isBusy() ? "message" : d.mode);
-        this._duelHud.visible = !$gameMessage.isBusy() && d.mode !== "finished";
+        this._duelHud.visible = d.mode !== "finished";
     };
     // Register a real battler sprite so slash animations and damage popups find
-    // actor 1. Form previews change only the image, never combat state.
+    // each ally. Form previews change only the image, never combat state.
     class Sprite_DuelPlayer extends Sprite_Battler {
         initialize(battler) {
             super.initialize(battler);
@@ -960,7 +1095,7 @@
             const pose = rules.playerPose(this._battler);
             if (pose !== this._pose) {
                 this._pose = pose;
-                this.bitmap = ImageManager.loadBitmap("img/battlers/", playerImage(pose));
+                this.bitmap = ImageManager.loadBitmap("img/battlers/", playerImage(pose, this._battler));
                 rules.applySpriteLayout(this, this._battler, pose);
             }
         }
@@ -985,8 +1120,8 @@
     Spriteset_Battle.prototype.createActors = function() {
         createActors.call(this);
         const d = BattleManager._wwsDuel;
-        if (d && !$gameSystem.isSideView() && d.battlers[0].actorId() === 1) {
-            for(const ally of d.allies){
+        if (d && !$gameSystem.isSideView()) {
+            for(const ally of d.allies.filter(b => rules.actorSpriteSet(b))){
                 const sprite = new Sprite_DuelPlayer(ally);
                 this._actorSprites.push(sprite);
                 this._battleField.addChild(sprite);
@@ -999,7 +1134,7 @@
     Spriteset_Battle.prototype.createEnemies = function() {
         createEnemies.call(this);
         if (BattleManager._wwsDuel) {
-            const playerVisible = !$gameSystem.isSideView() && BattleManager._wwsDuel.battlers[0].actorId() === 1;
+            const playerVisible = !$gameSystem.isSideView() && BattleManager._wwsDuel.allies.some(b => rules.actorSpriteSet(b));
             // Reserve the lower-left foreground for the player and keep all
             // fighters between the HUD and action cards.
             for (const sprite of this._enemySprites) {

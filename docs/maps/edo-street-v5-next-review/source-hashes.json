@@ -1,0 +1,16 @@
+{
+  "data/Map001.json": "c725146c309f5f142e6d25eb84988231f490b7b66e1ee43327fce2be4e35d915",
+  "data/Map002.json": "25c1ebf104d7e9e161b6da19e85356540cc4e395c34fe4a9ff4b706876f5b90a",
+  "data/Map003.json": "d98438f53091eb2e9179b3d2533505dc1b0d834df1489b73a26013a86f1ac807",
+  "data/Tilesets.json": "880c1c0892b41a5535c8efcd764bd6e4d97786b35ac5368a0d861c295545a415",
+  "data/Actors.json": "0559a7832ef1b9f80d93bd20830acb34bb833688a2f5b2aac3709830af3f32e9",
+  "data/System.json": "a78186a10341e03e26ca6bea3b21852ba7f0c2cd2dcf834a1d15807716ad1be5",
+  "data/MapInfos.json": "4729fc79b0a5131c8ad26c1e9ad443a4f55c3f061675c6f32953ec627b1b54a2",
+  "js/plugins/WWS_CourtyardGateReadability.js": "75081de4d7cf9845703fca4c141c68ea1253f2be93ec12a42a689b20e34b8fbe",
+  "img/characters/$Samurai-v3.png": "23dc0052bf8952a05f9784a5b2b58e3c6fd79ff31b18700e90f053d46804eb7a",
+  "img/pictures/EdoCourtyardGateCanopy-v5.png": "bcf535599eec9c12e8fdcca7aba679395b0009fc39e5de2706b9906614a84569",
+  "img/tilesets/EdoCourtyard_D-v5.png": "ad9f78d8b560e103d5e344c91aa68e00715fed022b61ad21678ec23a316e434f",
+  "img/tilesets/EdoStreet_B-v5.png": "3fec28c6e015b6145152865692e5a358d2d997b8ce28567059fe9156701d5a2b",
+  "img/tilesets/EdoStreet_C-v5.png": "a1ae392488f7caa9e673f57c6e98219be740414727941ba8660537891341a4c5",
+  "img/tilesets/EdoStreet_D-v5.png": "a3f569d6a5bc9705894bd32d2bca3e775b429fcfe5bd39d9305742e391ef7e76"
+}

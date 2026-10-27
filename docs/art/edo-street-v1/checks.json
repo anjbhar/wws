@@ -1,0 +1,35 @@
+{
+  "jsonValid": true,
+  "existingTilesetsPreserved": true,
+  "existingMapRegistryPreserved": true,
+  "interiorAndSystemBytePreserved": true,
+  "courtyardOnlyThreeExitsChanged": true,
+  "npcs": 0,
+  "encounters": 0,
+  "roadRows": [
+    7,
+    8,
+    9,
+    10
+  ],
+  "roadCells": 256,
+  "reachableCells": 298,
+  "transferCommands": 6,
+  "allArrivalsPassable": true,
+  "transferLoops": false,
+  "horizontalCameraTravelTiles": 37.3125,
+  "verticalCameraTravelTiles": 0,
+  "engineMethods": "Game_Map.isPassable/setDisplayPos; Game_Interpreter.command201; Game_Player.reserveTransfer",
+  "gameLaunched": false,
+  "sheetDimensions": [
+    768,
+    768
+  ],
+  "tileReconstructionPixelExact": true,
+  "mapArtSize": [
+    3072,
+    720
+  ],
+  "importerSyntaxValid": true,
+  "manualPlaytest": "Player contact, gate transitions, visual scrolling"
+}

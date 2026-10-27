@@ -1,0 +1,212 @@
+[
+  {
+    "character": "Shinsengumi",
+    "pose": "Chudan",
+    "source": "shinsengumi-chudan-source-v2.png",
+    "sourceSize": [
+      1402,
+      1122
+    ],
+    "sourceBounds": [
+      358,
+      199,
+      1322,
+      1071
+    ],
+    "crown": 199,
+    "scale": 0.3211009174311927,
+    "footAxis": 673.0,
+    "offset": [
+      139,
+      88
+    ],
+    "canvas": [
+      480,
+      384
+    ],
+    "bodyHeight": 280,
+    "soleBaseline": 368,
+    "visibleBounds": [
+      139,
+      88,
+      449,
+      368
+    ],
+    "output": "img/battlers/Shinsengumi-ChudanBack-v2.png"
+  },
+  {
+    "character": "Shinsengumi",
+    "pose": "Jodan",
+    "source": "shinsengumi-jodan-source-v2.png",
+    "sourceSize": [
+      1402,
+      1122
+    ],
+    "sourceBounds": [
+      375,
+      70,
+      1024,
+      1047
+    ],
+    "crown": 234,
+    "scale": 0.34440344403444034,
+    "footAxis": 704.0,
+    "offset": [
+      127,
+      32
+    ],
+    "canvas": [
+      480,
+      384
+    ],
+    "bodyHeight": 280,
+    "soleBaseline": 368,
+    "visibleBounds": [
+      127,
+      32,
+      351,
+      368
+    ],
+    "output": "img/battlers/Shinsengumi-JodanBack-v2.png"
+  },
+  {
+    "character": "Shinsengumi",
+    "pose": "Gedan",
+    "source": "shinsengumi-gedan-source-v2.png",
+    "sourceSize": [
+      1402,
+      1122
+    ],
+    "sourceBounds": [
+      366,
+      196,
+      1304,
+      1055
+    ],
+    "crown": 196,
+    "scale": 0.3259604190919674,
+    "footAxis": 690.0,
+    "offset": [
+      134,
+      88
+    ],
+    "canvas": [
+      480,
+      384
+    ],
+    "bodyHeight": 280,
+    "soleBaseline": 368,
+    "visibleBounds": [
+      134,
+      88,
+      440,
+      368
+    ],
+    "output": "img/battlers/Shinsengumi-GedanBack-v2.png"
+  },
+  {
+    "character": "Shinsengumi",
+    "pose": "Kasumi",
+    "source": "shinsengumi-kasumi-source-v2.png",
+    "sourceSize": [
+      1402,
+      1122
+    ],
+    "sourceBounds": [
+      358,
+      213,
+      1338,
+      1044
+    ],
+    "crown": 213,
+    "scale": 0.3128760529482551,
+    "footAxis": 697.5,
+    "offset": [
+      134,
+      108
+    ],
+    "canvas": [
+      480,
+      384
+    ],
+    "bodyHeight": 260,
+    "soleBaseline": 368,
+    "visibleBounds": [
+      134,
+      108,
+      441,
+      368
+    ],
+    "output": "img/battlers/Shinsengumi-KasumiBack-v2.png"
+  },
+  {
+    "character": "Shinsengumi",
+    "pose": "Waki",
+    "source": "shinsengumi-waki-source-v2.png",
+    "sourceSize": [
+      1402,
+      1122
+    ],
+    "sourceBounds": [
+      36,
+      181,
+      1128,
+      1042
+    ],
+    "crown": 181,
+    "scale": 0.3252032520325203,
+    "footAxis": 760.0,
+    "offset": [
+      5,
+      88
+    ],
+    "canvas": [
+      480,
+      384
+    ],
+    "bodyHeight": 280,
+    "soleBaseline": 368,
+    "visibleBounds": [
+      5,
+      88,
+      360,
+      368
+    ],
+    "output": "img/battlers/Shinsengumi-WakiBack-v2.png"
+  },
+  {
+    "character": "Shinsengumi",
+    "pose": "Seigan",
+    "source": "shinsengumi-seigan-source-v2.png",
+    "sourceSize": [
+      1402,
+      1122
+    ],
+    "sourceBounds": [
+      370,
+      97,
+      1275,
+      1062
+    ],
+    "crown": 216,
+    "scale": 0.3309692671394799,
+    "footAxis": 691.0,
+    "offset": [
+      134,
+      49
+    ],
+    "canvas": [
+      480,
+      384
+    ],
+    "bodyHeight": 280,
+    "soleBaseline": 368,
+    "visibleBounds": [
+      134,
+      49,
+      434,
+      368
+    ],
+    "output": "img/battlers/Shinsengumi-SeiganBack-v2.png"
+  }
+]

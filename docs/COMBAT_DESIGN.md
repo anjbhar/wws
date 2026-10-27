@@ -1,22 +1,26 @@
 # WWS Combat Design — Turn-Based Duel
 
-Revised October 21, 2026. Implemented in `js/plugins/WWS_Duel.js` v1.17 with a free opening stance choice, paid later stance changes, the compact combat UI, four-light/two-heavy neutral torso baseline for the original sparring partners, and a player-only 1 Health floor in practice. Fighters select from five forms and use automatic stat-based defenses with body-area stance coverage. Parry and block are the same weapon defense. Values remain provisional game balance, not a claim about historical combat effectiveness.
+Revised October 23, 2026. Implemented in `js/plugins/WWS_Duel.js` v1.23 with explicit solo/party encounters, three saved active positions, free opening stance choices, paid later stance changes, and a 1 Health floor for every practice ally. Fighters use automatic stat-based defenses with body-area stance coverage. Parry and block are the same weapon defense. Values remain provisional game balance, not a claim about historical combat effectiveness.
 
 The [original outline](battles/original-combat-outline.txt) is preserved for reference. This design reflects later feedback and takes precedence over the outline's timed decisions and reaction prompts.
 
 ## Shinsengumi sparring — October 21
 
-The Shinsengumi swordsman at courtyard (16,10) is a second repeatable sparring partner. Enemy/troop 7 use the same Health, Attack, Defense, Speed, action selection and nonlethal protections as Masanori; no difficulty retuning is introduced. He has his own Chudan/Jodan/Gedan/Kasumi/Waki sprites and pose-specific body targets. His event offers Spar / Not now, restores Health/MP before and after practice, and awards no EXP, gold or drops. Masanori remains available. WWS_Duel v1.13 selects opponent pose families from enemy notes; troop tags `[WWS Duel] [WWS Courtyard]` enable this practice encounter and its backdrop.
+The Shinsengumi swordsman is a repeatable solo sparring partner. Enemy/troop 7 has 1000 Health versus Masanori's 540, with matching Attack, Defense and Speed. His six forms include Seigan and its Three Stage Thrust follow-ups; his half-Health dialogue preserves his turn and form. His event offers Spar / Not now, restores Health/MP before and after practice, and awards no EXP, gold or drops. Masanori remains available. Troop tags `[WWS Duel] [WWS Courtyard]` enable this practice encounter and its backdrop.
 
-## Two-opponent introduction — warrior monks
+## Party and encounter boundaries
 
-Talking to either courtyard monk at (8,9) or (10,9) immediately starts the same protected practice against both. Enemy 8 is the Masked Monk and enemy 9 the Unmasked Monk; troop 8 places them beside each other on a shared ground line. Each has a separate Health bar, form, injuries, recovery, and one scheduled turn per round. A short introduction explains the additional opponent choice before the free opening form picker.
+The engine and custom combat both allow three active actors; further roster members are reserves. Saved actor IDs assign Center, Left and Right independently of incidental roster ordering. The stock Formation command deliberately swaps assignments or replaces an active actor with a reserve, and menu/battle labels expose the positions. Legacy saves initialize from their first three roster entries. Empty slots compact when actors leave. See [party integration contract](battles/party-foundation.md).
 
-Choose a cut, then an opponent, then a body area. The opponent cards and highlighted nameplate identify the selected fighter. Cancelling a body choice returns to opponents; cancelling opponents returns to actions, without spending a turn. Once only one opponent remains, cuts go straight to body selection. Defeated opponents lose their pending turns and never attack. Each monk attacks the player, and victory requires defeating both.
+Troop 6 and `[WWS Duel]` encounters are solo unless also marked `[WWS Party]` or the existing `[WWS Monk Group]`. Solo encounters select Hayato from the roster, including reserves, or the active leader if Hayato is absent. Benched actors receive no battle-start/end callbacks or combat actions. `[WWS Party]` also enables custom combat by itself. Custom battles accept one to three allies and one to three enemies; untagged battles retain stock mechanics with the same three-active limit.
 
-Each enemy independently chooses an opening form. Initiative sorts all living fighters by effective Speed; equal-speed priority rotates across the participants each round. The monks have 280 Health apiece and lower attack than the original sparring partners to introduce multiple turns gently. Practice protects the player at 1 Health; both event exits restore the party and give no rewards. Escape leaves practice normally.
+## Three-on-three practice — warrior monks
 
-The monks use the current static v2 naginata artwork at native scale. Their forms still affect combat, with the committed form shown in the HUD; separate form/reaction illustrations have not been generated. Group battles use body-area cards instead of the single-opponent sprite marker overlay. The custom system supports one player against one or two enemies; larger groups and multiple player characters remain deferred.
+The unmasked monk at (10,9), event 12, starts troop 8: two masked monks on the flanks and one unmasked monk in the center. Hayato alone receives temporary Masanori and Shinsengumi guests; an existing active party fights with its own members. Every fighter has separate Health, form, injuries, recovery and one scheduled turn per round. The three monks have 280 Health each. Initiative sorts living fighters by effective Speed, with rotating tie priority.
+
+Choose a cut, an opponent, then a body area. While both teams have three living fighters, flanks reach their opposite flank and center; centers reach everyone. When either team has fewer than three living fighters, both sides can target every surviving opponent. Single enemies occupy center; pairs occupy the flanks. The menus, previews, final validation and enemy AI share these rules. Cancelling target menus spends no turn; a single legal opponent skips the opponent picker.
+
+All three opponents must fall to win. Every practice ally is protected at 1 Health; event exits recover the party and give no rewards. Guests are fresh battle-only instances and leave afterward. Static v2 monk art uses the group scale, while logical forms remain visible in the HUD. Group battles use body-area cards; supported solo battles use sprite markers.
 
 Verification and screenshots: [group practice record](battles/monk-group.md).
 

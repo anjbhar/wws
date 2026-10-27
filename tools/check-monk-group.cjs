@@ -22,7 +22,7 @@ for(const variant of ['unmasked']){
   vm.runInContext(fs.readFileSync(path.join(root,'js/rmmz_objects.js'),'utf8'),context);
   context.list=list;
   vm.runInContext('const interpreter=new Game_Interpreter();interpreter.setup(list,1);let steps=0;while(interpreter.isRunning()){if(++steps>50)throw Error("Event stalled");interpreter.executeCommand()}',context);
-  assert.equal(calls.battles,1);assert.equal(calls.recoveries,2);assert.equal(calls.texts.length,result===0?1:0);
+  assert.equal(calls.battles,1);assert.equal(calls.recoveries,2);assert.equal(calls.texts.length,result===0?3:2);
  }
 }
 const {context,run}=require('./lib/duel-harness.cjs')({feedback:true});

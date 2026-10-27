@@ -1,6 +1,6 @@
 /*:
  * @target MZ
- * @plugindesc Azianmaddoxx Samurai music for the Shinsengumi duel.
+ * @plugindesc Azianmaddoxx Samurai music for Shinsengumi and warrior monk fights.
  * @author WWS
  * @help
  * Load after WWS_Duel. Plays the local MP3 through MZ's looping BGM system.
@@ -60,9 +60,12 @@
         buffer.frameCount = Graphics.frameCount;
         return buffer;
     }
-    function isShinsengumiBattle() {
-        const enemy = BattleManager._wwsDuel?.battlers[1];
-        return globalThis.WwsDuelRules?.enemySpriteSet(enemy) === 'Shinsengumi';
+    function usesSamuraiMusic() {
+        return BattleManager._wwsDuel?.battlers.some(battler =>
+            ['Shinsengumi', 'WarriorMonkMasked', 'WarriorMonkUnmasked'].includes(
+                globalThis.WwsDuelRules?.enemySpriteSet(battler)
+            )
+        ) || false;
     }
     // Decode before the encounter so playback need not wait for the MP3.
     const startMap = Scene_Map.prototype.start;
@@ -74,7 +77,7 @@
     const startEncounterEffect = Scene_Map.prototype.startEncounterEffect;
     Scene_Map.prototype.startEncounterEffect = function() {
         startEncounterEffect.call(this);
-        if (isShinsengumiBattle()) BattleManager.playBattleBgm();
+        if (usesSamuraiMusic()) BattleManager.playBattleBgm();
     };
     // MZ normally appends .ogg; this one imported track is an MP3.
     const createBuffer = AudioManager.createBuffer;
@@ -86,7 +89,7 @@
     };
     const playBattleBgm = BattleManager.playBattleBgm;
     BattleManager.playBattleBgm = function() {
-        if (!isShinsengumiBattle()) {
+        if (!usesSamuraiMusic()) {
             return playBattleBgm.call(this);
         }
         if (!AudioManager.isCurrentBgm({ name: track })) {

@@ -1,0 +1,25 @@
+{
+  "patch": [
+    312,
+    576,
+    504,
+    720
+  ],
+  "tileSize": 48,
+  "mapSize": [
+    17,
+    15
+  ],
+  "doorwayCenter": [
+    8,
+    14
+  ],
+  "landing": [
+    7,
+    13,
+    3,
+    1
+  ],
+  "preservedOutsidePatch": true,
+  "tileset": "DojoInterior_B-v2"
+}

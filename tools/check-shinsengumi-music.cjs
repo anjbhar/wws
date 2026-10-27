@@ -56,6 +56,23 @@ assert.equal(AudioManager._bgmBuffer.url,'audio/bgm/Town1.ogg');
 assert.equal(AudioManager._bgmBuffer.pos,27);
 map.start();
 assert.notEqual(WebAudio.created.at(-1),preloaded,'Returning to the map preloads the next battle');
+for (const spriteSet of ['WarriorMonkMasked', 'WarriorMonkUnmasked']) {
+  BattleManager._wwsDuel={battlers:[{}, {}, {}, {spriteSet}, {spriteSet}, {spriteSet}]};
+  BattleManager.saveBgmAndBgs();
+  map.startEncounterEffect();
+  assert.equal(AudioManager._bgmBuffer.url,'audio/bgm/azianmaddoxx-samurai-423024.mp3');
+  assert.equal(AudioManager._bgmBuffer.pos,10.67,'Monk fights use the same intro skip');
+  assert.equal(AudioManager._bgmBuffer.loop,true);
+  assert.equal(AudioManager._bgmBuffer.volume,.8);
+  const monkMusic=AudioManager._bgmBuffer;
+  monkMusic.pos=12;
+  BattleManager.playBattleBgm();
+  assert.equal(AudioManager._bgmBuffer,monkMusic);
+  assert.equal(monkMusic.pos,12,'Monk scene start must not restart playback');
+  BattleManager.replayBgmAndBgs();
+  assert.equal(AudioManager._bgmBuffer.url,'audio/bgm/Town1.ogg');
+  map.start();
+}
 for(const duel of [null,{battlers:[{},{spriteSet:'SamuraiInstructor'}]}]) {
   BattleManager._wwsDuel=duel;
   const before=AudioManager._bgmBuffer;
@@ -72,4 +89,4 @@ assert(asset.subarray(0, 3).toString() === 'ID3' || asset[0] === 255, 'Expected 
 const plugins = vm.createContext({});
 vm.runInContext(fs.readFileSync(path.join(root, 'js/plugins.js'), 'utf8'), plugins);
 assert(plugins.$plugins.some(plugin => plugin.name === 'WWS_ShinsengumiMusic' && plugin.status));
-console.log('PASS: Shinsengumi MP3 selection, intro skip, no duplicate restart, looping, volume, map music restoration, stock battle/audio fallback and enabled plugin');
+console.log('PASS: Shinsengumi and monk MP3 selection, intro skip, no duplicate restart, looping, volume, map music restoration, stock battle/audio fallback and enabled plugin');

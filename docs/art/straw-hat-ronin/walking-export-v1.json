@@ -1,0 +1,259 @@
+{
+  "generator": "built-in image_gen",
+  "source": "walking-source-v2.png",
+  "output": "img\\characters\\$StrawHatRonin-v1.png",
+  "canvas": [
+    192,
+    352
+  ],
+  "frameSize": [
+    64,
+    88
+  ],
+  "standingHeight": 67,
+  "soleBaseline": 84,
+  "rowOrder": [
+    "down",
+    "left",
+    "right",
+    "up"
+  ],
+  "columnOrder": [
+    "walk A",
+    "stand",
+    "walk B"
+  ],
+  "trueAlpha": true,
+  "equipment": "Both swords sheathed at anatomical left hip",
+  "frames": [
+    {
+      "row": 0,
+      "column": 0,
+      "sourceBounds": [
+        71,
+        64,
+        275,
+        407
+      ],
+      "scale": 0.1976401179941003,
+      "visibleSize": [
+        40,
+        68
+      ],
+      "offset": [
+        13,
+        16
+      ]
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "sourceBounds": [
+        363,
+        64,
+        567,
+        403
+      ],
+      "scale": 0.1976401179941003,
+      "visibleSize": [
+        40,
+        67
+      ],
+      "offset": [
+        12,
+        17
+      ]
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "sourceBounds": [
+        649,
+        64,
+        855,
+        405
+      ],
+      "scale": 0.1976401179941003,
+      "visibleSize": [
+        41,
+        67
+      ],
+      "offset": [
+        12,
+        17
+      ]
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "sourceBounds": [
+        59,
+        456,
+        290,
+        799
+      ],
+      "scale": 0.19533527696793002,
+      "visibleSize": [
+        45,
+        67
+      ],
+      "offset": [
+        11,
+        17
+      ]
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "sourceBounds": [
+        358,
+        456,
+        568,
+        799
+      ],
+      "scale": 0.19533527696793002,
+      "visibleSize": [
+        41,
+        67
+      ],
+      "offset": [
+        12,
+        17
+      ]
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "sourceBounds": [
+        658,
+        456,
+        890,
+        800
+      ],
+      "scale": 0.19533527696793002,
+      "visibleSize": [
+        45,
+        67
+      ],
+      "offset": [
+        11,
+        17
+      ]
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "sourceBounds": [
+        61,
+        855,
+        279,
+        1198
+      ],
+      "scale": 0.1936416184971098,
+      "visibleSize": [
+        42,
+        66
+      ],
+      "offset": [
+        9,
+        18
+      ]
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "sourceBounds": [
+        372,
+        854,
+        565,
+        1200
+      ],
+      "scale": 0.1936416184971098,
+      "visibleSize": [
+        37,
+        67
+      ],
+      "offset": [
+        14,
+        17
+      ]
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "sourceBounds": [
+        633,
+        854,
+        856,
+        1198
+      ],
+      "scale": 0.1936416184971098,
+      "visibleSize": [
+        43,
+        67
+      ],
+      "offset": [
+        8,
+        17
+      ]
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "sourceBounds": [
+        65,
+        1247,
+        270,
+        1604
+      ],
+      "scale": 0.1903409090909091,
+      "visibleSize": [
+        39,
+        68
+      ],
+      "offset": [
+        12,
+        16
+      ]
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "sourceBounds": [
+        360,
+        1247,
+        565,
+        1599
+      ],
+      "scale": 0.1903409090909091,
+      "visibleSize": [
+        39,
+        67
+      ],
+      "offset": [
+        12,
+        17
+      ]
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "sourceBounds": [
+        651,
+        1247,
+        856,
+        1605
+      ],
+      "scale": 0.1903409090909091,
+      "visibleSize": [
+        39,
+        68
+      ],
+      "offset": [
+        12,
+        16
+      ]
+    }
+  ],
+  "assignedToMap": false
+}

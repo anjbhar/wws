@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "One-actor menu access, empty positions, keyboard cancellation and return",
+    "Mouse active swaps, reserve swaps, roster preservation, engine save round-trip and keyboard pane navigation",
+    "Formation lock, scrolling beyond six reserves and promoting a scrolled reserve"
+  ],
+  "saveRoundTrip": [
+    10,
+    2,
+    1
+  ],
+  "smallWindow": "960 × 540",
+  "runtimeErrors": []
+}

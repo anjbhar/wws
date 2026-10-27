@@ -36,3 +36,9 @@ Desktop.ini
 # css/, img/, audio/, effects/, fonts/, icon/, and movies/ in Git.
 # Preserve docs/ source art, reference material, and existing manual backups.
 # Export deployed games outside this source folder.
+
+# Superseded generated courtyard review images (keep JSON reports).
+/docs/maps/courtyard-v6-checks/*.png
+/docs/maps/courtyard-v7-checks/*.png
+/docs/maps/courtyard-v8-checks/*.png
+/docs/maps/courtyard-v8-joins/*.png

@@ -1,0 +1,464 @@
+{
+  "scope": "Actual engine captures, normal player speed, art-selected contact probes; no transfer event suppression",
+  "preservation": true,
+  "contacts": [
+    {
+      "name": "home foundation",
+      "from": [
+        6,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        6,
+        4
+      ]
+    },
+    {
+      "name": "home-tea fence",
+      "from": [
+        12,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        12,
+        4
+      ]
+    },
+    {
+      "name": "tea-shop foundation",
+      "from": [
+        16,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        16,
+        4
+      ]
+    },
+    {
+      "name": "merchant foundation",
+      "from": [
+        26,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        26,
+        4
+      ]
+    },
+    {
+      "name": "dojo wall",
+      "from": [
+        34,
+        3
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        34,
+        3
+      ]
+    },
+    {
+      "name": "drainage edge",
+      "from": [
+        16,
+        11
+      ],
+      "direction": 2,
+      "allowed": false,
+      "after": [
+        16,
+        11
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "name": "home-foundation-contact-native",
+      "map": 3,
+      "x": 6,
+      "y": 4,
+      "realX": 6,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 2,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "frameCount": 824,
+      "displayed": {
+        "frame": {
+          "x": 128,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          312,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 2,
+        "expectedScreen": [
+          312,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "home-tea-fence-contact-native",
+      "map": 3,
+      "x": 12,
+      "y": 4,
+      "realX": 12,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 0,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "frameCount": 925,
+      "displayed": {
+        "frame": {
+          "x": 0,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          600,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 0,
+        "expectedScreen": [
+          600,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "tea-shop-foundation-contact-native",
+      "map": 3,
+      "x": 16,
+      "y": 4,
+      "realX": 16,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 2,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        3.1875,
+        0
+      ],
+      "frameCount": 993,
+      "displayed": {
+        "frame": {
+          "x": 128,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          639,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 2,
+        "expectedScreen": [
+          639,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "merchant-foundation-contact-native",
+      "map": 3,
+      "x": 26,
+      "y": 4,
+      "realX": 26,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        13.1875,
+        0
+      ],
+      "frameCount": 1161,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          639,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          639,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "dojo-wall-contact-native",
+      "map": 3,
+      "x": 34,
+      "y": 3,
+      "realX": 34,
+      "realY": 3,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "frameCount": 1343,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          921,
+          186
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          921,
+          186
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "drainage-contact-native",
+      "map": 3,
+      "x": 16,
+      "y": 11,
+      "realX": 16,
+      "realY": 11,
+      "direction": 2,
+      "pattern": 2,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        3.125,
+        0
+      ],
+      "frameCount": 1765,
+      "displayed": {
+        "frame": {
+          "x": 128,
+          "y": 0,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          642,
+          570
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 2,
+        "pattern": 2,
+        "expectedScreen": [
+          642,
+          570
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    }
+  ],
+  "transfers": [
+    {
+      "event": [
+        1,
+        10
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    }
+  ],
+  "walking": [
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 8,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        6,
+        4
+      ],
+      "steps": 33,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        4
+      ],
+      "steps": 6,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        16,
+        4
+      ],
+      "steps": 4,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        26,
+        4
+      ],
+      "steps": 10,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        34,
+        3
+      ],
+      "steps": 9,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        16,
+        11
+      ],
+      "steps": 26,
+      "method": "Engine moveStraight on canPass route, speed4"
+    }
+  ]
+}

@@ -1,14 +1,18 @@
 Current ground update (October 21): Map001 uses generated muted olive grass around the retained central dirt training area. See [grass source, prompt and exports](art/courtyard-grass-v1/README.md). The versioned A5 sheet preserves all original dirt tiles; map upper layers, events and movement are unchanged. Earlier courtyard rebuild tools restore older ground; reapply `tools/apply-courtyard-grass.py` afterward.
 
-Current combat update (v1.14, October 21): choose an opening stance for free before round 1. The opponent chooses its own opening form, then initiative is calculated from both forms. Both fighters retain their full first turns. Later Change Stance actions consume a turn; cancelling a later form menu is free. Forms persist across rounds. Cancelling the opening picker leaves sparring.
+Current combat (v1.23): choose an opening stance for each ally for free before round 1. Opponents choose their own opening forms, then initiative is calculated from all committed forms. Every fighter retains a full first turn. Later Change Stance actions consume a turn; cancelling a later form menu is free. Forms persist across rounds. Cancelling the opening picker leaves sparring.
 
-Current group practice (v1.17, October 21): talk to either warrior monk at (8,9) or (10,9) to fight both together. Choose a cut, an opponent, then a body area using arrows/Enter or clicks. Escape backs out of body selection to opponents, then actions; Escape on actions or the opening form picker leaves practice. Each monk gets a turn per round, and both must be defeated. The player stays alive at 1 Health, the party recovers afterward, and there are no rewards. Restart the playtest to load the updated plugin. Existing saves reload the changed map through the system version update. See [encounter record and checks](battles/monk-group.md).
+Current party/combat update (v1.23, October 23): three active slots (Center, Left, Right), with additional actors in reserve. Formation assignments persist in saves and are labeled in the menu and battle HUD. Existing Masanori, Shinsengumi and Legendary Ronin spars stay solo even with a larger roster. Explicit `[WWS Party]` encounters use the active team. Talk to the unmasked monk at (10,9) for three-on-three practice; Hayato alone receives temporary Masanori and Shinsengumi guests. Lane restrictions apply only while both teams have three living fighters. Every practice ally stays at or above 1 Health. Restart the playtest to load updated plugins. See [party rules and verification](battles/party-foundation.md) and [monk encounter](battles/monk-group.md).
 
 # WWS Project Guide
 
+Menu redesign (October 24): pause, Equipment, Inventory, Status, Skills, Save/Load, Options, title, shops, dialogue choices and confirmations now use shared WWS ink/cream panels and existing character artwork. Restart the playtest to load `WWS_UI` and `WWS_Menus`. Equipment changes have live comparisons; bulk changes and save overwrites have confirmation dialogs. Save-list metadata is additive and older saves remain supported. See [menu controls, implementation and staged verification](menus/README.md).
+
+Party screen (October 23): open the menu and choose **Party** to inspect fighters and manage saved active positions/reserves. Select two fighters to swap; Escape cancels a pending swap before leaving. Keyboard, mouse and smaller windows are supported. New games still start with Hayato alone. See [controls, screenshots and verification](party/README.md).
+
 Current courtyard (October 21): [the finished generated-only courtyard](maps/dojo-courtyard.md) supersedes older map descriptions below. Map002 is absent; dojo doors now display closed-door text, with no dangling transfers. The original hall and both full sparring events are preserved. See the linked map record for assets, previews and verification.
 
-Updated October 20, 2026. Practical setup, controls, map layout, implementation, and verification for the current RPG Maker MZ prototype.
+Updated October 24, 2026. Practical setup, controls, map layout, implementation, and verification for the current RPG Maker MZ prototype.
 
 ## Documentation
 
@@ -29,7 +33,7 @@ October 21 overworld art update: Actor 1 uses `$Samurai-v3`, Masanori uses `$Sam
 
 The game and UI use 1280 × 720 (16:9), with the desktop window configured to the same size. Tiles and movement remain 48 × 48; current cast walking frames are 64 × 88, rendered at native 1× scale. The wider view shows more of the map. Maps narrower than the screen are centered with empty space at their sides. Actor 1 uses five rear-view form sprites in the lower-left of front-view duels, with the opponent in the upper-right. Restart an active playtest to load new code and assets.
 
-- Arrow keys move; Enter/Z interacts. The party contains only actor 1, using the custom samurai walking sheet. Reid's name and original portrait remain placeholders.
+- Arrow keys move; Enter/Z interacts. New games start with Hayato (actor 1), using the custom samurai walking sheet. Menus use existing battle artwork and walking sprites instead of placeholder face portraits. Permanent recruitment is not implemented; Party is available with one roster member.
 - Walk onto either half of the red-wood home's double doorway to enter Samurai Home. Walk onto the room's lower exit to return. The exterior door is static and does not animate open.
 - Approach Masanori at (12, 9), face him, and interact. Choose Spar or Not now; cancelling the dialogue declines.
 - The Shinsengumi swordsman stands at (16, 10), on the right side of the courtyard. Face him, press Enter/Z, and choose Spar or Not now. His repeatable nonlethal duel uses the same rules and starting stats as Masanori, his own five guard sprites, and the courtyard background. Winning or leaving restores Health/MP; the player cannot fall below 1 Health during practice. Uses `$Shinsengumi-v2`, character index 0.

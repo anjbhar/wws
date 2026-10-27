@@ -1,0 +1,12 @@
+{
+  "architectureTiles": 161,
+  "groundTiles": 375,
+  "dojo": [
+    456,
+    0,
+    288,
+    192
+  ],
+  "eventsExact": true,
+  "geometryExact": true
+}

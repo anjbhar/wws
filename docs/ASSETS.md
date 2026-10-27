@@ -10,6 +10,9 @@ All listed custom artwork was generated with the built-in imagegen tool and expo
 
 | Asset | Game file | Dimensions | Current use |
 |---|---|---|---|
+| Legendary Ronin walking | [$StrawHatRonin-v1.png](../img/characters/$StrawHatRonin-v1.png) | 192 × 352 | Courtyard boss NPC at (18,8), event 13; both swords sheathed at left hip. [Source, prompts and comparison](art/straw-hat-ronin/README.md). |
+| Legendary Ronin battle | [StrawHatRonin-v2.png](../img/enemies/StrawHatRonin-v2.png) | 288 × 288 | Enemy 10, troop 9; repeatable protected boss spar. [Encounter and checks](battles/legendary-ronin.md). |
+| Kimono woman battle | [KimonoWoman-v4.png](../img/enemies/KimonoWoman-v4.png) | 288 × 288 | Approved standalone battle sprite with plain hairpin; [source and production record](art/kimono-woman/README.md). |
 | Protagonist | [$Samurai-v3.png](../img/characters/$Samurai-v3.png) | 192 × 352 | Actor 1, character index 0; 69px front standing height. |
 | Masanori walking | [$SamuraiInstructor-v3.png](../img/characters/$SamuraiInstructor-v3.png) | 192 × 352 | Courtyard NPC at (12,9); 67px front standing height. |
 | Masanori battle baseline | [SamuraiInstructor-v1.png](../img/enemies/SamuraiInstructor-v1.png) | 288 × 288 | Original enemy 6 database image outside custom front-view duels. |

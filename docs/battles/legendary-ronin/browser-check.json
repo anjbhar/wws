@@ -1,0 +1,45 @@
+{
+  "eventId": 13,
+  "position": [
+    18,
+    8
+  ],
+  "reachable": true,
+  "battle": {
+    "name": "Legendary Ronin",
+    "hp": 1400,
+    "sprite": "img/enemies/StrawHatRonin-v2.png",
+    "scale": 1,
+    "sparring": true,
+    "party": [
+      "Hayato"
+    ]
+  },
+  "twoSword": {
+    "stance": "Two Sword",
+    "hits": [
+      {
+        "strike": 1,
+        "defense": "Parry",
+        "damage": 0,
+        "stance": "Two Sword",
+        "time": 13575.399999976158
+      },
+      {
+        "strike": 2,
+        "defense": "Dodge",
+        "damage": 0,
+        "stance": "Two Sword",
+        "time": 13659.199999928474
+      }
+    ],
+    "stances": [
+      "Two Sword"
+    ]
+  },
+  "decline": true,
+  "escape": true,
+  "recovered": true,
+  "errors": [],
+  "failed": []
+}

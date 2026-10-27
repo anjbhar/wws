@@ -1,0 +1,59 @@
+{
+  "streetReconstructionExact": true,
+  "mapDimensions": {
+    "1": [
+      25,
+      15
+    ],
+    "2": [
+      17,
+      15
+    ],
+    "3": [
+      42,
+      15
+    ]
+  },
+  "interiorNonblankStarCells": 0,
+  "newEngineLaunch": false,
+  "newEngineScreenshots": false,
+  "merchantRailToFacadeGaps": [
+    {
+      "worldY": 118,
+      "railExclusiveEndX": 1118,
+      "firstOpaqueBuildingX": 1123,
+      "visibleGapPixels": 5
+    },
+    {
+      "worldY": 119,
+      "railExclusiveEndX": 1118,
+      "firstOpaqueBuildingX": 1123,
+      "visibleGapPixels": 5
+    },
+    {
+      "worldY": 120,
+      "railExclusiveEndX": 1118,
+      "firstOpaqueBuildingX": 1123,
+      "visibleGapPixels": 5
+    },
+    {
+      "worldY": 129,
+      "railExclusiveEndX": 1118,
+      "firstOpaqueBuildingX": 1123,
+      "visibleGapPixels": 5
+    },
+    {
+      "worldY": 130,
+      "railExclusiveEndX": 1118,
+      "firstOpaqueBuildingX": 1123,
+      "visibleGapPixels": 5
+    },
+    {
+      "worldY": 131,
+      "railExclusiveEndX": 1118,
+      "firstOpaqueBuildingX": 1123,
+      "visibleGapPixels": 5
+    }
+  ],
+  "captureAuditMismatchCount": 4
+}

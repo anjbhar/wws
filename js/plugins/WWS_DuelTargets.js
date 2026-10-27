@@ -23,6 +23,9 @@
     };
     const profiles = {
         SamuraiInstructor: poses,
+        LegendaryRonin: {
+            Chudan: {Head:[[163,73,20,23]],Torso:[[163,111,27,31]],Arms:[[120,153,20,26],[218,157,18,25]],Legs:[[126,235,29,31],[209,234,28,30]]}
+        },
         WarriorMonkMasked: {
             Chudan: {Head:[[138,157,24,25]],Torso:[[147,222,32,38]],Arms:[[113,217,24,29],[173,213,24,28]],Legs:[[107,334,30,34],[187,334,30,34]]}
         },
@@ -59,6 +62,7 @@
         return best;
     }
     function hitChances(attacker, defender, heavy) {
+        if (!heavy && WwsDuelRules.canExecute(attacker, defender)) return Object.fromEntries(areas.map(area => [area, 1]));
         return Object.fromEntries(areas.map(area => [area,
             1 - WwsDuelRules.defense(defender, attacker, heavy, area)]));
     }
@@ -89,14 +93,15 @@
             this.contents.clear();
             const d=BattleManager._wwsDuel;
             const [attacker,defender]=d.battlers;
-            const chances=WwsDuelRules.defenseChances(defender,attacker,d.kind==='Heavy Cut',this._area);
+            const execute=WwsDuelRules.canExecute(attacker,defender,d.kind);
+            const chances=execute ? {Parry:0,Dodge:0} : WwsDuelRules.defenseChances(defender,attacker,d.kind==='Heavy Cut',this._area);
             const ui=WwsDuelUI;
             ui.panel(this);
-            ui.textAt(this,`${d.kind.toUpperCase()}  /  CHOOSE A TARGET`,16,2,440,12,ui.muted);
+            ui.textAt(this,`${WwsDuelRules.cutName(attacker,defender,d.kind).toUpperCase()}  /  CHOOSE A TARGET`,16,2,440,12,ui.muted);
             ui.textAt(this,'Point or ← →  Select     Enter  Strike     Esc  Back',this.innerWidth-440,2,424,12,ui.muted,'right');
             ui.textAt(this,this._area,16,34,this.innerWidth-320,27,ui.text,'left',true);
-            const damage=WwsDuelRules.damage(attacker,defender,d.kind==='Heavy Cut',this._area);
-            ui.textAt(this,`${damage} damage · ${effects[this._area]}`,16,70,this.innerWidth-360,15,ui.muted);
+            const damage=execute ? defender.hp : WwsDuelRules.damage(attacker,defender,d.kind==='Heavy Cut',this._area);
+            ui.textAt(this,execute ? `${damage} damage · Defeats enemy` : `${damage} damage · ${effects[this._area]}`,16,70,this.innerWidth-360,15,ui.muted);
             ui.textAt(this,`${Math.round((1-chances.Parry-chances.Dodge)*100)}% hit`,this.innerWidth-260,34,244,27,ui.text,'right',true);
             ui.textAt(this,`Parry/Block ${Math.round(chances.Parry*100)}%  ·  Dodge ${Math.round(chances.Dodge*100)}%`,this.innerWidth-340,70,324,13,ui.muted,'right');
         }
@@ -114,7 +119,7 @@
             const d=BattleManager._wwsDuel;
             const chances=hitChances(d.battlers[0],sprite._battler,d.kind==='Heavy Cut');
             const percentages=Object.fromEntries(areas.map(area=>[area,Math.round(chances[area]*100)]));
-            const damages=Object.fromEntries(areas.map(area=>[area,WwsDuelRules.damage(d.battlers[0],sprite._battler,d.kind==='Heavy Cut',area)]));
+            const damages=Object.fromEntries(areas.map(area=>[area,WwsDuelRules.canExecute(d.battlers[0],sprite._battler,d.kind) ? sprite._battler.hp : WwsDuelRules.damage(d.battlers[0],sprite._battler,d.kind==='Heavy Cut',area)]));
             const key=JSON.stringify([sprite._battler.enemyId(),pose,this._area,percentages,damages]);
             if(this._drawn===key)return;
             this._drawn=key;

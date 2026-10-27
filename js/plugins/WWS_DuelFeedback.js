@@ -33,18 +33,23 @@
             this.emit({ type: 'injury', target, area, severity, text: `${area} injured — ${injuryEffects[area]}`, delay: 20, duration: 82 });
         },
         impact(event) {
-            this.emit({ type: 'impact', duration: 72, ...event });
+            // damage is actual Health lost, including the practice Health floor.
+            // Fixed particles consume no combat randomness or additional wait time.
+            const blood = !event.defense && event.damage > 0 ? {
+                duration: event.execute ? 40 : event.heavy ? 22 : 18, count: event.execute ? 24 : event.heavy ? 16 : 10, travel: event.execute ? 84 : event.heavy ? 48 : 32
+            } : null;
+            this.emit({ type: 'impact', duration: 72, ...event, blood });
             if (!this.scene) return;
-            const rapid = event.lightlessStrike > 1 || (event.defense === 'Parry' &&
+            const rapid = event.twoSwordStrike > 0 || event.lightlessStrike > 1 || (event.defense === 'Parry' &&
                 globalThis.WwsDuelRules?.hasLightlessBlade(event.subject));
             this.hitStop = event.defense === 'Dodge' ? 0 : rapid ? 1 : event.heavy ? 6 : 3;
-            this.motionFrames = rapid ? 4 : event.defense === 'Dodge' ? 26 : event.heavy ? 24 : 16;
+            this.motionFrames = event.execute ? 40 : rapid ? 4 : event.defense === 'Dodge' ? 26 : event.heavy ? 24 : 16;
             const sprite = this.sprite(event.target);
             if (sprite) {
                 if (event.defense) sprite.updateBitmap?.();
                 sprite._wwsFeedbackMotion = { kind: event.defense || 'Hit', heavy: event.heavy, age: 0, duration: this.motionFrames };
             }
-            const name = event.defense === 'Parry' ? 'Parry' : event.defense === 'Dodge' ? 'Evasion1' : event.heavy ? 'Sword3' : 'Sword1';
+            const name = event.defense === 'Parry' ? 'Parry' : event.defense === 'Dodge' ? 'Evasion1' : 'Sword5';
             AudioManager.playSe({ name, volume: event.defense ? 68 : event.heavy ? 76 : 58, pitch: event.heavy ? 90 : 105, pan: event.target.isActor() ? -15 : 15 });
         },
         sprite(target) {
@@ -88,7 +93,7 @@
         const d = BattleManager._wwsDuel;
         const chainingParry = d?.defense === 'Parry' && d.target?._wws?.reaction === 'Parry' &&
             globalThis.WwsDuelRules?.hasLightlessBlade(BattleManager._subject);
-        return d && (d.kind === 'Lightless Blade' || chainingParry) ? 2 : messageSpeed.call(this);
+        return d && (d.twoSwordStrike > 0 || d.kind === 'Three Stage Thrust' || chainingParry) ? 2 : messageSpeed.call(this);
     };
 
     // Use one short wind-up; reveal defense, play the impact sound and draw the
@@ -96,7 +101,7 @@
     const startAction = Window_BattleLog.prototype.startAction;
     Window_BattleLog.prototype.startAction = function(subject, action, targets) {
         if (!BattleManager._wwsDuel) return startAction.call(this, subject, action, targets);
-        if (BattleManager._wwsDuel.kind === 'Lightless Blade') {
+        if (BattleManager._wwsDuel.twoSwordStrike === 2 || BattleManager._wwsDuel.kind === 'Three Stage Thrust') {
             // Follow-ups snap straight into the next cut without another wind-up.
             this.push('performAction', subject, action);
             return;
@@ -110,7 +115,12 @@
     Window_BattleLog.prototype.displayActionResults = function(subject, target) {
         if (!BattleManager._wwsDuel) return results.call(this, subject, target);
         // Feedback draws a single number or defense label; no duplicate stock Miss.
-        if (target.isDead()) this.push('performCollapse', target);
+        if (target.isDead()) {
+            // Start the fade alongside the neck spray instead of waiting for
+            // queued log text to finish before making the enemy disappear.
+            if (BattleManager._wwsDuel.kind === 'Execute') target.performCollapse();
+            else this.push('performCollapse', target);
+        }
         this.push('wait');
     };
     const updateBattler = Sprite_Battler.prototype.update;
@@ -135,10 +145,10 @@
             const sprite = feedback.sprite(target);
             if (!sprite) return { x: target.isActor() ? Graphics.boxWidth * .26 : Graphics.boxWidth * .68, y: 330 };
             const pose = WwsDuelRules.pose(target);
-            const regions = !target.isActor() && !$gameSystem.isSideView() && globalThis.WwsDuelTargets?.regions(target, pose)?.[area];
+            const regions = !target.isActor() && !$gameSystem.isSideView() && globalThis.WwsDuelTargets?.regions(target, pose)?.[area === 'Neck' ? 'Head' : area];
             let width = sprite.bitmap?.width || 288, height = sprite.bitmap?.height || 288;
-            let x = width * .5, y = height * ({ Head: .32, Torso: .54, Arms: .50, Legs: .80 }[area] || .54);
-            if (regions) { x = regions.reduce((sum, region) => sum + region[0], 0) / regions.length; y = regions.reduce((sum, region) => sum + region[1], 0) / regions.length; }
+            let x = width * .5, y = height * ({ Head: .32, Neck: .40, Torso: .54, Arms: .50, Legs: .80 }[area] || .54);
+            if (regions) { x = regions.reduce((sum, region) => sum + region[0], 0) / regions.length; y = regions.reduce((sum, region) => sum + region[1] + (area === 'Neck' ? region[3] * .7 : 0), 0) / regions.length; }
             const local = new Point(x - sprite.anchor.x * width, y - sprite.anchor.y * height);
             return sprite.toGlobal(local);
         }
@@ -150,6 +160,48 @@
             this.drawText(text, x - 220, y - 12, 440, 'center');
             this.contents.paintOpacity = 255;
         }
+        executeMarker(target) {
+            if (!WwsDuelRules.canExecute(WwsDuelRules.actor(), target)) return;
+            const sprite = feedback.sprite(target);
+            if (!sprite || !sprite.visible || sprite.opacity === 0) return;
+            const torso = this.point(target, 'Torso');
+            const x = Math.max(34, Math.min(Graphics.boxWidth - 34, torso.x));
+            const y = Math.max(28, Math.min(Graphics.boxHeight - 28, torso.y));
+            const saved = {};
+            for (const key of ['fontFace', 'fontSize', 'textColor', 'outlineColor', 'outlineWidth', 'paintOpacity']) saved[key] = this.contents[key];
+            Object.assign(this.contents, {
+                fontFace: '"Yu Mincho", "Yu Gothic", "MS Gothic", serif', fontSize: 44,
+                textColor: '#e52b35', outlineColor: 'rgba(30,0,3,0.95)', outlineWidth: 4, paintOpacity: 255
+            });
+            this.contents.drawText('\u6b7b', x - 32, y - 28, 64, 56, 'center');
+            Object.assign(this.contents, saved);
+        }
+        blood(event, point, age) {
+            const spray = event.blood;
+            if (!spray || age >= spray.duration) return;
+            const c = this.contents.context, t = age / spray.duration;
+            const direction = event.target.isActor() ? -1 : 1;
+            c.save();
+            c.translate(point.x, point.y);
+            // Stay readable while separating from the blade glint, then fade.
+            c.globalAlpha = .95 * Math.min(1, (1 - t) / .55);
+            c.fillStyle = '#800e19'; c.lineCap = 'round';
+            for (let i = 0; i < spray.count; i++) {
+                const angle = -.65 + i / (spray.count - 1) * 1.35;
+                const distance = 5 + spray.travel * (.55 + (i % 3) * .2) * t;
+                const dx = direction * Math.cos(angle), dy = Math.sin(angle);
+                const x = dx * distance, y = dy * distance + 7 * t * t;
+                const streak = (i % 2 === 0 ? 11 : 8) * (1 - .5 * t);
+                const width = i % 3 === 0 ? 3.2 : 2.4;
+                // A narrow dark rim distinguishes crimson from skin and clothing.
+                c.strokeStyle = '#290407'; c.lineWidth = width + 1.5;
+                c.beginPath(); c.moveTo(x - dx * streak, y - dy * streak); c.lineTo(x, y); c.stroke();
+                c.strokeStyle = '#800e19'; c.lineWidth = width; c.stroke();
+                c.beginPath(); c.arc(x, y, i % 3 === 0 ? 3 : 2.2, 0, Math.PI * 2);
+                c.strokeStyle = '#290407'; c.lineWidth = 1; c.stroke(); c.fill();
+            }
+            c.restore(); this.contents.baseTexture.update();
+        }
         update() {
             super.update();
             const d = BattleManager._wwsDuel;
@@ -160,6 +212,7 @@
                 feedback.health(target);
                 const sprite = feedback.sprite(target), motion = sprite?._wwsFeedbackMotion;
                 if (!sprite) continue;
+                this.executeMarker(target);
                 if (motion && motion.kind !== 'Dodge') {
                     const alpha = Math.round(90 * (1 - motion.age / motion.duration));
                     sprite.setBlendColor(motion.kind === 'Parry' ? [255,237,184,alpha] : [230,115,85,alpha]);
@@ -180,6 +233,8 @@
                 if (event.type === 'stance') { this.label(event.text, x, Math.max(158,y-36), 16, '#e9d4a7', alpha); continue; }
                 if (event.type === 'injury') { this.label(event.text, x, y + 28 - age * .12, 15, '#e3b695', alpha); continue; }
                 if (event.type !== 'impact') continue;
+                // Paint the short-lived spray beneath the damage number.
+                this.blood(event, point, age);
                 if (event.defense) this.label(event.defense === 'Parry' ? 'Parried' : 'Dodged', x, y - 16 - age * .35, 22, event.defense === 'Parry' ? '#f5dfac' : '#cbd9d1', alpha);
                 else this.label(String(event.damage), x, y - 12 - age * .45, event.heavy ? 40 : 30, event.heavy ? '#ffe0b1' : '#f5edda', alpha);
                 const life = event.defense === 'Parry' ? 14 : event.heavy ? 10 : 7;

@@ -1,0 +1,40 @@
+const fs = require('node:fs'), path = require('node:path');
+const { run } = require('./lib/duel-harness.cjs')();
+// Scene rendering is exercised by preview-party-screen.cjs; use real party objects here.
+run(`
+function Window_Selectable(){};function Scene_MenuBase(){};
+function Window_MenuCommand(){};function Scene_Menu(){};
+var WwsUI={colors:{},text(){},wrapped(){},panel(){},artwork(){}};
+Scene_Menu.prototype.createCommandWindow=function(){};
+$gamePlayer={refresh(){}};
+`);
+run(fs.readFileSync(path.join(__dirname,'../js/plugins/WWS_Party.js'),'utf8'));
+run(`
+$gameParty._actors=[1,9,10,2,3];
+assert.deepEqual($gameParty.wwsFormation().map(a=>a.actorId()),[1,9,10]);
+assert.deepEqual(WwsParty.reserves().map(a=>a.actorId()),[2,3]);
+assert.equal(WwsParty.position($gameActors.actor(1)),'Center');
+assert.equal(WwsParty.position($gameActors.actor(9)),'Left');
+assert.equal(WwsParty.position($gameActors.actor(10)),'Right');
+assert.equal(WwsParty.position($gameActors.actor(2)),'Reserve');
+assert(WwsParty.swap(1,10));
+assert.deepEqual($gameParty.wwsFormation().map(a=>a.actorId()),[10,9,1]);
+assert(WwsParty.swap(9,2));
+assert.deepEqual($gameParty.wwsFormation().map(a=>a.actorId()),[10,2,1]);
+assert.deepEqual(WwsParty.reserves().map(a=>a.actorId()),[9,3]);
+const original = JSON.stringify($gameParty);
+for(const [a,b] of [[9,3],[1,1],[1,999],[999,1]])assert.equal(WwsParty.swap(a,b),false);
+assert.equal(JSON.stringify($gameParty),original);
+$gameSystem.disableFormation();assert.equal(WwsParty.swap(1,2),false);
+assert.equal(JSON.stringify($gameParty),original);
+$gameSystem.enableFormation();
+const actor=$gameActors.actor(2);actor.isFormationChangeOk=()=>false;
+assert.equal(WwsParty.swap(1,2),false);assert.equal(WwsParty.swap(2,1),false);
+assert.equal(JSON.stringify($gameParty),original);delete actor.isFormationChangeOk;
+const restored=Object.assign(new Game_Party(),JSON.parse(original));
+assert.deepEqual(restored.wwsFormation().map(a=>a.actorId()),[10,2,1]);
+assert.equal(new Set($gameParty._actors).size,5);
+$gameParty._actors=[1];delete $gameParty._wwsFormation;
+assert.equal(WwsParty.reserves().length,0);assert.equal(WwsParty.swap(1,9),false);
+console.log('PASS: Party screen swaps, reserve membership, saved assignments, no-op/invalid swaps, roster preservation, actor locks and formation lock');
+`);

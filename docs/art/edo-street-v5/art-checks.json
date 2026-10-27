@@ -1,0 +1,58 @@
+{
+  "modifiedJSONValid": true,
+  "streetReconstructionExact": true,
+  "old200pxTerrainRepeatAbsent": true,
+  "doors": [
+    {
+      "name": "home",
+      "openingHeight": 76,
+      "maximumOpaquePixelColorDifference": 2,
+      "baseY": 192
+    },
+    {
+      "name": "tea-shop",
+      "openingHeight": 76,
+      "maximumOpaquePixelColorDifference": 2,
+      "baseY": 192
+    },
+    {
+      "name": "merchant",
+      "openingHeight": 76,
+      "maximumOpaquePixelColorDifference": 2,
+      "baseY": 192
+    }
+  ],
+  "playerVisibleHeight": 69,
+  "fenceContinuity": [
+    {
+      "name": "west-home",
+      "railTransparentColumns": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "home-tea",
+      "railTransparentColumns": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "tea-merchant",
+      "railTransparentColumns": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "merchant-dojo",
+      "railTransparentColumns": [
+        0,
+        0
+      ]
+    }
+  ],
+  "canopyExtractionReversibleAndOtherArchitectureExact": true,
+  "previousSheetsAndUnrelatedInputsPreserved": true
+}

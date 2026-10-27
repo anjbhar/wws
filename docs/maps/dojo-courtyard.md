@@ -1,4 +1,4 @@
-Current implementation: [courtyard v6](courtyard-v6-implementation.md). The notes below describe earlier iterations.
+Current implementation: [courtyard v9 artwork refinement](courtyard-v9-implementation.md), with the entrance now connected to the [neighborhood dojo interior](dojo-interior.md). The notes below describe earlier iterations.
 
 # Finished dojo courtyard — October 21, 2026
 

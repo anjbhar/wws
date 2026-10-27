@@ -1,0 +1,272 @@
+[
+  {
+    "name": "courtyard-north-clear-native",
+    "meanRGBErrorBest60Percent": 0.571,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-fade-boundary-native",
+    "meanRGBErrorBest60Percent": 0.618,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-southbound-reverse-input-native",
+    "meanRGBErrorBest60Percent": 0.571,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-reversed-north-native",
+    "meanRGBErrorBest60Percent": 0.592,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-northbound-reverse-input-native",
+    "meanRGBErrorBest60Percent": 0.584,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-reversed-south-native",
+    "meanRGBErrorBest60Percent": 0.626,
+    "matchingOpaqueFraction": 0.999,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-gate-approach-native",
+    "meanRGBErrorBest60Percent": 0.494,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-gate-half-step-native",
+    "meanRGBErrorBest60Percent": 0.602,
+    "matchingOpaqueFraction": 0.999,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "street-arrival-native",
+    "meanRGBErrorBest60Percent": 0.686,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-arrival-38-native",
+    "meanRGBErrorBest60Percent": 0.591,
+    "matchingOpaqueFraction": 0.999,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-jamb-contact-native",
+    "meanRGBErrorBest60Percent": 0.633,
+    "matchingOpaqueFraction": 0.999,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-west-fade-edge-native",
+    "meanRGBErrorBest60Percent": 0.545,
+    "matchingOpaqueFraction": 0.999,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-east-fade-edge-native",
+    "meanRGBErrorBest60Percent": 0.594,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-canopy-restored-native",
+    "meanRGBErrorBest60Percent": 0.553,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "courtyard-arrival-39-native",
+    "meanRGBErrorBest60Percent": 0.591,
+    "matchingOpaqueFraction": 0.999,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "dojo-return-contact-native",
+    "meanRGBErrorBest60Percent": 0.686,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "dojo-wall-contact-native",
+    "meanRGBErrorBest60Percent": 0.664,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "street-east-contact-native",
+    "meanRGBErrorBest60Percent": 0.801,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "street-middle-walking-native",
+    "meanRGBErrorBest60Percent": 0.787,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "street-west-walking-native",
+    "meanRGBErrorBest60Percent": 0.779,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "street-west-contact-native",
+    "meanRGBErrorBest60Percent": 0.782,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "home-foundation-contact-native",
+    "meanRGBErrorBest60Percent": 0.579,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "home-tea-fence-contact-native",
+    "meanRGBErrorBest60Percent": 0.651,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "tea-shop-foundation-contact-native",
+    "meanRGBErrorBest60Percent": 0.59,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "merchant-foundation-contact-native",
+    "meanRGBErrorBest60Percent": 0.642,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "merchant-return-contact-native",
+    "meanRGBErrorBest60Percent": 0.708,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  },
+  {
+    "name": "drainage-contact-native",
+    "meanRGBErrorBest60Percent": 0.692,
+    "matchingOpaqueFraction": 1.0,
+    "bestOffset": [
+      0,
+      0
+    ],
+    "frameMatchesLogicalPose": true
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "Generator": "built-in image_gen",
+  "Status": "Draft for visual approval",
+  "SourceSize": [
+    1254,
+    1254
+  ],
+  "Canvas": [
+    288,
+    288
+  ],
+  "Scale": 0.2203548085901027,
+  "Offset": [
+    8,
+    6
+  ],
+  "OutputBoundsExclusive": [
+    15,
+    31,
+    280,
+    268
+  ],
+  "VisibleHeight": 237,
+  "TrueAlpha": true,
+  "Output": "img\\enemies\\StrawHatRonin-v2.png",
+  "AssignedEncounter": false
+}

@@ -1,0 +1,128 @@
+{
+  "tool": "Built-in image_gen",
+  "prompts": [
+    {
+      "character": "Masanori",
+      "pose": "Chudan",
+      "prompt": "Use case: identity-preserve. Create ONE transparent game-ready pixel-art party battle sprite: Masanori in CHUDAN. Reference 1 is Hayato's rear Chudan party sprite: match its exact camera (rear three-quarter, facing upper-right), crisp pixel clusters, restrained outlines, large readable clothing planes and pixel density. Reference 2 is Masanori's front enemy sprite: preserve HIS identity: mature man with dark/greying topknot, russet brown kimono, dark charcoal hakama, indigo blue obi, sandals, katana and sheathed second sword. Do not copy Hayato's blue kimono. Rear view showing mostly back and a small right facial profile. Chudan: two hands grip katana before waist, blade extending diagonally upper-right toward opponent, stable feet apart. Full body and entire blade inside frame with generous clear margins. Stylized adult samurai, not realistic illustration. Output single isolated sprite on true alpha transparency, no checkerboard painted in, no ground shadow, text, panels or effects. Intended export 480x384, standing body crown-to-sole approximately 280px, sole baseline y368, foot center x240; source may be larger but keep 5:4 composition and full blade clearance. Match original restrained pixel detail; clean hard edges. Save output and return local path."
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Chudan",
+      "prompt": "Use case: identity-preserve. Create ONE transparent game-ready pixel-art party battle sprite: Shinsengumi swordsman in CHUDAN. Reference 1 Hayato rear Chudan: match exact rear three-quarter camera facing upper-right, crisp pixel clusters, restrained dark contours, broad angular folds, stylized adult proportions and pixel density. Reference 2 Shinsengumi front enemy: preserve his young black-haired identity, loose short spiky black hair NOT a topknot, asagi blue haori with distinctive white sawtooth mountain trim on sleeves and hem, dark indigo inner kimono, vertically striped gray/cream hakama, sandals, katana and sheathed second sword. Mostly back visible with small right facial profile. Chudan: two hands on katana held before waist, blade extending diagonally upper-right toward opponents; stable feet-apart stance. Keep complete body and entire blade inside frame with clear margins. Authentic crisp retro pixel sprite, not realistic or painted illustration. One isolated sprite true alpha transparent background, no ground shadow, no text, panels, watermark or effects. Intended export 480x384, crown-to-sole about 280px, sole y368 and foot center x240; larger source okay with 5:4 composition and weapon clearance. Match Hayato's battle size and detail. Save output and return local path."
+    },
+    {
+      "character": "Masanori",
+      "pose": "Jodan",
+      "prompt": "Use case: identity-preserve. ONE transparent pixel-art party battle sprite, Masanori, JODAN high guard. Reference 1 is this character's approved rear Chudan: preserve exactly his identity, hairstyle, costume, colors, proportions, rendering style, camera angle, body size and feet position. Reference 2 is Hayato's Jodan: use the SAME pose and orientation (rear three-quarter facing upper-right), both hands raised above head holding ONE katana, blade angled across above head toward upper-left; elbows bent and hands anatomically correct. Change only upper-body guard and natural folds from reference 1. Preserve full body, shoes, sheathed sword on left hip, all signature garment details. Same crisp restrained pixel clusters, no painterly textures. Keep entire raised sword inside generous canvas margins. Intended export 480x384, crown-to-sole 280px, foot axis x240 and soles y368; leave extra headroom for blade without shrinking body. One sprite, true alpha transparency, no shadow/background/text/effects. Save local output path."
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Jodan",
+      "prompt": "Use case: identity-preserve. ONE transparent pixel-art party battle sprite, Shinsengumi, JODAN high guard. Reference 1 is this character's approved rear Chudan: preserve exactly his identity, hairstyle, costume, colors, proportions, rendering style, camera angle, body size and feet position. Reference 2 is Hayato's Jodan: use the SAME pose and orientation (rear three-quarter facing upper-right), both hands raised above head holding ONE katana, blade angled across above head toward upper-left; elbows bent and hands anatomically correct. Change only upper-body guard and natural folds from reference 1. Preserve full body, shoes, sheathed sword on left hip, all signature garment details. Same crisp restrained pixel clusters, no painterly textures. Keep entire raised sword inside generous canvas margins. Intended export 480x384, crown-to-sole 280px, foot axis x240 and soles y368; leave extra headroom for blade without shrinking body. One sprite, true alpha transparency, no shadow/background/text/effects. Save local output path."
+    },
+    {
+      "character": "Masanori",
+      "pose": "Gedan",
+      "prompt": "Use case: identity-preserve. Create ONE transparent pixel-art party battle sprite of Masanori in GEDAN low guard. Reference 1 is his approved rear Chudan: preserve identical identity, outfit, hair, palette, proportions, pixel density, sandals, sheathed sword and rear three-quarter camera facing upper-right. Reference 2 Hayato Gedan defines precise pose: stable wide feet, hands lowered before right hip, ONE katana pointing diagonally down-right with tip near shin height. Change only arms, blade angle and natural clothing folds. Keep body size and foot positions consistent with reference 1. Complete sword and body visible with margins, no cropped blades. Crisp pixel clusters and broad angular cloth shading matching existing sprites; no smooth illustrative finish. Intended 480x384 export, 280px crown-to-sole body, foot center x240 and soles y368. True alpha transparency, single sprite, no background, ground shadow, labels, effects. Save local path."
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Gedan",
+      "prompt": "Use case: identity-preserve. Create ONE transparent pixel-art party battle sprite of Shinsengumi in GEDAN low guard. Reference 1 is his approved rear Chudan: preserve identical identity, outfit, hair, palette, proportions, pixel density, sandals, sheathed sword and rear three-quarter camera facing upper-right. Reference 2 Hayato Gedan defines precise pose: stable wide feet, hands lowered before right hip, ONE katana pointing diagonally down-right with tip near shin height. Change only arms, blade angle and natural clothing folds. Keep body size and foot positions consistent with reference 1. Complete sword and body visible with margins, no cropped blades. Crisp pixel clusters and broad angular cloth shading matching existing sprites; no smooth illustrative finish. Intended 480x384 export, 280px crown-to-sole body, foot center x240 and soles y368. True alpha transparency, single sprite, no background, ground shadow, labels, effects. Save local path."
+    },
+    {
+      "character": "Masanori",
+      "pose": "Kasumi",
+      "prompt": "Use case: identity-preserve. ONE transparent pixel-art party battle sprite of Masanori in KASUMI protective high side guard. Reference 1 approved rear Chudan is identity/style lock: exactly same hair, outfit, palette, costume markings, proportions, pixel density and sandals. Reference 2 Hayato Kasumi is pose reference: rear three-quarter facing upper-right, both hands together close to right cheek/temple, katana held nearly horizontal at eye level with ONE blade pointing right, bent elbows shielding upper body; slightly lower crouched knees but same feet spacing. Match orientation and clear readable blade. Preserve sheathed sword at left hip, entire body and weapon with margins. Broad angular folds, crisp pixel clusters, restrained dark outlines, no painterly finish. Intended final canvas 480x384, crouched body 260px crown-to-sole, foot center x240, sole baseline y368. Keep same physical character scale as Chudan, simply crouch 20px lower. True alpha transparent background, single sprite, no ground shadow, text or effects. Save local path."
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Kasumi",
+      "prompt": "Use case: identity-preserve. ONE transparent pixel-art party battle sprite of Shinsengumi in KASUMI protective high side guard. Reference 1 approved rear Chudan is identity/style lock: exactly same hair, outfit, palette, costume markings, proportions, pixel density and sandals. Reference 2 Hayato Kasumi is pose reference: rear three-quarter facing upper-right, both hands together close to right cheek/temple, katana held nearly horizontal at eye level with ONE blade pointing right, bent elbows shielding upper body; slightly lower crouched knees but same feet spacing. Match orientation and clear readable blade. Preserve sheathed sword at left hip, entire body and weapon with margins. Broad angular folds, crisp pixel clusters, restrained dark outlines, no painterly finish. Intended final canvas 480x384, crouched body 260px crown-to-sole, foot center x240, sole baseline y368. Keep same physical character scale as Chudan, simply crouch 20px lower. True alpha transparent background, single sprite, no ground shadow, text or effects. Save local path."
+    },
+    {
+      "character": "Masanori",
+      "pose": "Waki",
+      "prompt": "Use case: identity-preserve. ONE transparent pixel-art party battle sprite of Masanori in WAKI concealed side/rear guard. Reference 1 approved rear Chudan locks identity, clothes, hair, colors, proportions, shoes, rendering and pixel density. Reference 2 Hayato Waki defines pose: mostly back facing viewer, head turned to upper-right opponent, torso twisted, hands holding ONE katana drawn low behind the left side of image with long blade pointing down-left, feet wide and stable. Follow reference 2's rear three-quarter orientation precisely; no mirror-facing left. Preserve character's costume details from reference 1 and sheathed sword attached naturally at waist. Whole body and full blade must fit with generous margins. Crisp retro pixel clusters and broad angular shading, no realistic textures. Intended export 480x384, standing crown-to-sole 280px, sole baseline y368, foot axis x240. Single full-body sprite on genuine alpha transparency, no backdrop, shadow, labels, motion effects. Save local output path."
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Waki",
+      "prompt": "Use case: identity-preserve. ONE transparent pixel-art party battle sprite of Shinsengumi in WAKI concealed side/rear guard. Reference 1 approved rear Chudan locks identity, clothes, hair, colors, proportions, shoes, rendering and pixel density. Reference 2 Hayato Waki defines pose: mostly back facing viewer, head turned to upper-right opponent, torso twisted, hands holding ONE katana drawn low behind the left side of image with long blade pointing down-left, feet wide and stable. Follow reference 2's rear three-quarter orientation precisely; no mirror-facing left. Preserve character's costume details from reference 1 and sheathed sword attached naturally at waist. Whole body and full blade must fit with generous margins. Crisp retro pixel clusters and broad angular shading, no realistic textures. Intended export 480x384, standing crown-to-sole 280px, sole baseline y368, foot axis x240. Single full-body sprite on genuine alpha transparency, no backdrop, shadow, labels, motion effects. Save local output path."
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Seigan",
+      "prompt": "Use case: identity-preserve. ONE transparent pixel-art party battle sprite of Shinsengumi swordsman in SEIGAN guard. Reference 1 is approved rear Chudan: preserve same young loose spiky black hair (no topknot), asagi blue haori with white sawtooth edging, striped gray/cream hakama, sandals, sheathed sword, pixel density, body proportions and rear three-quarter camera facing upper-right. Reference 2 is front enemy SEIGAN: translate this particular stance into rear party viewpoint, do NOT use its front camera. Seigan is a raised centerline pointing guard: hands together at upper chest, ONE katana rising diagonally forward upper-right with tip aimed toward opponent's eyes, noticeably steeper than waist-level Chudan and lower than overhead Jodan. Both elbows compact, stable wide feet. Same body and feet size as reference 1, full blade and body inside generous margins. Crisp restrained pixel clusters, broad angular cloth shading, not painterly or realistic. Intended export 480x384 with 280px crown-to-sole body, soles y368, foot center x240. One isolated sprite, genuine alpha transparent background, no backdrop, ground shadow, lettering or effects. Save local path."
+    }
+  ],
+  "images": [
+    {
+      "character": "Masanori",
+      "pose": "Chudan",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-d4fc7b61-78f5-4737-833b-4534cfcb70cd.png",
+      "source": "masanori-chudan-source-v1.png"
+    },
+    {
+      "character": "Masanori",
+      "pose": "Jodan",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-b9e1b878-913d-42ad-9176-adf9d793f9f7.png",
+      "source": "masanori-jodan-source-v1.png"
+    },
+    {
+      "character": "Masanori",
+      "pose": "Gedan",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-294b64ea-95b7-43e4-8fec-c294953636b5.png",
+      "source": "masanori-gedan-source-v1.png"
+    },
+    {
+      "character": "Masanori",
+      "pose": "Kasumi",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-c869de6e-a12b-4446-b520-d24887b9cd1c.png",
+      "source": "masanori-kasumi-source-v1.png"
+    },
+    {
+      "character": "Masanori",
+      "pose": "Waki",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-9e0e65e3-6013-4aed-b397-0f865e61174a.png",
+      "source": "masanori-waki-source-v1.png"
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Chudan",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-bf026fbe-3d7b-4d2b-b8cc-371d56485a52.png",
+      "source": "shinsengumi-chudan-source-v1.png"
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Jodan",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-49b2c3c0-4272-4be6-b2cd-46db3564b370.png",
+      "source": "shinsengumi-jodan-source-v1.png"
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Gedan",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-be82c5d9-490e-4456-be2b-dcb508c064fd.png",
+      "source": "shinsengumi-gedan-source-v1.png"
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Kasumi",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-12e161b6-b313-42a1-b27a-2918020f85f4.png",
+      "source": "shinsengumi-kasumi-source-v1.png"
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Waki",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-52354e02-e192-4cc4-a64b-6aca1b148a84.png",
+      "source": "shinsengumi-waki-source-v1.png"
+    },
+    {
+      "character": "Shinsengumi",
+      "pose": "Seigan",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-8def98e1-fc1f-4b44-ae20-d6d88b632f25.png",
+      "source": "shinsengumi-seigan-source-v1.png"
+    }
+  ]
+}

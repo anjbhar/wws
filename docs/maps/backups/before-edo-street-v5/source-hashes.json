@@ -1,0 +1,18 @@
+{
+  "data/Map001.json": "5e0d4cc630734b1c5e4d038d26e4ff00a416052890ea37859b6faa1e0a5f2bcd",
+  "data/Map002.json": "25c1ebf104d7e9e161b6da19e85356540cc4e395c34fe4a9ff4b706876f5b90a",
+  "data/Map003.json": "d3fe68addc2725b69a714509d671120f8be8232698915a6b81da2de5b0433f1f",
+  "data/Tilesets.json": "016e9c6821ac9bb8b6351d8b6c31bf9e2d911329d393a6ca715a18a78733ef14",
+  "data/MapInfos.json": "4729fc79b0a5131c8ad26c1e9ad443a4f55c3f061675c6f32953ec627b1b54a2",
+  "data/Actors.json": "0559a7832ef1b9f80d93bd20830acb34bb833688a2f5b2aac3709830af3f32e9",
+  "data/System.json": "a78186a10341e03e26ca6bea3b21852ba7f0c2cd2dcf834a1d15807716ad1be5",
+  "js/plugins/WWS_CourtyardGateReadability.js": "4fc12047b0fd9f0270b0821f91c23576e3239c6bcf63d8b90b64388d33aa6986",
+  "img/tilesets/EdoCourtyard_A5-grass-v3.png": "e39aeaf73b9e712b813936e5705afdc08eafdbe62a02585d3b7cd6b333096dae",
+  "img/tilesets/EdoCourtyard_B-v9.png": "8bd6f551e3f166a246eb7db3354952cfbf6baa548c4b3912ee65f61d173ddba2",
+  "img/tilesets/EdoCourtyard_C-v9.png": "2bf3f9d57187321e906960cd118e34ceb9992cd988972c0fd985d3ad182b0cb1",
+  "img/tilesets/EdoCourtyard_D-v9.png": "134ac06db37a5298a7bba80a0bd8ccde7c760272343be75582933f66edffca3f",
+  "img/tilesets/EdoCourtyard_E-v9.png": "cd69b3f7fc61d541801cf22ae6e4715f65f086342e51c0b93bef5b875f287998",
+  "img/tilesets/EdoStreet_B-v4.png": "0d6893a004dd2dc7a05b8b44e3be61572968a7a99a8efbdd3a6192fb9a507798",
+  "img/tilesets/EdoStreet_C-v4.png": "be61762a591daaa155e34a1f21e278fd355b0960609588f5ccce9525785047e3",
+  "img/tilesets/EdoStreet_D-v4.png": "6f63c882fbfd285e45e6c1e364b690ba608f0122940189fc77b99551a242ec57"
+}

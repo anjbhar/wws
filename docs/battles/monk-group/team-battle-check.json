@@ -3,18 +3,130 @@
   "simulationClock": "real MZ frames stepped between inputs",
   "opening": [
     "Hayato",
-    "Hayato B",
-    "Hayato C"
+    "Masanori",
+    "Shinsengumi Swordsman"
   ],
-  "actions": 37,
+  "poseChecks": [
+    {
+      "name": "Masanori",
+      "pose": "Chudan",
+      "preview": "Chudan",
+      "committed": null,
+      "file": "img/battlers/SamuraiInstructor-ChudanBack-v1.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.74,
+      "round": 0
+    },
+    {
+      "name": "Masanori",
+      "pose": "Jodan",
+      "preview": "Jodan",
+      "committed": null,
+      "file": "img/battlers/SamuraiInstructor-JodanBack-v1.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.74,
+      "round": 0
+    },
+    {
+      "name": "Masanori",
+      "pose": "Gedan",
+      "preview": "Gedan",
+      "committed": null,
+      "file": "img/battlers/SamuraiInstructor-GedanBack-v1.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.74,
+      "round": 0
+    },
+    {
+      "name": "Masanori",
+      "pose": "Kasumi",
+      "preview": "Kasumi",
+      "committed": null,
+      "file": "img/battlers/SamuraiInstructor-KasumiBack-v1.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.7971428571428572,
+      "round": 0
+    },
+    {
+      "name": "Masanori",
+      "pose": "Waki",
+      "preview": "Waki",
+      "committed": null,
+      "file": "img/battlers/SamuraiInstructor-WakiBack-v1.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.74,
+      "round": 0
+    },
+    {
+      "name": "Shinsengumi Swordsman",
+      "pose": "Seigan",
+      "preview": "Seigan",
+      "committed": null,
+      "file": "img/battlers/Shinsengumi-SeiganBack-v2.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.74,
+      "round": 0
+    },
+    {
+      "name": "Shinsengumi Swordsman",
+      "pose": "Jodan",
+      "preview": "Jodan",
+      "committed": null,
+      "file": "img/battlers/Shinsengumi-JodanBack-v2.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.74,
+      "round": 0
+    },
+    {
+      "name": "Shinsengumi Swordsman",
+      "pose": "Gedan",
+      "preview": "Gedan",
+      "committed": null,
+      "file": "img/battlers/Shinsengumi-GedanBack-v2.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.74,
+      "round": 0
+    },
+    {
+      "name": "Shinsengumi Swordsman",
+      "pose": "Kasumi",
+      "preview": "Kasumi",
+      "committed": null,
+      "file": "img/battlers/Shinsengumi-KasumiBack-v2.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.7971428571428572,
+      "round": 0
+    },
+    {
+      "name": "Shinsengumi Swordsman",
+      "pose": "Waki",
+      "preview": "Waki",
+      "committed": null,
+      "file": "img/battlers/Shinsengumi-WakiBack-v2.png",
+      "width": 480,
+      "height": 384,
+      "scale": 0.74,
+      "round": 0
+    }
+  ],
+  "actions": 15,
   "turns": [
-    "Hayato B",
+    "Masanori",
     "Hayato",
-    "Hayato C"
+    "Shinsengumi Swordsman"
   ],
   "menus": [
     {
-      "name": "Hayato B",
+      "name": "Masanori",
       "lane": 0,
       "options": [
         0,
@@ -40,7 +152,7 @@
       ]
     },
     {
-      "name": "Hayato C",
+      "name": "Shinsengumi Swordsman",
       "lane": 2,
       "options": [
         1,
@@ -52,7 +164,7 @@
       ]
     },
     {
-      "name": "Hayato B",
+      "name": "Masanori",
       "lane": 0,
       "options": [
         0,
@@ -78,7 +190,7 @@
       ]
     },
     {
-      "name": "Hayato C",
+      "name": "Shinsengumi Swordsman",
       "lane": 2,
       "options": [
         1,
@@ -90,15 +202,27 @@
       ]
     },
     {
-      "name": "Hayato B",
+      "name": "Masanori",
       "lane": 0,
       "options": [
         0,
-        1
+        2
       ],
       "legal": [
         0,
-        1
+        2
+      ]
+    },
+    {
+      "name": "Shinsengumi Swordsman",
+      "lane": 2,
+      "options": [
+        0,
+        2
+      ],
+      "legal": [
+        0,
+        2
       ]
     },
     {
@@ -106,37 +230,23 @@
       "lane": 1,
       "options": [
         0,
-        1,
         2
       ],
       "legal": [
         0,
-        1,
         2
       ]
     },
     {
-      "name": "Hayato C",
-      "lane": 2,
-      "options": [
-        1,
-        2
-      ],
-      "legal": [
-        1,
-        2
-      ]
-    },
-    {
-      "name": "Hayato B",
+      "name": "Masanori",
       "lane": 0,
       "options": [
         0,
-        1
+        2
       ],
       "legal": [
         0,
-        1
+        2
       ]
     },
     {
@@ -144,68 +254,28 @@
       "lane": 1,
       "options": [
         0,
-        1,
         2
       ],
       "legal": [
         0,
-        1,
         2
       ]
     },
     {
-      "name": "Hayato C",
+      "name": "Shinsengumi Swordsman",
       "lane": 2,
       "options": [
-        1,
+        0,
         2
       ],
       "legal": [
-        1,
+        0,
         2
       ]
     },
     {
-      "name": "Hayato B",
+      "name": "Masanori",
       "lane": 0,
-      "options": [
-        0,
-        1
-      ],
-      "legal": [
-        0,
-        1
-      ]
-    },
-    {
-      "name": "Hayato",
-      "lane": 1,
-      "options": [
-        0,
-        1,
-        2
-      ],
-      "legal": [
-        0,
-        1,
-        2
-      ]
-    },
-    {
-      "name": "Hayato C",
-      "lane": 2,
-      "options": [
-        1,
-        2
-      ],
-      "legal": [
-        1,
-        2
-      ]
-    },
-    {
-      "name": "Hayato",
-      "lane": 1,
       "options": [
         0,
         2
@@ -231,37 +301,7 @@
   "hits": [
     {
       "actor": true,
-      "source": "Hayato B",
-      "target": "Masked Monk A",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk A",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Unmasked Monk",
-      "target": "Hayato",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Unmasked Monk",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk A",
-      "target": "Hayato B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato B",
+      "source": "Masanori",
       "target": "Masked Monk A",
       "legal": true
     },
@@ -273,37 +313,25 @@
     },
     {
       "actor": true,
-      "source": "Hayato C",
+      "source": "Shinsengumi Swordsman",
       "target": "Unmasked Monk",
       "legal": true
     },
     {
       "actor": false,
       "source": "Masked Monk B",
-      "target": "Hayato C",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Unmasked Monk",
-      "target": "Hayato B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Unmasked Monk",
-      "target": "Hayato B",
+      "target": "Shinsengumi Swordsman",
       "legal": true
     },
     {
       "actor": false,
       "source": "Masked Monk A",
-      "target": "Hayato",
+      "target": "Masanori",
       "legal": true
     },
     {
       "actor": true,
-      "source": "Hayato B",
+      "source": "Masanori",
       "target": "Masked Monk A",
       "legal": true
     },
@@ -315,7 +343,19 @@
     },
     {
       "actor": true,
-      "source": "Hayato C",
+      "source": "Shinsengumi Swordsman",
+      "target": "Unmasked Monk",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Shinsengumi Swordsman",
+      "target": "Unmasked Monk",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Shinsengumi Swordsman",
       "target": "Unmasked Monk",
       "legal": true
     },
@@ -328,48 +368,42 @@
     {
       "actor": false,
       "source": "Masked Monk A",
-      "target": "Hayato B",
+      "target": "Masanori",
       "legal": true
     },
     {
       "actor": false,
       "source": "Masked Monk B",
-      "target": "Hayato",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato B",
-      "target": "Masked Monk A",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk A",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Unmasked Monk",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato C",
+      "target": "Masanori",
       "legal": true
     },
     {
       "actor": false,
       "source": "Masked Monk A",
-      "target": "Hayato B",
+      "target": "Hayato",
       "legal": true
     },
     {
       "actor": true,
-      "source": "Hayato B",
+      "source": "Masanori",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Shinsengumi Swordsman",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Shinsengumi Swordsman",
+      "target": "Masked Monk A",
+      "legal": true
+    },
+    {
+      "actor": true,
+      "source": "Shinsengumi Swordsman",
       "target": "Masked Monk A",
       "legal": true
     },
@@ -380,26 +414,20 @@
       "legal": true
     },
     {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Unmasked Monk",
+      "actor": false,
+      "source": "Masked Monk B",
+      "target": "Masanori",
       "legal": true
     },
     {
       "actor": false,
       "source": "Masked Monk A",
-      "target": "Hayato B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato C",
+      "target": "Masanori",
       "legal": true
     },
     {
       "actor": true,
-      "source": "Hayato B",
+      "source": "Masanori",
       "target": "Masked Monk A",
       "legal": true
     },
@@ -411,19 +439,13 @@
     },
     {
       "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato C",
+      "source": "Shinsengumi Swordsman",
+      "target": "Masked Monk A",
       "legal": true
     },
     {
       "actor": true,
-      "source": "Hayato B",
+      "source": "Masanori",
       "target": "Masked Monk A",
       "legal": true
     },
@@ -435,163 +457,7 @@
     },
     {
       "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk A",
-      "target": "Hayato B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk A",
-      "target": "Hayato B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato B",
-      "target": "Masked Monk A",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato C",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato C",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato C",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato C",
-      "target": "Masked Monk B",
-      "legal": true
-    },
-    {
-      "actor": false,
-      "source": "Masked Monk B",
-      "target": "Hayato C",
-      "legal": true
-    },
-    {
-      "actor": true,
-      "source": "Hayato",
+      "source": "Shinsengumi Swordsman",
       "target": "Masked Monk B",
       "legal": true
     }
@@ -599,5 +465,36 @@
   "victory": true,
   "escape": true,
   "partyRestored": true,
+  "formation": {
+    "positions": [
+      10,
+      9,
+      1
+    ],
+    "roster": [
+      10,
+      9,
+      1,
+      2
+    ],
+    "labels": [
+      "Center",
+      "Left",
+      "Right",
+      "Reserve"
+    ]
+  },
+  "solo": {
+    "allies": [
+      1
+    ],
+    "roster": [
+      10,
+      9,
+      1,
+      2
+    ],
+    "visibleActors": 1
+  },
   "errors": []
 }

@@ -50,7 +50,7 @@ function reset(id=6,opening=false){$gameParty._inBattle=false;BattleManager.setu
     if(!opening&&BattleManager._wwsDuel?.mode==='openingDialogue'){
         $gameMessage.clear();BattleManager.updatePhase(true);}
     if(!opening&&BattleManager._wwsDuel?.opening){const random=Math.random;Math.random=()=>0;
-        try{while(BattleManager._wwsDuel?.opening)BattleManager.wwsChooseStance('Chudan')}finally{Math.random=random}}}
+        try{while(BattleManager._wwsDuel?.opening)BattleManager.wwsChooseStance(WwsDuelRules.availableStances(WwsDuelRules.actor())[0])}finally{Math.random=random}}}
 function tick(n){for(let i=0;i<n;i++)BattleManager.updatePhase(true)}
 function resolve(){while(BattleManager._phase==='action')BattleManager.updateAction()}
 `);

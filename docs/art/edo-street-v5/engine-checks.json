@@ -1,0 +1,864 @@
+{
+  "scope": "Actual engine captures, normal player speed, art-selected contact probes; no transfer event suppression",
+  "preservation": true,
+  "contacts": [
+    {
+      "name": "left jamb from opening",
+      "from": [
+        12,
+        12
+      ],
+      "direction": 4,
+      "allowed": false,
+      "after": [
+        12,
+        12
+      ]
+    },
+    {
+      "name": "right jamb from opening",
+      "from": [
+        12,
+        12
+      ],
+      "direction": 6,
+      "allowed": false,
+      "after": [
+        12,
+        12
+      ]
+    },
+    {
+      "name": "left jamb from yard",
+      "from": [
+        11,
+        11
+      ],
+      "direction": 2,
+      "allowed": false,
+      "after": [
+        11,
+        11
+      ]
+    },
+    {
+      "name": "right jamb from yard",
+      "from": [
+        13,
+        11
+      ],
+      "direction": 2,
+      "allowed": false,
+      "after": [
+        13,
+        11
+      ]
+    },
+    {
+      "name": "clear forecourt west",
+      "from": [
+        34,
+        3
+      ],
+      "direction": 4,
+      "allowed": true,
+      "after": [
+        33,
+        3
+      ]
+    },
+    {
+      "name": "dojo return",
+      "from": [
+        32,
+        3
+      ],
+      "direction": 4,
+      "allowed": false,
+      "after": [
+        32,
+        3
+      ]
+    },
+    {
+      "name": "dojo wall",
+      "from": [
+        34,
+        3
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        34,
+        3
+      ]
+    },
+    {
+      "name": "east boundary",
+      "from": [
+        40,
+        7
+      ],
+      "direction": 6,
+      "allowed": false,
+      "after": [
+        40,
+        7
+      ]
+    },
+    {
+      "name": "home foundation",
+      "from": [
+        6,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        6,
+        4
+      ]
+    },
+    {
+      "name": "home-tea fence",
+      "from": [
+        12,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        12,
+        4
+      ]
+    },
+    {
+      "name": "tea-shop foundation",
+      "from": [
+        16,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        16,
+        4
+      ]
+    },
+    {
+      "name": "merchant foundation",
+      "from": [
+        26,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        26,
+        4
+      ]
+    },
+    {
+      "name": "walkable north apron",
+      "from": [
+        16,
+        5
+      ],
+      "direction": 8,
+      "allowed": true,
+      "after": [
+        16,
+        4
+      ]
+    },
+    {
+      "name": "drainage edge",
+      "from": [
+        16,
+        11
+      ],
+      "direction": 2,
+      "allowed": false,
+      "after": [
+        16,
+        11
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "name": "courtyard-gate-approach-native",
+      "map": 1,
+      "x": 12,
+      "y": 11,
+      "realX": 12,
+      "realY": 11,
+      "direction": 6,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 48,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "courtyard-gate-half-step-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 11.4375,
+      "direction": 2,
+      "pattern": 1,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 48,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "street-arrival-native",
+      "map": 3,
+      "x": 38,
+      "y": 3,
+      "realX": 38,
+      "realY": 3,
+      "direction": 4,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "courtyard-arrival-38-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 12,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 48,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "courtyard-jamb-contact-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 12,
+      "direction": 6,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 48,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "courtyard-canopy-restored-native",
+      "map": 1,
+      "x": 12,
+      "y": 10,
+      "realX": 12,
+      "realY": 10,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "courtyard-arrival-39-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 12,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 48,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "dojo-return-contact-native",
+      "map": 3,
+      "x": 32,
+      "y": 3,
+      "realX": 32,
+      "realY": 3,
+      "direction": 4,
+      "pattern": 2,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "dojo-wall-contact-native",
+      "map": 3,
+      "x": 34,
+      "y": 3,
+      "realX": 34,
+      "realY": 3,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "street-east-contact-native",
+      "map": 3,
+      "x": 40,
+      "y": 7,
+      "realX": 40,
+      "realY": 7,
+      "direction": 6,
+      "pattern": 0,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "street-middle-walking-native",
+      "map": 3,
+      "x": 25,
+      "y": 7,
+      "realX": 25.875,
+      "realY": 7,
+      "direction": 4,
+      "pattern": 1,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        13,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "street-west-walking-native",
+      "map": 3,
+      "x": 12,
+      "y": 7,
+      "realX": 12.875,
+      "realY": 7,
+      "direction": 4,
+      "pattern": 1,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "street-west-contact-native",
+      "map": 3,
+      "x": 1,
+      "y": 7,
+      "realX": 1,
+      "realY": 7,
+      "direction": 4,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "home-foundation-contact-native",
+      "map": 3,
+      "x": 6,
+      "y": 4,
+      "realX": 6,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "home-tea-fence-contact-native",
+      "map": 3,
+      "x": 12,
+      "y": 4,
+      "realX": 12,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 0,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "tea-shop-foundation-contact-native",
+      "map": 3,
+      "x": 16,
+      "y": 4,
+      "realX": 16,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 2,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        3.1875,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "merchant-foundation-contact-native",
+      "map": 3,
+      "x": 26,
+      "y": 4,
+      "realX": 26,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        13.1875,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    },
+    {
+      "name": "drainage-contact-native",
+      "map": 3,
+      "x": 16,
+      "y": 11,
+      "realX": 16,
+      "realY": 11,
+      "direction": 2,
+      "pattern": 2,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        3.1875,
+        0
+      ],
+      "method": "Actual engine canvas, unchanged events"
+    }
+  ],
+  "transfers": [
+    {
+      "event": [
+        1,
+        10
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    },
+    {
+      "event": [
+        3,
+        1
+      ],
+      "arrival": [
+        1,
+        12,
+        12,
+        8
+      ]
+    },
+    {
+      "event": [
+        1,
+        10
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    },
+    {
+      "event": [
+        3,
+        2
+      ],
+      "arrival": [
+        1,
+        12,
+        12,
+        8
+      ]
+    },
+    {
+      "event": [
+        1,
+        10
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    }
+  ],
+  "walking": [
+    {
+      "target": [
+        12,
+        11
+      ],
+      "steps": 7,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        38,
+        3
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        11,
+        11
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        13,
+        11
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        10
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        39,
+        3
+      ],
+      "steps": 1,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        34,
+        3
+      ],
+      "steps": 4,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        32,
+        3
+      ],
+      "steps": 1,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        34,
+        3
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        40,
+        7
+      ],
+      "steps": 10,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        38,
+        7
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "from": [
+        38,
+        7
+      ],
+      "to": [
+        1,
+        7
+      ],
+      "method": "Continuous ArrowLeft keyboard input, normal speed, stopped by visible west barrier"
+    },
+    {
+      "target": [
+        6,
+        4
+      ],
+      "steps": 8,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        4
+      ],
+      "steps": 6,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        16,
+        4
+      ],
+      "steps": 4,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        26,
+        4
+      ],
+      "steps": 10,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        16,
+        5
+      ],
+      "steps": 11,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        16,
+        11
+      ],
+      "steps": 7,
+      "method": "Engine moveStraight on canPass route, speed4"
+    }
+  ],
+  "reachability": 331,
+  "errors": [],
+  "failedRequests": []
+}

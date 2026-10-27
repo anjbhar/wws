@@ -1,0 +1,33 @@
+{
+  "source": "shinsengumi-chudan-source-v2.png",
+  "sourceSize": [
+    1402,
+    1122
+  ],
+  "sourceBounds": [
+    358,
+    199,
+    1322,
+    1071
+  ],
+  "scale": 0.3211009174311927,
+  "footAxis": 673.0,
+  "offset": [
+    139,
+    88
+  ],
+  "canvas": [
+    480,
+    384
+  ],
+  "bodyHeight": 280,
+  "soleBaseline": 368,
+  "visibleBounds": [
+    139,
+    88,
+    449,
+    368
+  ],
+  "output": "img\\battlers\\Shinsengumi-ChudanBack-v2.png",
+  "status": "review"
+}

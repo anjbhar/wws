@@ -1,0 +1,53 @@
+{
+  "tool": "Built-in image_gen",
+  "reference": "Approved shinsengumi-chudan-source-v2.png",
+  "prompts": [
+    {
+      "pose": "Jodan",
+      "prompt": "Use case: identity-preserve / precise-object-edit. Correct ONLY the Shinsengumi swordsman's haori in the JODAN rear party battle sprite (reference 1 is the edit target). Reference 2 is the APPROVED corrected Chudan source: copy its loose blue outer jacket construction and white 誠 back emblem, same palette, hem length, sawtooth sleeve/hem trim, pixel clusters and identity. Transfer the approved costume to reference 1's EXACT Jodan pose, keeping original rear three-quarter camera facing upper-right. Both hands hold ONE katana overhead; preserve blade crossing above head toward upper-left, bent elbows and raised sleeves. Add the SINGLE bold white kanji 誠 between shoulder blades, sized like approved Chudan and following back cloth perspective; no circle/background behind emblem. Remove gathered/tied waist and dangling blue sash ends: haori hangs loosely from shoulders over hips, broad draping back panels, obi UNDER the jacket, scabbard naturally emerges under left hip. Pose wrinkles may change but jacket must match approved costume. STRICT INVARIANTS: same head/hair/face, feet placement, sandals, striped hakama, sword/grip/blade angle, body size, pose, perspective and crisp pixel-art style from target. Full body and full sword visible with generous transparent margins; no cropped weapons. Intended final 480x384 PNG, crown-to-sole standing body280px, sole y368, foot axis x240; preserve enough overhead clearance for Jodan. Exactly ONE full-body sprite, true alpha transparency, no ground shadow, panels, effects or text except 誠 emblem."
+    },
+    {
+      "pose": "Gedan",
+      "prompt": "Use case: identity-preserve / precise-object-edit. Correct ONLY the Shinsengumi swordsman's haori in the GEDAN rear party battle sprite (reference 1 is the edit target). Reference 2 is the APPROVED corrected Chudan source: copy its loose blue outer jacket construction and white 誠 back emblem, same palette, hem length, sawtooth sleeve/hem trim, pixel clusters and identity. Transfer the approved costume to reference 1's EXACT Gedan pose, keeping original rear three-quarter camera facing upper-right. Both hands hold ONE katana low before right hip; preserve blade pointing diagonally down-right, low wrists and arms. Add the SINGLE bold white kanji 誠 between shoulder blades, sized like approved Chudan and following back cloth perspective; no circle/background behind emblem. Remove gathered/tied waist and dangling blue sash ends: haori hangs loosely from shoulders over hips, broad draping back panels, obi UNDER the jacket, scabbard naturally emerges under left hip. Pose wrinkles may change but jacket must match approved costume. STRICT INVARIANTS: same head/hair/face, feet placement, sandals, striped hakama, sword/grip/blade angle, body size, pose, perspective and crisp pixel-art style from target. Full body and full sword visible with generous transparent margins; no cropped weapons. Intended final 480x384 PNG, crown-to-sole standing body280px, sole y368, foot axis x240; preserve enough overhead clearance for Jodan. Exactly ONE full-body sprite, true alpha transparency, no ground shadow, panels, effects or text except 誠 emblem."
+    },
+    {
+      "pose": "Waki",
+      "prompt": "Use case: identity-preserve / precise-object-edit. Correct ONLY the haori on the Shinsengumi swordsman's WAKI rear battle sprite. Reference 1 is the edit target; preserve its EXACT pose, blade direction, body orientation and feet. Reference 2 is APPROVED corrected Chudan: transfer its loose outer haori construction, white single kanji 誠 centered on upper back, blue palette, proportions, hem length and sawtooth sleeve/hem trim. Remove the tight gathered waist, blue tie/bow and sash tails entirely; obi remains hidden UNDER loose jacket. Haori falls from shoulders over hips with broad draping back panels, small pose-dependent folds, scabbard emerging naturally from under jacket. WAKI: torso twisted with mostly back visible, head looks upper-right, ONE drawn katana held low behind body with blade extending DOWN-LEFT across image; keep original feet and sheathed sword, standing 280px crown-to-sole at export. White 誠 emblem must remain recognizable and centered on the cloth of upper back with correct perspective, no circle or patch behind it. Match exact same jacket as approved reference while preserving target pose. STRICT INVARIANTS: original head/hair/face, striped hakama, sandals, hands, grip, sword shape/angle, rear three-quarter camera facing upper-right, body scale and crisp pixel-art rendering. Do not rotate whole character to face left. Full body and full blade within generous margins, no cropping. Intended export480x384, soles y368, foot center x240. Exactly one sprite on TRUE ALPHA transparency, no backdrop, shadow, text besides 誠 emblem, labels, motion trails or panels."
+    },
+    {
+      "pose": "Kasumi",
+      "prompt": "Use case: identity-preserve / precise-object-edit. Correct ONLY the haori on the Shinsengumi swordsman's KASUMI rear battle sprite. Reference 1 is the edit target; preserve its EXACT pose, blade direction, body orientation and feet. Reference 2 is APPROVED corrected Chudan: transfer its loose outer haori construction, white single kanji 誠 centered on upper back, blue palette, proportions, hem length and sawtooth sleeve/hem trim. Remove the tight gathered waist, blue tie/bow and sash tails entirely; obi remains hidden UNDER loose jacket. Haori falls from shoulders over hips with broad draping back panels, small pose-dependent folds, scabbard emerging naturally from under jacket. KASUMI: both hands compact beside right cheek, katana nearly horizontal at eye height pointing right, elbows shielding upper body; keep slight crouch and 260px crown-to-sole body at export. White 誠 emblem must remain recognizable and centered on the cloth of upper back with correct perspective, no circle or patch behind it. Match exact same jacket as approved reference while preserving target pose. STRICT INVARIANTS: original head/hair/face, striped hakama, sandals, hands, grip, sword shape/angle, rear three-quarter camera facing upper-right, body scale and crisp pixel-art rendering. Do not rotate whole character to face left. Full body and full blade within generous margins, no cropping. Intended export480x384, soles y368, foot center x240. Exactly one sprite on TRUE ALPHA transparency, no backdrop, shadow, text besides 誠 emblem, labels, motion trails or panels."
+    },
+    {
+      "pose": "Seigan",
+      "prompt": "Use case: identity-preserve / precise-object-edit. Fix ONLY the costume on reference1, the Shinsengumi swordsman SEIGAN rear party battle sprite. Reference2 is APPROVED corrected Chudan source: match its loose asagi-blue outer haori, white single kanji 誠 emblem centered on upper back, white sawtooth sleeve/hem edging, drape, length, palette, crisp pixel-art style. Add same bold white 誠 between shoulder blades, angled with cloth perspective, no surrounding patch/circle. Remove pinched waist and any blue tie/bow/sash tails: loose outer jacket falls from shoulders over hips, broad back panels, obi UNDER jacket, scabbard naturally emerges under left hip. Keep EXACT target SEIGAN guard: two hands together at upper chest, katana rising diagonally forward upper-right toward opponent's eye line, lower than overhead Jodan and steeper than waist Chudan. Keep original body, head, young face, spiky black hair, hands, feet placement, sandals, striped hakama, sword shape/angle, rear three-quarter camera facing upper-right, pixel density, scale and proportions. Full sword and entire figure within generous margins. Intended export480x384, standing body280px crown-to-sole, soles y368, foot axis x240. Exactly ONE transparent full-body sprite on genuine alpha, no shadow/background/text besides 誠 emblem/effects/panels."
+    }
+  ],
+  "images": [
+    {
+      "pose": "Jodan",
+      "source": "shinsengumi-jodan-source-v2.png",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-42f7b3dc-d158-4869-ae34-180772f0eff7.png"
+    },
+    {
+      "pose": "Gedan",
+      "source": "shinsengumi-gedan-source-v2.png",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-69989a75-b0c5-4811-a405-078d0911d819.png"
+    },
+    {
+      "pose": "Kasumi",
+      "source": "shinsengumi-kasumi-source-v2.png",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-68c61d94-bb54-41df-9571-f42e92c5ca33.png"
+    },
+    {
+      "pose": "Waki",
+      "source": "shinsengumi-waki-source-v2.png",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-f18ac2d7-794a-41ea-b5e4-0a1fad837f41.png"
+    },
+    {
+      "pose": "Seigan",
+      "source": "shinsengumi-seigan-source-v2.png",
+      "generated": "C:\\Users\\anjan\\.codex\\generated_images\\01a16223-4f3a-7e60-b027-1e3bfcded5d5\\exec-f619d82b-bc9e-4b57-b7cf-d71935ef18e1.png"
+    }
+  ]
+}

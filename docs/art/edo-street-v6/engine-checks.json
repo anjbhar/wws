@@ -1,0 +1,1905 @@
+{
+  "scope": "Actual engine captures, normal player speed, art-selected contact probes; no transfer event suppression",
+  "preservation": true,
+  "contacts": [
+    {
+      "name": "left jamb from opening",
+      "from": [
+        12,
+        12
+      ],
+      "direction": 4,
+      "allowed": false,
+      "after": [
+        12,
+        12
+      ]
+    },
+    {
+      "name": "right jamb from opening",
+      "from": [
+        12,
+        12
+      ],
+      "direction": 6,
+      "allowed": false,
+      "after": [
+        12,
+        12
+      ]
+    },
+    {
+      "name": "left jamb from yard",
+      "from": [
+        11,
+        11
+      ],
+      "direction": 2,
+      "allowed": false,
+      "after": [
+        11,
+        11
+      ]
+    },
+    {
+      "name": "right jamb from yard",
+      "from": [
+        13,
+        11
+      ],
+      "direction": 2,
+      "allowed": false,
+      "after": [
+        13,
+        11
+      ]
+    },
+    {
+      "name": "clear forecourt west",
+      "from": [
+        34,
+        3
+      ],
+      "direction": 4,
+      "allowed": true,
+      "after": [
+        33,
+        3
+      ]
+    },
+    {
+      "name": "dojo return",
+      "from": [
+        32,
+        3
+      ],
+      "direction": 4,
+      "allowed": false,
+      "after": [
+        32,
+        3
+      ]
+    },
+    {
+      "name": "dojo wall",
+      "from": [
+        34,
+        3
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        34,
+        3
+      ]
+    },
+    {
+      "name": "east boundary",
+      "from": [
+        40,
+        7
+      ],
+      "direction": 6,
+      "allowed": false,
+      "after": [
+        40,
+        7
+      ]
+    },
+    {
+      "name": "home foundation",
+      "from": [
+        6,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        6,
+        4
+      ]
+    },
+    {
+      "name": "home-tea fence",
+      "from": [
+        12,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        12,
+        4
+      ]
+    },
+    {
+      "name": "tea-shop foundation",
+      "from": [
+        16,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        16,
+        4
+      ]
+    },
+    {
+      "name": "merchant foundation",
+      "from": [
+        26,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        26,
+        4
+      ]
+    },
+    {
+      "name": "merchant return approach",
+      "from": [
+        22,
+        4
+      ],
+      "direction": 8,
+      "allowed": false,
+      "after": [
+        22,
+        4
+      ]
+    },
+    {
+      "name": "walkable north apron",
+      "from": [
+        16,
+        5
+      ],
+      "direction": 8,
+      "allowed": true,
+      "after": [
+        16,
+        4
+      ]
+    },
+    {
+      "name": "drainage edge",
+      "from": [
+        16,
+        11
+      ],
+      "direction": 2,
+      "allowed": false,
+      "after": [
+        16,
+        11
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "name": "courtyard-north-clear-native",
+      "map": 1,
+      "x": 12,
+      "y": 10,
+      "realX": 12,
+      "realY": 10,
+      "direction": 6,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 255,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 197,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 176,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          522
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 6,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          522
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-fade-boundary-native",
+      "map": 1,
+      "x": 12,
+      "y": 11,
+      "realX": 12,
+      "realY": 10.625,
+      "direction": 2,
+      "pattern": 2,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 133,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 207,
+      "displayed": {
+        "frame": {
+          "x": 128,
+          "y": 0,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          552
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 2,
+        "pattern": 2,
+        "expectedScreen": [
+          640,
+          552
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-southbound-reverse-input-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 11.5,
+      "direction": 2,
+      "pattern": 1,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 247,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 0,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          594
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 2,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          594
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-reversed-north-native",
+      "map": 1,
+      "x": 12,
+      "y": 11,
+      "realX": 12,
+      "realY": 11.1875,
+      "direction": 8,
+      "pattern": 1,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 268,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          579
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          579
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-northbound-reverse-input-native",
+      "map": 1,
+      "x": 12,
+      "y": 11,
+      "realX": 12,
+      "realY": 11.5,
+      "direction": 8,
+      "pattern": 1,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 324,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          594
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          594
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-reversed-south-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 11.75,
+      "direction": 2,
+      "pattern": 1,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 344,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 0,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          606
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 2,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          606
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-gate-approach-native",
+      "map": 1,
+      "x": 12,
+      "y": 11,
+      "realX": 12,
+      "realY": 11,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 397,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          570
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          570
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-gate-half-step-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 11.625,
+      "direction": 2,
+      "pattern": 0,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 407,
+      "displayed": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          600
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 2,
+        "pattern": 0,
+        "expectedScreen": [
+          640,
+          600
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "street-arrival-native",
+      "map": 3,
+      "x": 38,
+      "y": 3,
+      "realX": 38,
+      "realY": 3,
+      "direction": 4,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "frameCount": 532,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 88,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          1113,
+          186
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 4,
+        "pattern": 1,
+        "expectedScreen": [
+          1113,
+          186
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-arrival-38-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 12,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 614,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          618
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          618
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-jamb-contact-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 12,
+      "direction": 6,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 646,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 176,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          618
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 6,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          618
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-west-fade-edge-native",
+      "map": 1,
+      "x": 11,
+      "y": 11,
+      "realX": 11,
+      "realY": 11,
+      "direction": 4,
+      "pattern": 0,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 766,
+      "displayed": {
+        "frame": {
+          "x": 0,
+          "y": 88,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          592,
+          570
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 4,
+        "pattern": 0,
+        "expectedScreen": [
+          592,
+          570
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-east-fade-edge-native",
+      "map": 1,
+      "x": 13,
+      "y": 11,
+      "realX": 13,
+      "realY": 11,
+      "direction": 6,
+      "pattern": 0,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 807,
+      "displayed": {
+        "frame": {
+          "x": 0,
+          "y": 176,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          688,
+          570
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 6,
+        "pattern": 0,
+        "expectedScreen": [
+          688,
+          570
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-canopy-restored-native",
+      "map": 1,
+      "x": 12,
+      "y": 10,
+      "realX": 12,
+      "realY": 10,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 255,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 865,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          522
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          522
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "courtyard-arrival-39-native",
+      "map": 1,
+      "x": 12,
+      "y": 12,
+      "realX": 12,
+      "realY": 12,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "canopyOpacity": 72,
+      "headerOpacity": 255,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        -0.84375,
+        0
+      ],
+      "frameCount": 1112,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          640,
+          618
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          640,
+          618
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "dojo-return-contact-native",
+      "map": 3,
+      "x": 32,
+      "y": 3,
+      "realX": 32,
+      "realY": 3,
+      "direction": 4,
+      "pattern": 2,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "frameCount": 1302,
+      "displayed": {
+        "frame": {
+          "x": 128,
+          "y": 88,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          825,
+          186
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 4,
+        "pattern": 2,
+        "expectedScreen": [
+          825,
+          186
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "dojo-wall-contact-native",
+      "map": 3,
+      "x": 34,
+      "y": 3,
+      "realX": 34,
+      "realY": 3,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "frameCount": 1341,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          921,
+          186
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          921,
+          186
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "street-east-contact-native",
+      "map": 3,
+      "x": 40,
+      "y": 7,
+      "realX": 40,
+      "realY": 7,
+      "direction": 6,
+      "pattern": 0,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        15.3125,
+        0
+      ],
+      "frameCount": 1504,
+      "displayed": {
+        "frame": {
+          "x": 0,
+          "y": 176,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          1209,
+          378
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 6,
+        "pattern": 0,
+        "expectedScreen": [
+          1209,
+          378
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "street-middle-walking-native",
+      "map": 3,
+      "x": 25,
+      "y": 7,
+      "realX": 25.75,
+      "realY": 7,
+      "direction": 4,
+      "pattern": 2,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        12.875,
+        0
+      ],
+      "frameCount": 1737,
+      "displayed": {
+        "frame": {
+          "x": 128,
+          "y": 88,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          642,
+          378
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 4,
+        "pattern": 2,
+        "expectedScreen": [
+          642,
+          378
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "street-west-walking-native",
+      "map": 3,
+      "x": 12,
+      "y": 7,
+      "realX": 12.8125,
+      "realY": 7,
+      "direction": 4,
+      "pattern": 1,
+      "moving": true,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "frameCount": 1944,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 88,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          639,
+          378
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 4,
+        "pattern": 1,
+        "expectedScreen": [
+          639,
+          378
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "street-west-contact-native",
+      "map": 3,
+      "x": 1,
+      "y": 7,
+      "realX": 1,
+      "realY": 7,
+      "direction": 4,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "frameCount": 2152,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 88,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          72,
+          378
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 4,
+        "pattern": 1,
+        "expectedScreen": [
+          72,
+          378
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "home-foundation-contact-native",
+      "map": 3,
+      "x": 6,
+      "y": 4,
+      "realX": 6,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "frameCount": 2284,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          312,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          312,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "home-tea-fence-contact-native",
+      "map": 3,
+      "x": 12,
+      "y": 4,
+      "realX": 12,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 0,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        0,
+        0
+      ],
+      "frameCount": 2388,
+      "displayed": {
+        "frame": {
+          "x": 0,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          600,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 0,
+        "expectedScreen": [
+          600,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "tea-shop-foundation-contact-native",
+      "map": 3,
+      "x": 16,
+      "y": 4,
+      "realX": 16,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        3.1875,
+        0
+      ],
+      "frameCount": 2465,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          639,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 1,
+        "expectedScreen": [
+          639,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "merchant-foundation-contact-native",
+      "map": 3,
+      "x": 26,
+      "y": 4,
+      "realX": 26,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 2,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        13.1875,
+        0
+      ],
+      "frameCount": 2634,
+      "displayed": {
+        "frame": {
+          "x": 128,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          639,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 2,
+        "expectedScreen": [
+          639,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "merchant-return-contact-native",
+      "map": 3,
+      "x": 22,
+      "y": 4,
+      "realX": 22,
+      "realY": 4,
+      "direction": 8,
+      "pattern": 0,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        9.1875,
+        0
+      ],
+      "frameCount": 2701,
+      "displayed": {
+        "frame": {
+          "x": 0,
+          "y": 264,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          639,
+          234
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 8,
+        "pattern": 0,
+        "expectedScreen": [
+          639,
+          234
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    },
+    {
+      "name": "drainage-contact-native",
+      "map": 3,
+      "x": 16,
+      "y": 11,
+      "realX": 16,
+      "realY": 11,
+      "direction": 2,
+      "pattern": 1,
+      "moving": false,
+      "playerOpacity": 255,
+      "playerVisible": true,
+      "legacyGhost": false,
+      "viewport": [
+        1280,
+        720
+      ],
+      "display": [
+        3.1875,
+        0
+      ],
+      "frameCount": 2950,
+      "displayed": {
+        "frame": {
+          "x": 64,
+          "y": 0,
+          "width": 64,
+          "height": 88
+        },
+        "screen": [
+          639,
+          570
+        ],
+        "anchor": [
+          0.5,
+          1
+        ],
+        "scale": [
+          1,
+          1
+        ],
+        "direction": 2,
+        "pattern": 1,
+        "expectedScreen": [
+          639,
+          570
+        ],
+        "source": "$Samurai-v3"
+      },
+      "method": "Actual engine canvas, frozen after completed update/render; source-frame file is documentation"
+    }
+  ],
+  "transfers": [
+    {
+      "event": [
+        1,
+        10
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    },
+    {
+      "event": [
+        3,
+        1
+      ],
+      "arrival": [
+        1,
+        12,
+        12,
+        8
+      ]
+    },
+    {
+      "event": [
+        1,
+        10
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    },
+    {
+      "event": [
+        3,
+        2
+      ],
+      "arrival": [
+        1,
+        12,
+        12,
+        8
+      ]
+    },
+    {
+      "event": [
+        1,
+        10
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    }
+  ],
+  "walking": [
+    {
+      "target": [
+        12,
+        10
+      ],
+      "steps": 6,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 1,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "method": "Actual keyboard reversals during both northbound and southbound gate steps; no transfer suppression"
+    },
+    {
+      "target": [
+        12,
+        11
+      ],
+      "steps": 1,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        38,
+        3
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        11,
+        11
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        13,
+        11
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        11,
+        11
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        13,
+        11
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        10
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        39,
+        3
+      ],
+      "steps": 1,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        12
+      ],
+      "steps": 0,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        34,
+        3
+      ],
+      "steps": 4,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        32,
+        3
+      ],
+      "steps": 1,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        34,
+        3
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        40,
+        7
+      ],
+      "steps": 10,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        38,
+        7
+      ],
+      "steps": 2,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "from": [
+        38,
+        7
+      ],
+      "to": [
+        1,
+        7
+      ],
+      "method": "Continuous ArrowLeft keyboard input, normal speed, stopped by visible west barrier"
+    },
+    {
+      "target": [
+        6,
+        4
+      ],
+      "steps": 8,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        12,
+        4
+      ],
+      "steps": 6,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        16,
+        4
+      ],
+      "steps": 4,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        26,
+        4
+      ],
+      "steps": 10,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        22,
+        4
+      ],
+      "steps": 4,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        16,
+        5
+      ],
+      "steps": 7,
+      "method": "Engine moveStraight on canPass route, speed4"
+    },
+    {
+      "target": [
+        16,
+        11
+      ],
+      "steps": 7,
+      "method": "Engine moveStraight on canPass route, speed4"
+    }
+  ],
+  "reachability": 331,
+  "errors": [],
+  "failedRequests": []
+}

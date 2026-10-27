@@ -9,6 +9,8 @@ $gameParty._inBattle=false;BattleManager.setup(teamTroopId,true,true);
 assert.equal(BattleManager._wwsDuel.allies.length,3);assert.equal($gameParty.members().length,1);assert.equal($gameParty.battleMembers().length,1,'No clones appear during the map encounter transition');
 team(true);
 assert.equal(d.battlers.length,6);assert.equal(allies.length,3);assert.equal(new Set(allies).size,3);
+assert.deepEqual(allies.map(b=>b.name()),['Hayato','Masanori','Shinsengumi Swordsman']);
+assert.equal(new Set(allies.map(b=>b.actorId())).size,3,'Guests have their own actor records');
 assert.deepEqual($gameParty._actors,[1]);assert.equal($gameParty.members().length,3);
 assert.equal(d.mode,'openingDialogue');assert($gameMessage.allText().includes('Centers can attack anyone'));
 $gameMessage.clear();BattleManager.updatePhase(true);
@@ -50,15 +52,37 @@ assert.equal(d.target,allies[1]);assert.equal(BattleManager._targets[0],allies[1
 assert(allies[1].hp<allies[1].mhp);assert.equal(allies[0].hp,allies[0].mhp);assert.equal(allies[2].hp,allies[2].mhp);
 team();Math.random=()=>.99;giveTurn(enemies[2]);assert.equal(d.target,allies[2]);resolve();
 assert(allies[2].hp<allies[2].mhp);assert.equal(allies[1].hp,allies[1].mhp);
-// Fallen centers do not unlock attacks against the far flank.
+// Every knockout opens all surviving enemies to every ally, including far flanks.
+for(let defeated=0;defeated<3;defeated++){
+ team();enemies[defeated].setHp(0);
+ const survivors=enemies.filter(b=>b.isAlive());
+ for(const ally of allies){
+  assert.deepEqual(WwsDuelRules.legalTargets(ally),survivors);
+  for(const target of survivors){
+   giveTurn(ally);BattleManager.wwsChooseAction('Quick Cut');assert.equal(d.mode,'opponent');
+   BattleManager.wwsChooseOpponent(target.index());assert.equal(d.mode,'target');
+   assert.equal(WwsDuelRules.playerTarget(),target);
+  }
+ }
+ for(const last of survivors){
+  survivors.forEach(b=>b.setHp(b===last?b.mhp:0));
+  for(const ally of allies){
+   assert.deepEqual(WwsDuelRules.legalTargets(ally),[last]);
+   giveTurn(ally);BattleManager.wwsChooseAction('Quick Cut');assert.equal(d.mode,'target');
+   assert.equal(WwsDuelRules.playerTarget(),last);
+  }
+ }
+}
+// Partial formations let both sides reach the remaining fighters.
 team();d.sparring=false;allies[0].setHp(0);enemies[1].setHp(0);
-assert.deepEqual(WwsDuelRules.legalTargets(allies[1]),[enemies[0]]);
-assert.deepEqual(WwsDuelRules.legalTargets(allies[2]),[enemies[2]]);
-enemies[0].setHp(0);assert.deepEqual(WwsDuelRules.legalTargets(allies[1]),[]);
-giveTurn(allies[1]);assert.equal(d.mode,'advance');assert.equal(BattleManager._subject,null);
-d.pending=[allies[0],allies[2]];BattleManager.wwsNext();assert.equal(BattleManager._subject,allies[2]);
-allies[2].setHp(0);assert(BattleManager.checkBattleEnd());assert.equal(d.mode,'finished');
-assert($gameMessage.allText().includes('draw'));$gameMessage.clear();
+enemies[0].setHp(0);allies[2].setHp(0);
+assert.deepEqual(WwsDuelRules.legalTargets(allies[1]),[enemies[2]]);
+assert.deepEqual(WwsDuelRules.legalTargets(enemies[2]),[allies[1]]);
+giveTurn(enemies[2]);assert.equal(BattleManager._subject,enemies[2]);resolve();
+assert.equal(BattleManager.checkBattleEnd(),false);
+d.pending=[allies[0],allies[1],allies[2]];BattleManager.wwsNext();assert.equal(BattleManager._subject,allies[1]);
+BattleManager.wwsChooseAction('Quick Cut');assert.equal(d.mode,'target');
+assert.equal(WwsDuelRules.playerTarget(),enemies[2]);
 // All protected practice allies share the same nonlethal floor.
 team();for(const b of allies){b.setHp(0);assert.equal(b.hp,1);assert(b.isAlive());}
 const previous=allies.slice();BattleManager.endBattle(1);assert(previous.every(b=>!b._wws));
@@ -101,5 +125,5 @@ for(let battle=0;battle<80;battle++){
 assert.equal(allyTurns.size,3);assert.equal(enemyTargets.size,3);
 BattleManager.invokeAction=originalInvoke;
 Math.random=originalRandom;
-console.log('PASS: actual 3v3 clones, three free opening forms, six turns, mirrored lane targets, illegal-target rejection, independent actions/states, AI hits both clones, dead/blocked fighters, draw handling, practice protection, party cleanup and 80 complete seeded team battles');
+console.log('PASS: Hayato/Masanori/Shinsengumi 3v3, three free opening forms, six turns, full-formation lane restrictions, unrestricted allies after knockouts, independent actions/states, dead/blocked fighters, practice protection, party cleanup and 80 complete seeded team battles');
 `);

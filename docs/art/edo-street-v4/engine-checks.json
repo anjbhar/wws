@@ -1,0 +1,92 @@
+{
+  "scope": "Native 1280x720 engine review; real player sprite and gate cue",
+  "preservation": true,
+  "transfers": [
+    {
+      "from": [
+        1,
+        11,
+        13
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    },
+    {
+      "from": [
+        1,
+        12,
+        13
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    },
+    {
+      "from": [
+        1,
+        13,
+        13
+      ],
+      "arrival": [
+        3,
+        38,
+        3,
+        4
+      ]
+    },
+    {
+      "from": [
+        3,
+        38,
+        2
+      ],
+      "arrival": [
+        1,
+        12,
+        12,
+        8
+      ]
+    },
+    {
+      "from": [
+        3,
+        39,
+        2
+      ],
+      "arrival": [
+        1,
+        12,
+        12,
+        8
+      ]
+    }
+  ],
+  "street": {
+    "passageMismatches": [],
+    "reachable": 331,
+    "viewport": [
+      1280,
+      720
+    ],
+    "actor": "$Samurai-v3",
+    "dimensions": [
+      42,
+      15
+    ],
+    "gateApproaches": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "transferEvidence": "Retained from completed unchanged-data movement check",
+  "errors": []
+}

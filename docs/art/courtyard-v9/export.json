@@ -1,0 +1,62 @@
+{
+  "mapExact": true,
+  "flagsExact": true,
+  "architectureExact": true,
+  "propsExact": true,
+  "contacts": [
+    [
+      "rack",
+      0,
+      0,
+      143,
+      382,
+      58,
+      14
+    ],
+    [
+      "dummy",
+      1,
+      0,
+      119,
+      527,
+      30,
+      10
+    ],
+    [
+      "basin",
+      2,
+      0,
+      1080,
+      527,
+      37,
+      10
+    ],
+    [
+      "lantern",
+      0,
+      1,
+      1080,
+      432,
+      34,
+      10
+    ],
+    [
+      "bamboo-west",
+      1,
+      1,
+      151,
+      283,
+      74,
+      15
+    ],
+    [
+      "bamboo-east",
+      2,
+      1,
+      1060,
+      334,
+      66,
+      14
+    ]
+  ]
+}

@@ -4,7 +4,11 @@ var $plugins =
 [
 {"name":"WWS_OverworldCharacters","status":true,"description":"Regenerated larger overworld character sheets and legacy save support","parameters":{}},
 {"name":"WWS_CourtyardOpening","status":true,"description":"Face the dojo on new courtyard games","parameters":{}},
+{"name":"WWS_CourtyardGateReadability","status":true,"description":"Local player visibility cue beneath the courtyard gate roof","parameters":{}},
 {"name":"WWS_Duel","status":true,"description":"Samurai duels with aimed cuts and automatic stat-based Parry/Block and Dodge","parameters":{}},
+{"name":"WWS_UI","status":true,"description":"Shared WWS interface helpers","parameters":{}},
+{"name":"WWS_Party","status":true,"description":"Party formation, reserves and fighter details","parameters":{}},
+{"name":"WWS_Menus","status":true,"description":"WWS menu interfaces","parameters":{}},
 {"name":"WWS_ShinsengumiMusic","status":true,"description":"Azianmaddoxx Samurai battle music for the Shinsengumi fight","parameters":{}},
 {"name":"WWS_DojoMusic","status":true,"description":"The Spirit of the Samurai dojo courtyard BGM","parameters":{}},
 {"name":"WWS_PracticeBackdrop","status":true,"description":"Edo courtyard background for tagged practice fights","parameters":{}},

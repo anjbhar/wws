@@ -1,0 +1,36 @@
+{
+  "tool": "built-in image_gen",
+  "initial": [
+    [
+      "architecture",
+      {
+        "referenced_image_paths": [
+          "C:/Users/anjan/Desktop/Projects/rpgm/wws/docs/art/courtyard-v7/architecture.png"
+        ],
+        "transparent_background": true,
+        "prompt": "Edit this pixel-art RPG courtyard architecture into a structurally coherent quieter enclosure. Output exactly same 1200x720 canvas and registered footprint, transparent courtyard and exterior. Preserve original center dojo exactly at x456 y0 width288 height192, no enlargement. Perimeter stays x0..1199: north wall base y139, side wall bases within x0..47 and x1152..1199, south wall y574..672 with passage x528..671. Simplify and mute plaster and red wall wood contrast; softer charcoal roof detail so dojo focal. Side tiled roof strips must be NARROW (about 28px wide), matching 30px front roof depth, no deep diagonal perspective wedges. Resolve all four corners as joined ridges/eaves with consistent posts and stone ground anchors. Southern gateway: remove continuous roof above center opening, replace it with one intentionally raised shallow small gate roof (x516..684 y552..586), supported by a single crossbeam and jambs at x520..538 and x664..682 reaching stone bases at y672. Clean wall ends terminate at jambs. No overlapping fragment construction, no extra decorations, no ground, no veranda or props. Upper-left light, crisp modest pixel clusters. Keep transparent."
+      }
+    ],
+    [
+      "terrain",
+      {
+        "referenced_image_paths": [
+          "C:/Users/anjan/Desktop/Projects/rpgm/wws/docs/maps/starter-map-audit/initial.png"
+        ],
+        "transparent_background": false,
+        "prompt": "Create ONLY the flat ground layer underlying this RPG map, no characters architecture props stones shadows of buildings or objects, no text. Output 1200x720 ground texture image, viewed flat in same overhead RPG perspective. Remove 40px black side margins from reference. Muted spring grass, quiet broad subtle green variation, very few grouped pixel details, NO evenly speckled wallpaper. Preserve empty sparse yard. Main packed earth training area roughly x366..834 y272..546, centered x600. Naturally worn asymmetric contour, uneven shallow turf intrusions, varied transition widths 8..24px with grouped thin grass tongues and small worn extensions, no rounded rectangle or outlined border. Broad open smooth tan soil center for training. Very subtle narrow lightly worn grass connections from center steps at (600,230) to training patch at (600,280), gate at (600,666) to patch at (600,540), westward to rack (120,380) and dummy (120,520). Small localized contacts at basin (1080,522), lantern (1080,426), bamboo (144,282) and (1056,330). Keep path wear faint and broken, not paved or outlined. Match retained reference pixel art resolution, restrained noise, upper-left lighting, flat ground only."
+      }
+    ],
+    [
+      "props",
+      {
+        "referenced_image_paths": [
+          "C:/Users/anjan/Desktop/Projects/rpgm/wws/img/tilesets/EdoCourtyard_E-v7.png",
+          "C:/Users/anjan/Desktop/Projects/rpgm/wws/img/tilesets/EdoRedWoodExterior_D-v4.png"
+        ],
+        "transparent_background": true,
+        "prompt": "Create a clean pixel-art RPG prop asset sheet on transparent canvas, 768x768. Match input's modest pixel clusters and muted colors, upper-left lighting, consistent restrained dark outlines. Six clearly separated assets in a 3 column by 2 row layout, each centered in its own 256x320 cell, bottom aligned with margin, no labels. Top row: (1) compact wooden sword rack with three readable swords, believable two upright posts, cross rails supporting hilts and lower blades, visible grips and guards, solid wooden feet; (2) straw practice dummy with clear rounded head, broad shoulder bar, single substantial bound straw torso, wooden support post and stable feet, grouped straw texture; (3) stone basin, clearly elliptical thick stone rim, visible muted blue water inset, wooden ladle with scoop and handle resting on rim, shallow substantial base. Bottom row: (1) related bamboo clump variant of reference bamboo, three unequal culms with different leaf grouping and silhouette, full height, modest rooted base; (2) stone lantern matching input with calmer outline and compact base; (3) three separate flat stepping stones, closely related but distinct chipped shapes, modest wear and subtle upper left highlight, no bulky upright rocks. No ground discs, no scenery, no cast shadows beyond tiny contact shadows. Entire props within own cells. Preserve restrained old Japanese courtyard style. No text."
+      }
+    ]
+  ]
+}

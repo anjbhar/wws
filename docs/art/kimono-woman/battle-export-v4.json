@@ -1,0 +1,29 @@
+{
+  "Base": "KimonoWoman-v1.png",
+  "Output": "img/enemies/KimonoWoman-v4.png",
+  "Canvas": [
+    288,
+    288
+  ],
+  "Scale": 0.1988205560235889,
+  "Offset": [
+    19,
+    22
+  ],
+  "SourcePatchRectangles": [
+    [
+      680,
+      25,
+      130,
+      220
+    ],
+    [
+      710,
+      245,
+      100,
+      75
+    ]
+  ],
+  "ChangedExportPixels": 790,
+  "ChangedPixelsOutsideAccessoryRegion": 0
+}

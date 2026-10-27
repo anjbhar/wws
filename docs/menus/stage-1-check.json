@@ -1,0 +1,7 @@
+{
+  "stage": 1,
+  "checks": [
+    "Pause: solo empty slots, three active fighters, left navigation, keyboard cancel, mouse actor selection, 960 × 540 fit"
+  ],
+  "runtimeErrors": []
+}

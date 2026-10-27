@@ -1,0 +1,29 @@
+{
+  "west-wall": {
+    "exposedGrassPixels": 0,
+    "engineBox": [
+      496,
+      88,
+      514,
+      132
+    ]
+  },
+  "east-wall": {
+    "exposedGrassPixels": 0,
+    "engineBox": [
+      766,
+      88,
+      784,
+      132
+    ]
+  },
+  "sill": {
+    "exposedGrassPixels": 0,
+    "engineBox": [
+      518,
+      190,
+      762,
+      193
+    ]
+  }
+}

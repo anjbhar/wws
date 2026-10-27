@@ -1,0 +1,8 @@
+{
+  "measurement": "Door jamb/header-to-sill heights measured on the retained generated cutouts; every building is uniformly scaled to a 76px door. Coordinates are source-image pixels.",
+  "buildings": [
+    {"name":"home","source":"home-source.png","doorHeight":290,"doorBox":[626,530,913,820],"centerX":408},
+    {"name":"tea-shop","source":"asset-1-crop.png","doorHeight":147,"doorBox":[135,184,314,331],"centerX":1080},
+    {"name":"merchant","source":"asset-2-crop.png","doorHeight":136,"doorBox":[189,188,389,324],"centerX":2040}
+  ]
+}

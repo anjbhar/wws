@@ -1,0 +1,12 @@
+{
+  "data/Map001.json": "5e0d4cc630734b1c5e4d038d26e4ff00a416052890ea37859b6faa1e0a5f2bcd",
+  "data/Map002.json": "25c1ebf104d7e9e161b6da19e85356540cc4e395c34fe4a9ff4b706876f5b90a",
+  "data/Map003.json": "d3fe68addc2725b69a714509d671120f8be8232698915a6b81da2de5b0433f1f",
+  "data/Tilesets.json": "016e9c6821ac9bb8b6351d8b6c31bf9e2d911329d393a6ca715a18a78733ef14",
+  "data/Actors.json": "0559a7832ef1b9f80d93bd20830acb34bb833688a2f5b2aac3709830af3f32e9",
+  "data/System.json": "a78186a10341e03e26ca6bea3b21852ba7f0c2cd2dcf834a1d15807716ad1be5",
+  "js/plugins/WWS_CourtyardGateReadability.js": "4fc12047b0fd9f0270b0821f91c23576e3239c6bcf63d8b90b64388d33aa6986",
+  "img/tilesets/EdoStreet_B-v4.png": "0d6893a004dd2dc7a05b8b44e3be61572968a7a99a8efbdd3a6192fb9a507798",
+  "img/tilesets/EdoStreet_C-v4.png": "be61762a591daaa155e34a1f21e278fd355b0960609588f5ccce9525785047e3",
+  "img/tilesets/EdoStreet_D-v4.png": "6f63c882fbfd285e45e6c1e364b690ba608f0122940189fc77b99551a242ec57"
+}

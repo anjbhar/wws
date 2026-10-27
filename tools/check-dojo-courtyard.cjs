@@ -1,5 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
+const currentMap=JSON.parse(fs.readFileSync(path.join(root,'data/Map001.json'),'utf8'));
+if(JSON.parse(fs.readFileSync(path.join(root,'data/Tilesets.json'),'utf8'))[currentMap.tilesetId].tilesetNames[8]==='EdoCourtyard_E-v8') { require('./verify-courtyard-v8.cjs');return; }
 if(JSON.parse(fs.readFileSync(path.join(root,'data/Map001.json'),'utf8')).note.includes('wws:dojo-courtyard-v7')) { require('./verify-courtyard-v7.cjs');return; }
 if(JSON.parse(fs.readFileSync(path.join(root,'data/Map001.json'),'utf8')).note.includes('wws:dojo-courtyard-v6')) {
     require('./verify-courtyard-v6.cjs');return;

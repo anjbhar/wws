@@ -1,0 +1,152 @@
+[
+  {
+    "capture": "home-foundation-contact-native",
+    "recorded": {
+      "direction": 8,
+      "pattern": 1
+    },
+    "bestVisibleFrame": {
+      "direction": 8,
+      "pattern": 1,
+      "meanRGBError": 1.155,
+      "offset": [
+        0,
+        3
+      ]
+    },
+    "recordedFrameFit": {
+      "direction": 8,
+      "pattern": 1,
+      "meanRGBError": 1.155,
+      "offset": [
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "capture": "home-tea-fence-contact-native",
+    "recorded": {
+      "direction": 8,
+      "pattern": 0
+    },
+    "bestVisibleFrame": {
+      "direction": 6,
+      "pattern": 0,
+      "meanRGBError": 1.266,
+      "offset": [
+        -3,
+        0
+      ]
+    },
+    "recordedFrameFit": {
+      "direction": 8,
+      "pattern": 0,
+      "meanRGBError": 40.459,
+      "offset": [
+        -2,
+        4
+      ]
+    }
+  },
+  {
+    "capture": "tea-shop-foundation-contact-native",
+    "recorded": {
+      "direction": 8,
+      "pattern": 2
+    },
+    "bestVisibleFrame": {
+      "direction": 6,
+      "pattern": 2,
+      "meanRGBError": 1.292,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "recordedFrameFit": {
+      "direction": 8,
+      "pattern": 2,
+      "meanRGBError": 40.647,
+      "offset": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "capture": "merchant-foundation-contact-native",
+    "recorded": {
+      "direction": 8,
+      "pattern": 1
+    },
+    "bestVisibleFrame": {
+      "direction": 6,
+      "pattern": 1,
+      "meanRGBError": 1.219,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "recordedFrameFit": {
+      "direction": 8,
+      "pattern": 1,
+      "meanRGBError": 44.812,
+      "offset": [
+        -1,
+        -1
+      ]
+    }
+  },
+  {
+    "capture": "dojo-wall-contact-native",
+    "recorded": {
+      "direction": 8,
+      "pattern": 1
+    },
+    "bestVisibleFrame": {
+      "direction": 6,
+      "pattern": 1,
+      "meanRGBError": 1.373,
+      "offset": [
+        -3,
+        0
+      ]
+    },
+    "recordedFrameFit": {
+      "direction": 8,
+      "pattern": 1,
+      "meanRGBError": 43.564,
+      "offset": [
+        -4,
+        -1
+      ]
+    }
+  },
+  {
+    "capture": "drainage-contact-native",
+    "recorded": {
+      "direction": 2,
+      "pattern": 2
+    },
+    "bestVisibleFrame": {
+      "direction": 2,
+      "pattern": 2,
+      "meanRGBError": 1.349,
+      "offset": [
+        0,
+        -3
+      ]
+    },
+    "recordedFrameFit": {
+      "direction": 2,
+      "pattern": 2,
+      "meanRGBError": 1.349,
+      "offset": [
+        0,
+        -3
+      ]
+    }
+  }
+]

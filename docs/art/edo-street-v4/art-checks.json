@@ -1,0 +1,24 @@
+{
+  "tileReconstructionExact": true,
+  "uniqueStreetCells": 630,
+  "sheetSizes": [
+    [
+      768,
+      768
+    ],
+    [
+      768,
+      768
+    ],
+    [
+      768,
+      768
+    ]
+  ],
+  "former200pxBandPeriodRemoved": true,
+  "playerVisibleHeight": 69,
+  "doorHeight": 76,
+  "architectureNativeScale": true,
+  "modifiedJSONValid": true,
+  "finalFenceJoinRevisionReconstructed": true
+}
